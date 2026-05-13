@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>../../index.html</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>../../index.htmlproducts/socialize</loc>
+    <lastmod>2026-05-13T06:30:23-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <image:image>
+      <image:loc>../cdn.shopify.com/s/files/1/0951/0092/8298/files/socialize_b5c19158-d046-4b80-8aa5-ec693f490c7f__v_1759228393.webp</image:loc>
+      <image:title>socialize</image:title>
+      <image:caption>happly gummies | the right amount of socialize
+Red and white container with &apos;happly&apos; branding on a white background</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>../../index.htmlproducts/relax</loc>
+    <lastmod>2026-05-13T06:30:23-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <image:image>
+      <image:loc>../cdn.shopify.com/s/files/1/0951/0092/8298/files/relax_098304f3-df68-4602-a129-2403240707d5__v_1759228408.webp</image:loc>
+      <image:title>relax</image:title>
+      <image:caption>happly gummies | the right amount of relax
+Purple and white container labeled &apos;happly&apos; with text on a white background</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>../../index.htmlproducts/sleep</loc>
+    <lastmod>2026-05-13T06:30:23-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <image:image>
+      <image:loc>../cdn.shopify.com/s/files/1/0951/0092/8298/files/sleep_ba7c29ec-0f0c-4de6-a66b-97e912ab2057__v_1759228466.webp</image:loc>
+      <image:title>sleep</image:title>
+      <image:caption>happly gummies | the right amount of sleep
+Blue and white container with &apos;happly&apos; branding on a white background.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>../../index.htmlproducts/besoberish-order-1</loc>
+    <lastmod>2026-05-13T06:30:23-04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <image:image>
+      <image:loc>../cdn.shopify.com/s/files/1/0951/0092/8298/files/Rectangle_10_c1b953a6-dad4-43bf-bd13-211303000f10__v_1757333447.webp</image:loc>
+      <image:title>BeSoberish Order 1</image:title>
+      <image:caption>Four square-shaped, red-colored Happly gummy cubes with a textured surface against a blue gradient background.</image:caption>
+    </image:image>
+  </url>
+</urlset>

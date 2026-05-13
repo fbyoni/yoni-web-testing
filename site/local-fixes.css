@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "RethinkSans-Regular";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Regular.woff2") format("woff2"),
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RethinkSans-Medium";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Medium.woff2") format("woff2"),
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RethinkSans-SemiBold";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-SemiBold.woff2") format("woff2"),
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RethinkSans-Bold";
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Bold.woff2") format("woff2"),
+    url("/assets/gethapply.com/cdn/shop/t/3/assets/RethinkSans-Bold.woff") format("woff");
+}

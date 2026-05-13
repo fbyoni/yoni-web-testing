@@ -1,0 +1,13 @@
+{
+  "name": "gethapply-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local static mirror of the public gethapply.com storefront.",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "serve": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

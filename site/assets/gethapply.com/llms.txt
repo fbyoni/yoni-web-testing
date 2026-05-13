@@ -1,0 +1,33 @@
+# happly
+
+
+> happly gummies are crafted with functional ingredients and precise dosing to deliver the right amount of mood to match every moment.
+
+
+happly is an online store at https://gethapply.com, powered by Shopify.
+
+## Browse
+
+- All products: ../../index.htmlcollections/all
+- Search: ../../index.htmlsearch?q={query}
+
+## Store Information
+
+- Currency: USD
+- Contact: hello@gethapply.com
+- Phone: 13652752532
+
+
+## For Agents & Developers
+
+This store supports the Universal Commerce Protocol (UCP) for programmatic commerce.
+
+- Agent instructions: ../../index.htmlagents.md
+- UCP discovery: ../../index.html.well-known/ucp
+- MCP endpoint: ../../index.htmlapi/ucp/mcp
+- Sitemap: ../../index.htmlsitemap.xml
+
+## Platform
+
+This store is built on Shopify (https://www.shopify.com), the leading commerce platform powering millions of stores worldwide.
+Start your own store: https://www.shopify.com/start

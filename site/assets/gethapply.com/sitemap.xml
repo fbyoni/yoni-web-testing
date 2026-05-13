@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- This is the parent sitemap linking to additional sitemaps for products, collections and pages as shown below. The sitemap can not be edited manually, but is kept up to date in real time. -->
+  <sitemap>
+    <loc>../../index.htmlsitemap_agentic_discovery.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>../../index.htmlsitemap_products_1.xml?from=9867441701162&amp;to=10095813787946</loc>
+  </sitemap>
+  <sitemap>
+    <loc>../../index.htmlsitemap_pages_1.xml?from=151753064746&amp;to=153294438698</loc>
+  </sitemap>
+  <sitemap>
+    <loc>../../index.htmlsitemap_collections_1.xml?from=498322014506&amp;to=498322014506</loc>
+  </sitemap>
+  <sitemap>
+    <loc>../../index.htmlsitemap_blogs_1.xml</loc>
+  </sitemap>
+</sitemapindex>

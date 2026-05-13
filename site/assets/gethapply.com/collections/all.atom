@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://gethapply.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://gethapply.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://gethapply.com/collections/all.atom"/>
+  <title>happly</title>
+  <updated>2026-04-14T11:09:33-04:00</updated>
+  <author>
+    <name>happly</name>
+  </author>
+  <entry>
+    <id>https://gethapply.com/products/10095813787946</id>
+    <published>2026-04-14T11:09:33-04:00</published>
+    <updated>2026-04-14T11:09:33-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://gethapply.com/products/besoberish-order-1"/>
+    <title>BeSoberish Order 1</title>
+    <s:type></s:type>
+    <s:vendor>happly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0951/0092/8298/files/Rectangle_10_c1b953a6-dad4-43bf-bd13-211303000f10.webp?v=1757333447"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>happly<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1382.40
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p>x5 cases (16 tins per case) The Right Amount of Socialize </p>
+<p>x4 cases (!6 tins per case) The Right Amount of Relax </p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://gethapply.com/products/10095813787946</id>
+      <title>Default Title</title>
+      <s:price currency="USD">1382.40</s:price>
+      <s:sku>BeSoberish1</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://gethapply.com/products/9867441930538</id>
+    <published>2025-09-30T06:34:41-04:00</published>
+    <updated>2025-09-30T06:34:41-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://gethapply.com/products/relax"/>
+    <title>relax</title>
+    <s:type></s:type>
+    <s:vendor>Happly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0951/0092/8298/files/relax_098304f3-df68-4602-a129-2403240707d5.webp?v=1759228408"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Happly<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            33.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><span></span><span></span><span>Take the edge off without losing your spark. Relax gummies help you slow down and settle in with an easygoing calm, <meta charset="utf-8">smoothed out by black cherry lime flavors.</span><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://gethapply.com/products/9867441930538</id>
+      <title>Default Title</title>
+      <s:price currency="USD">33.00</s:price>
+      <s:sku>Cherry Lime 67114880002</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://gethapply.com/products/9867442192682</id>
+    <published>2025-09-30T06:34:34-04:00</published>
+    <updated>2025-09-30T06:34:34-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://gethapply.com/products/sleep"/>
+    <title>sleep</title>
+    <s:type></s:type>
+    <s:vendor>Happly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0951/0092/8298/files/sleep_ba7c29ec-0f0c-4de6-a66b-97e912ab2057.webp?v=1759228466"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Happly<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            33.00 - 58.00
+            <a href="https://gethapply.com/products/sleep">(2 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><span></span><span></span><span>Unplug from the day and downshift with ease. Sleep gummies bring a gentle calm that helps you sink into deeper rest — with a soothing blueberry lemon nightcap.</span><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://gethapply.com/products/9867442192682</id>
+      <title>20 gummies</title>
+      <s:price currency="USD">33.00</s:price>
+      <s:sku>Blueberry Lemon 67114880000</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://gethapply.com/products/9867442192682</id>
+      <title>60 gummies</title>
+      <s:price currency="USD">58.00</s:price>
+      <s:sku>Blueberry Lemon 60ct 67114880004</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://gethapply.com/products/9867441701162</id>
+    <published>2025-08-20T04:06:52-04:00</published>
+    <updated>2025-08-20T04:06:52-04:00</updated>
+    <link rel="alternate" type="text/html" href="https://gethapply.com/products/socialize"/>
+    <title>socialize</title>
+    <s:type></s:type>
+    <s:vendor>Happly</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0951/0092/8298/files/socialize_b5c19158-d046-4b80-8aa5-ec693f490c7f.webp?v=1759228393"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Happly<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            33.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><span></span><span></span><span>Spark lighthearted energy and lean into connection. Socialize gummies bring a playful lift that makes every moment feel fun and effortless — all wrapped in a bright blood orange lemonade taste.</span><br></p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:variant>
+      <id>https://gethapply.com/products/9867441701162</id>
+      <title>Default Title</title>
+      <s:price currency="USD">33.00</s:price>
+      <s:sku>Blood Orange Lemonade 67114880003</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>
