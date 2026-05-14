@@ -52,7 +52,21 @@ function fileForRequest(url) {
 }
 
 createServer((req, res) => {
-  const file = fileForRequest(req.url || '/');
+  const rawUrl = req.url || '/';
+  const parsed = new URL(rawUrl, `http://localhost:${port}`);
+
+  // Canonicalize any path that ends in /index.html to the parent directory
+  // so window.location.pathname matches the home-page check ("/" === pathname)
+  // baked into the theme bundle. Same idea for nested pages — keeps URL
+  // semantics consistent with how the site was originally served.
+  if (parsed.pathname.endsWith('/index.html')) {
+    const target = parsed.pathname.slice(0, -'index.html'.length) + parsed.search;
+    res.writeHead(308, {location: target});
+    res.end();
+    return;
+  }
+
+  const file = fileForRequest(rawUrl);
   if (!file) {
     res.writeHead(404, {'content-type': 'text/plain; charset=utf-8'});
     res.end('Not found');
