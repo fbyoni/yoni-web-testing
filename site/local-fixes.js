@@ -33,13 +33,29 @@
 
   function applySavedState() {
     try {
-      if (
-        window.localStorage.getItem(storageKey) === "yes" ||
-        window.localStorage.getItem("age_verified")
-      ) {
-        verify();
-      }
+      window.localStorage.setItem(storageKey, "yes");
+      window.localStorage.setItem("age_verified", "1");
     } catch (_) {}
+    verify();
+  }
+
+  function purgePopups() {
+    document.querySelectorAll(".b-agegate, .b-popup").forEach((el) => {
+      el.classList.remove("active", "age-verify");
+      el.setAttribute("hidden", "");
+      if (el.parentNode) {
+        el.parentNode.removeChild(el);
+      }
+    });
+    document.documentElement.classList.remove("hidden");
+    document.body && document.body.classList.remove("hidden");
+  }
+
+  const popupObserver = new MutationObserver(purgePopups);
+  function startObserver() {
+    if (document.body) {
+      popupObserver.observe(document.body, { childList: true, subtree: true });
+    }
   }
 
   document.addEventListener(
@@ -81,9 +97,15 @@
     true
   );
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", applySavedState);
-  } else {
+  function init() {
     applySavedState();
+    purgePopups();
+    startObserver();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
   }
 })();

@@ -1,3 +1,13 @@
+.b-agegate,
+.b-popup {
+  display: none !important;
+}
+
+html.hidden,
+body.hidden {
+  overflow: auto !important;
+}
+
 @font-face {
   font-family: "RethinkSans-Regular";
   font-style: normal;
