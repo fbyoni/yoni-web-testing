@@ -1,7 +1,22 @@
+@import url("/assets/cdn.shopify.com/extensions/019e1c64-2a8c-7eae-ae75-2d4654ecd5f8/judgeme-505/assets/shopify_v2.css");
+
 .b-agegate,
 .b-popup {
   display: none !important;
 }
+
+/* Reveal Judge.me widget pieces that the (missing) loader would normally un-hide. */
+/* Note: scraped theme already styles layout — we only undo loader-only hiding rules. */
+.jdgm-rev-widg__summary-text { visibility: visible !important; }
+.jdgm-histogram { display: block !important; }
+.jdgm-rev__timestamp.jdgm-spinner {
+  background: none !important;
+  border: none !important;
+  animation: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+.jdgm-rev-widg__paginate-spinner-wrapper { display: none !important; }
 
 html.hidden,
 body.hidden {
