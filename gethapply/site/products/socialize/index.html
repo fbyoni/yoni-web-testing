@@ -183,6 +183,7 @@
 .b-reviews .jdgm-histogram__row:hover{opacity:1 !important}
 /* Slightly more top spacing on the stars/histogram block (theme uses 2rem padding on header) */
 .b-reviews .jdgm-rev-widg__summary{margin-top:4rem !important}
+
 /* Hide the Write a review button */
 .b-reviews .jdgm-widget-actions-wrapper,
 .b-reviews .jdgm-write-rev-link{display:none !important}
@@ -220,6 +221,30 @@
   padding-top:0 !important;margin-top:0 !important
 }
 .b-reviews .jdgm-rev-widg__summary{margin-top:0 !important}
+
+/* Mobile: stack vertically, no sticky, no side-by-side, no vertical divider — placed last so it overrides all desktop sticky rules above */
+@media (max-width:575.98px){
+  .b-reviews .jdgm-rev-widg{display:block !important}
+  .b-reviews .jdgm-rev-widg::before{display:none !important}
+  .b-reviews .jdgm-rev-widg__header,
+  .b-reviews .jdgm-rev-widg__body,
+  .b-reviews .jdgm-row-stars,
+  .b-reviews .jdgm-rev-widg__summary,
+  .b-reviews .jdgm-rev-widg__summary-inner,
+  .b-reviews .jdgm-histogram,
+  .b-reviews .jdgm-widget-actions-wrapper{
+    position:static !important;top:auto !important;
+    max-height:none !important;height:auto !important;overflow:visible !important
+  }
+  .b-reviews .jdgm-rev-widg__header{
+    padding:2rem 0 !important;
+    flex:1 1 100% !important;width:100% !important;border-right:0 !important
+  }
+  .b-reviews .jdgm-rev-widg__body{
+    width:100% !important;border-left:0 !important;padding-left:0 !important;
+    min-height:0 !important
+  }
+}
 </style>
 
 
