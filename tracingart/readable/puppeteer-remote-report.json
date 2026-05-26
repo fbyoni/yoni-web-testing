@@ -23,14 +23,14 @@
         "text": "TracingArt",
         "className": "introTitle textH1",
         "rect": {
-          "x": 556.4230346679688,
-          "y": 414.0057678222656,
-          "width": 327.04400634765625,
-          "height": 71.98849487304688
+          "x": 556.4453125,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
         },
-        "transform": "matrix(0.9998, 0, 0, 0.99984, -163.61, -36)",
+        "transform": "matrix(1, 0, 0, 1, -163.555, -36)",
         "translate": "none",
-        "opacity": "0.9992",
+        "opacity": "1",
         "visibility": "visible"
       },
       "nav": {
@@ -74,12 +74,12 @@
         "text": "TracingArt",
         "className": "introTitle textH1",
         "rect": {
-          "x": 556.3903198242188,
+          "x": 556.4453125,
           "y": 414,
           "width": 327.109375,
           "height": 72
         },
-        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "transform": "matrix(1, 0, 0, 1, -163.555, -36)",
         "translate": "none",
         "opacity": "1",
         "visibility": "visible"
@@ -105,14 +105,14 @@
         "className": "",
         "rect": {
           "x": 492.9749755859375,
-          "y": 332.51092529296875,
+          "y": 1079.934814453125,
           "width": 454.050048828125,
           "height": 540.13037109375
         },
         "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
         "translate": "none",
         "opacity": "1",
-        "visibility": "visible"
+        "visibility": "hidden"
       },
       "activeSection": "section1 active"
     },
@@ -125,12 +125,12 @@
         "text": "TracingArt",
         "className": "introTitle textH1",
         "rect": {
-          "x": 556.3903198242188,
+          "x": 556.4453125,
           "y": 414,
           "width": 327.109375,
           "height": 72
         },
-        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "transform": "matrix(1, 0, 0, 1, -163.555, -36)",
         "translate": "none",
         "opacity": "1",
         "visibility": "visible"
@@ -156,14 +156,14 @@
         "className": "",
         "rect": {
           "x": 492.9749755859375,
-          "y": 35.934814453125,
+          "y": 1079.934814453125,
           "width": 454.050048828125,
           "height": 540.13037109375
         },
         "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
         "translate": "none",
         "opacity": "1",
-        "visibility": "visible"
+        "visibility": "hidden"
       },
       "activeSection": "section1 active"
     },
@@ -176,12 +176,12 @@
         "text": "TracingArt",
         "className": "introTitle textH1",
         "rect": {
-          "x": 556.3903198242188,
+          "x": 556.4453125,
           "y": 414,
           "width": 327.109375,
           "height": 72
         },
-        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "transform": "matrix(1, 0, 0, 1, -163.555, -36)",
         "translate": "none",
         "opacity": "1",
         "visibility": "visible"
@@ -207,14 +207,14 @@
         "className": "",
         "rect": {
           "x": 492.9749755859375,
-          "y": 35.934814453125,
+          "y": 1079.934814453125,
           "width": 454.050048828125,
           "height": 540.13037109375
         },
         "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
         "translate": "none",
         "opacity": "1",
-        "visibility": "visible"
+        "visibility": "hidden"
       },
       "activeSection": "section1 active"
     },
@@ -227,12 +227,12 @@
         "text": "TracingArt",
         "className": "introTitle textH1",
         "rect": {
-          "x": 556.3903198242188,
+          "x": 556.4453125,
           "y": 414,
           "width": 327.109375,
           "height": 72
         },
-        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "transform": "matrix(1, 0, 0, 1, -163.555, -36)",
         "translate": "none",
         "opacity": "1",
         "visibility": "visible"
@@ -257,15 +257,15 @@
         "text": "",
         "className": "",
         "rect": {
-          "x": 0,
-          "y": -113.4698486328125,
-          "width": 1440,
-          "height": 1713
+          "x": 492.9749755859375,
+          "y": 1079.934814453125,
+          "width": 454.050048828125,
+          "height": 540.13037109375
         },
-        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
         "translate": "none",
         "opacity": "1",
-        "visibility": "visible"
+        "visibility": "hidden"
       },
       "activeSection": "section1 active"
     },

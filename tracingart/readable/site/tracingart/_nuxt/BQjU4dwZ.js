@@ -727,7 +727,7 @@ const ft = () => {
       },
       m = (r) => {
         if (!h.canvasRollover || !n.value) return;
-        const o = `images/getty/${a.folder}/${a.img}@thumb.webp`;
+        const o = `images/getty/${a.folder}/${a.img}@sm.webp`;
         h.asset = { ...a, src: o };
       },
       v = (r) => {

@@ -2103,7 +2103,7 @@ const $o = bt.reduce((a, e) => a + e.height - e.offset, 0),
           g ? (M.value = !0) : W.delayedCall(0.5, () => (M.value = g));
         },
         v = (g) => {
-          const f = `images/getty/artist-to-artist/${g.img}@thumb.webp`;
+          const f = `images/getty/artist-to-artist/${g.img}@sm.webp`;
           b.asset = { ...g, src: f };
         },
         { active: y } = Ye(t, {
