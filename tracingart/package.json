@@ -1,0 +1,20 @@
+{
+  "name": "tracingart-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local static mirror of Getty Tracing Art.",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "clean": "node scripts/clean-external.mjs",
+    "serve": "node server.mjs",
+    "verify:puppeteer": "node scripts/puppeteer-remote-smoke.mjs",
+    "verify:mobile": "node scripts/puppeteer-remote-mobile.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.43.1",
+    "puppeteer-core": "^24.43.1"
+  }
+}

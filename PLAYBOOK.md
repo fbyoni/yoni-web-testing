@@ -266,6 +266,113 @@ Then open the page in a browser. In DevTools:
   bundle still tries to call out. Track those down and patch them statically
   (Phase 3/4) so the shim's job is purely defensive.
 
+### Puppeteer verification with an already-running Chrome
+
+For browser checks in this workspace, use `puppeteer-core` against a manually
+launched Chrome debug session. Do not spawn bundled/headless Chrome from the
+agent shell on macOS; TCC/sandboxing can kill or deny the browser.
+
+Launch Chrome once from a real Terminal:
+
+```bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9222 \
+  --user-data-dir=$HOME/Chrome-Debug
+```
+
+Probe scripts should connect like this:
+
+```js
+const browser = await puppeteer.connect({
+  browserURL: 'http://127.0.0.1:9222'
+});
+```
+
+Use these sampling rules:
+
+- Slow-scroll in small increments, dwell about 1.5s at each sampled scroll
+  position, then read DOM state. This avoids capturing mid-animation frames.
+- Capture network `request`, `requestfailed`, and local `response.status() >=
+  400`; success means `external.length === 0`, `failed.length === 0`, and
+  `localErrors.length === 0`.
+- In DOM probes, read both `getComputedStyle(el).transform` and
+  `getComputedStyle(el).translate`; GSAP and app bridges may write motion to
+  different properties.
+- Install `evaluateOnNewDocument` guards for `window.location.assign`,
+  `window.location.replace`, `window.open`, and outbound anchor clicks so live
+  scripts cannot navigate the inspected page out from under Puppeteer.
+
+The `tracingart/` project has a reusable example:
+
+```bash
+cd tracingart
+npm run serve
+npm run verify:puppeteer
+```
+
+It writes `site/puppeteer-remote-report.json` and
+`site/puppeteer-remote-smoke.png`.
+
+---
+
+## Nuxt / Generated Asset Sites
+
+Some sites do not expose all runtime assets as literal HTML/CSS links. The
+Getty Tracing Art replica in `tracingart/` is the reference example for this
+class of site.
+
+### What to preserve
+
+- Keep the original path prefix when the app expects it. Tracing Art serves
+  under `/tracingart/`, so local files live under `site/tracingart/...`.
+- Fetch Nuxt build metadata such as:
+  `/tracingart/_nuxt/builds/meta/<buildId>.json`
+- Search bundled JS for generated asset identifiers, not only literal URLs.
+  Tracing Art stores image names as `img:"..."` and builds paths at runtime.
+- Mirror generated image folders and variants that Puppeteer reveals. For
+  Tracing Art these were:
+  - `/tracingart/images/getty/intro/<name>@lg.webp`
+  - `/tracingart/images/getty/intro/<name>@sm.webp`
+  - `/tracingart/images/getty/still-life/<name>@lg.webp`
+  - `/tracingart/images/getty/still-life/<name>@sm.webp`
+  - `/tracingart/images/getty/artist-to-artist/<name>@lg.webp`
+  - `/tracingart/images/getty/artist-to-artist/<name>@sm.webp`
+  - `/tracingart/images/getty/world-of-gpi/<name>@lg.webp`
+  - `/tracingart/images/getty/world-of-gpi/<name>@sm.webp`
+- Try both NFC and NFD Unicode forms for filenames. This caught
+  `Mäda-Primavesi` after the first Puppeteer pass.
+- For generated spritesheets, mirror both metadata and the transformed runtime
+  files. Tracing Art's metadata names `spritesheet_0.png`, but the browser
+  requests `spritesheet_0@lg.webp` and `spritesheet_0@sm.webp`.
+
+### Practical scrape loop
+
+1. Run the initial scraper and local server.
+2. Run the remote-Chrome Puppeteer smoke probe.
+3. Treat every same-origin 404 in `localErrors` as a missing generated asset
+   pattern, patch the scraper, and rerun it.
+4. Repeat until the Puppeteer report is `ok: true`.
+
+For Tracing Art, the final successful report had:
+
+```json
+{
+  "ok": true,
+  "external": [],
+  "failed": [],
+  "localErrors": [],
+  "consoleMessages": []
+}
+```
+
+### Font fallbacks
+
+If public font URLs return 403, do not leave the CSS pointing at them. Vendor a
+local fallback under `site/` and rewrite `@font-face` to the local path. Tracing
+Art's Graphik WOFF2 files returned 403, so the scraper copies local Helvetica
+Neue TTF files into `site/tracingart/fonts/graphik/` and rewrites the Graphik
+`@font-face` URLs to those local files.
+
 ---
 
 ## Replicating a new site (TL;DR)

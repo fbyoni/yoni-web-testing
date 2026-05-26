@@ -1,0 +1,1502 @@
+{
+  "ok": true,
+  "targetURL": "http://localhost:5173/tracingart/",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 3,
+    "isMobile": true,
+    "hasTouch": true
+  },
+  "screenshot": "site/puppeteer-mobile-smoke.png",
+  "result": {
+    "title": "Tracing Art",
+    "h1": "TracingArt",
+    "imageCount": 13,
+    "completeImages": 12,
+    "externalAnchors": 0,
+    "bodyHeight": 76382,
+    "scrollWidth": 390,
+    "viewportWidth": 390
+  },
+  "samples": [
+    {
+      "scrollPosition": 0,
+      "actualScrollY": 0,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": -310.177734375,
+          "right": 386.619140625,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineStart",
+          "text": "",
+          "left": -310.177734375,
+          "right": 12.220703125,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.30767822265625
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 616.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 701.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 900,
+      "actualScrollY": 900,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": -310.177734375,
+          "right": 386.619140625,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineStart",
+          "text": "",
+          "left": -310.177734375,
+          "right": 12.220703125,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.30767822265625
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 616.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 701.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 2200,
+      "actualScrollY": 2200,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": -284.628662109375,
+          "right": 412.168212890625,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineStart",
+          "text": "",
+          "left": -284.628662109375,
+          "right": 37.769775390625,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineEnd",
+          "text": "",
+          "left": 89.769775390625,
+          "right": 412.168212890625,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.30767822265625
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 616.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 701.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 5200,
+      "actualScrollY": 5200,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": -173.22976684570312,
+          "right": 523.5671081542969,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineStart",
+          "text": "",
+          "left": -173.22976684570312,
+          "right": 149.16867065429688,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineEnd",
+          "text": "",
+          "left": 201.16867065429688,
+          "right": 523.567138671875,
+          "width": 322.3984680175781,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.30767822265625
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 616.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 701.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 12000,
+      "actualScrollY": 12000,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "assetZoom__imgInner",
+          "text": "Still Life with a Chinese Porcelain Jar, Willem KalfGift of Mrs. James W. Fesler",
+          "left": -266.5,
+          "right": 656.5,
+          "width": 923,
+          "height": 1097
+        },
+        {
+          "tag": "div",
+          "className": "assetZoom__imgWrap",
+          "text": "",
+          "left": -266.5,
+          "right": 656.5,
+          "width": 923,
+          "height": 1097
+        },
+        {
+          "tag": "picture",
+          "className": "picture loaded assetZoom__img",
+          "text": "",
+          "left": -266.5,
+          "right": 656.5,
+          "width": 923,
+          "height": 1097
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -266.5,
+          "right": 656.5,
+          "width": 923,
+          "height": 1097
+        },
+        {
+          "tag": "div",
+          "className": "imageCredits",
+          "text": "Still Life with a Chinese Porcelain Jar, Willem KalfGift of Mrs. James W. Fesler",
+          "left": -446.63604736328125,
+          "right": 836.6359252929688,
+          "width": 1283.27197265625,
+          "height": 238.940673828125
+        },
+        {
+          "tag": "h2",
+          "className": "imageCredits__title textPaintingDescription",
+          "text": "Still Life with a Chinese Porcelain Jar, Willem Kalf",
+          "left": -446.63604736328125,
+          "right": 836.6359252929688,
+          "width": 1283.27197265625,
+          "height": 47.794189453125
+        },
+        {
+          "tag": "a",
+          "className": "",
+          "text": "Still Life with a Chinese Porcelain Jar",
+          "left": -219.94256591796875,
+          "right": 400.0367431640625,
+          "width": 619.9793090820312,
+          "height": 40.1470947265625
+        },
+        {
+          "tag": "p",
+          "className": "imageCredits__credit textPaintingDescription small",
+          "text": "Gift of Mrs. James W. Fesler in memory of Daniel W. and Elizabeth C. Marmon,Indi",
+          "left": -446.63604736328125,
+          "right": 836.6359252929688,
+          "width": 1283.27197265625,
+          "height": 91.7646484375
+        },
+        {
+          "tag": "a",
+          "className": "",
+          "text": "No copyright",
+          "left": 428.92230224609375,
+          "right": 640.6801147460938,
+          "width": 211.7578125,
+          "height": 38.2352294921875
+        },
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": 3.380859375,
+          "right": 700.177734375,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineEnd",
+          "text": "",
+          "left": 377.779296875,
+          "right": 700.177734375,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.30767822265625
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 616.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 701.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 75538,
+      "actualScrollY": 75538,
+      "bodyHeight": 76382,
+      "scrollWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "overflowOffenders": [
+        {
+          "tag": "div",
+          "className": "descriptions__bg",
+          "text": "",
+          "left": -227,
+          "right": 617,
+          "width": 844,
+          "height": 337.59375
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__line",
+          "text": "",
+          "left": 3.380859375,
+          "right": 700.177734375,
+          "width": 696.796875,
+          "height": 2
+        },
+        {
+          "tag": "div",
+          "className": "timelineBar__lineEnd",
+          "text": "",
+          "left": 377.779296875,
+          "right": 700.177734375,
+          "width": 322.3984375,
+          "height": 2
+        },
+        {
+          "tag": "img",
+          "className": "",
+          "text": "",
+          "left": -33.46153259277344,
+          "right": 423.46156311035156,
+          "width": 456.923095703125,
+          "height": 506.3077087402344
+        }
+      ],
+      "visibleTextBlocks": [
+        {
+          "tag": "button",
+          "className": "nav__btnAbout btnAbout",
+          "text": "",
+          "rect": {
+            "x": 338.0078125,
+            "y": 20.796875,
+            "width": 41.59375,
+            "height": 41.59375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 39.5078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__title textCreditsM js-animEl",
+          "text": "About the Getty Provenance Index",
+          "rect": {
+            "x": 36.40625,
+            "y": 6.7890625,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textNavDescription js-animEl",
+          "text": "The GPI provides open access to millions of richly curated records that document",
+          "rect": {
+            "x": 36.40625,
+            "y": 45.0859375,
+            "width": 317.203125,
+            "height": 139.78125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Access the Getty Provenance Index®",
+          "rect": {
+            "x": 36.40625,
+            "y": 205.6640625,
+            "width": 317.203125,
+            "height": 20.3828125
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__description textLabelS js-animEl",
+          "text": "Getty continuously improves and adds data to the GPI. Learn more about our proje",
+          "rect": {
+            "x": 36.40625,
+            "y": 246.84375,
+            "width": 317.203125,
+            "height": 40.765625
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, -40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "p",
+          "className": "navPanel__copyright",
+          "text": "© J. Paul Getty Trust",
+          "rect": {
+            "x": 36.40625,
+            "y": 360.3984375,
+            "width": 317.203125,
+            "height": 12
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0.5"
+        },
+        {
+          "tag": "button",
+          "className": "closeBtn navPanel__close close",
+          "text": "",
+          "rect": {
+            "x": 340.09375,
+            "y": 434.078125,
+            "width": 10.3984375,
+            "height": 10.3984375
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        {
+          "tag": "h2",
+          "className": "navPanel__chaptersTitle chaptersTitle textCreditsM js-animEl",
+          "text": "Chapters",
+          "rect": {
+            "x": 36.40625,
+            "y": 481.359375,
+            "width": 317.203125,
+            "height": 17.5
+          },
+          "transform": "matrix(1, 0, 0, 1, 0, 40)",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "0"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Tracing a Painting Through Time",
+          "rect": {
+            "x": 73.8359375,
+            "y": 531.703125,
+            "width": 212.65625,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Artists as Collectors",
+          "rect": {
+            "x": 73.8359375,
+            "y": 615.890625,
+            "width": 132.3671875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        },
+        {
+          "tag": "h3",
+          "className": "navChapter__title textCreditsM",
+          "text": "Collectors, Museums and the Market",
+          "rect": {
+            "x": 73.8359375,
+            "y": 700.078125,
+            "width": 242.921875,
+            "height": 17.5
+          },
+          "transform": "none",
+          "translate": "none",
+          "visibility": "hidden",
+          "opacity": "1"
+        }
+      ],
+      "activeSection": "section3 active"
+    }
+  ],
+  "external": [],
+  "failed": [],
+  "localErrors": [],
+  "overflowSamples": [],
+  "consoleMessages": []
+}
