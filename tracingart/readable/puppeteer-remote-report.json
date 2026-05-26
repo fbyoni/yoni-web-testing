@@ -1,0 +1,328 @@
+{
+  "ok": true,
+  "targetURL": "http://localhost:5186/tracingart/",
+  "screenshot": "readable/puppeteer-remote-smoke.png",
+  "result": {
+    "title": "Tracing Art",
+    "h1": "TracingArt",
+    "bodySample": "Tracing\nArt\n\nMillions of Resources, Spanning Five Centuries\n\nHere's how the Getty Provenance Index is transforming research on the social life of art.\nScroll down\n\nM. Knoedler & Co. Painting stock book 9, page 76, 1943-1952. Getty Research Institute, Los Angel",
+    "imageCount": 17,
+    "completeImages": 16,
+    "scriptCount": 4,
+    "externalAnchors": 0,
+    "neutralizedAnchors": 0,
+    "scrollY": 89.5
+  },
+  "samples": [
+    {
+      "scrollPosition": 0,
+      "actualScrollY": 0,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.4230346679688,
+          "y": 414.0057678222656,
+          "width": 327.04400634765625,
+          "height": 71.98849487304688
+        },
+        "transform": "matrix(0.9998, 0, 0, 0.99984, -163.61, -36)",
+        "translate": "none",
+        "opacity": "0.9992",
+        "visibility": "visible"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 492.9749755859375,
+          "y": 1079.934814453125,
+          "width": 454.050048828125,
+          "height": 540.13037109375
+        },
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "hidden"
+      },
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 1200,
+      "actualScrollY": 1200,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.3903198242188,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
+        },
+        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 492.9749755859375,
+          "y": 332.51092529296875,
+          "width": 454.050048828125,
+          "height": 540.13037109375
+        },
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 3600,
+      "actualScrollY": 3600,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.3903198242188,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
+        },
+        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 492.9749755859375,
+          "y": 35.934814453125,
+          "width": 454.050048828125,
+          "height": 540.13037109375
+        },
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 7200,
+      "actualScrollY": 7200,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.3903198242188,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
+        },
+        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 492.9749755859375,
+          "y": 35.934814453125,
+          "width": 454.050048828125,
+          "height": 540.13037109375
+        },
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 12000,
+      "actualScrollY": 12000,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.3903198242188,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
+        },
+        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 0,
+          "y": -113.4698486328125,
+          "width": 1440,
+          "height": 1713
+        },
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "activeSection": "section1 active"
+    },
+    {
+      "scrollPosition": 80550,
+      "actualScrollY": 80550,
+      "bodyHeight": 81450,
+      "h1": {
+        "selector": "h1",
+        "text": "TracingArt",
+        "className": "introTitle textH1",
+        "rect": {
+          "x": 556.3903198242188,
+          "y": 414,
+          "width": 327.109375,
+          "height": 72
+        },
+        "transform": "matrix(1, 0, 0, 1, -163.61, -36)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "hidden"
+      },
+      "nav": {
+        "selector": ".nav",
+        "text": "About the Getty Provenance IndexThe GPI provides open access to millions of rich",
+        "className": "nav",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "transform": "none",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "visible"
+      },
+      "visibleImage": {
+        "selector": "picture img:not([src=\"\"])",
+        "text": "",
+        "className": "",
+        "rect": {
+          "x": 492.9749755859375,
+          "y": -720.065185546875,
+          "width": 454.050048828125,
+          "height": 540.13037109375
+        },
+        "transform": "matrix(1.2, 0, 0, 1.2, 0, 0)",
+        "translate": "none",
+        "opacity": "1",
+        "visibility": "hidden"
+      },
+      "activeSection": "section3 active"
+    }
+  ],
+  "external": [],
+  "failed": [],
+  "localErrors": [],
+  "consoleMessages": []
+}

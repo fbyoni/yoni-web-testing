@@ -1,0 +1,488 @@
+const __vite__mapDeps = (
+  i,
+  m = __vite__mapDeps,
+  d = m.f ||
+    (m.f = [
+      './t6X-vfZJ.js',
+      './DPLBeim1.js',
+      './BQjU4dwZ.js',
+      './CDY68bNc.js',
+      './CENEsQq1.js',
+      './s5kuwhN6.js',
+      './BdT36_8W.js',
+      './BBSPXiNi.js',
+      './CTD0GRTa.js',
+      './BqbHwPfs.js',
+      './C5x6R2a_.js',
+      './BGfcuG2n.js',
+      './vxidHdmP.js',
+      './De0MQsoJ.js',
+      './CAExIIT3.js',
+      './EJcA7ZIo.js',
+      './B-tuEXrK.js',
+      './BBmyyArJ.js',
+      './B4mEty-d.js',
+      './BWhTUJCt.js',
+      './Br6vISkq.js',
+      './BpG8wLCf.js',
+      './B-ewFBwx.js',
+      './yQCYfrVS.js',
+      './Dc84iY9I.js',
+    ]),
+) => i.map((i) => d[i]);
+import {
+  d as P,
+  v as S,
+  g as L,
+  x as I,
+  c as s,
+  o as c,
+  a as g,
+  t as T,
+  F as R,
+  p as A,
+  y as C,
+  z as V,
+  q as y,
+  _ as D,
+  b as w,
+  A as $,
+  w as G,
+  k as b,
+  l as O,
+  B as N,
+  C as n,
+  D as a,
+} from './DPLBeim1.js';
+import { T as F, K as B, G as H, a as W } from './s5kuwhN6.js';
+import { n as z } from './VbIHlcLE.js';
+import { _ as U } from './EJcA7ZIo.js';
+import './CDY68bNc.js';
+const j = Symbol.for('nuxt:client-only'),
+  J = P({
+    name: 'ClientOnly',
+    inheritAttrs: !1,
+    props: ['fallback', 'placeholder', 'placeholderTag', 'fallbackTag'],
+    setup(x, { slots: r, attrs: h }) {
+      const l = S(!1);
+      return (
+        L(() => {
+          l.value = !0;
+        }),
+        I(j, !0),
+        (i) => {
+          var f;
+          if (l.value) return (f = r.default) == null ? void 0 : f.call(r);
+          const m = r.fallback || r.placeholder;
+          if (m) return m();
+          const k = i.fallback || i.placeholder || '',
+            u = i.fallbackTag || i.placeholderTag || 'span';
+          return s(u, h, k);
+        }
+      );
+    },
+  }),
+  K = { class: 'sb' },
+  Z = { class: 'sb-title' },
+  q = { class: 'sb-list', 'data-ui': 'list', 'data-lenis-prevent': '' },
+  M = { key: 0, class: 'col__category' },
+  X = { key: 1, class: 'col__config' },
+  Q = ['id', 'name', 'checked'],
+  Y = ['for'],
+  ee = { class: 'items', 'data-ui': 'items' },
+  te = ['href'],
+  oe = 'General',
+  ne = {
+    __name: 'SandboxHub',
+    props: {
+      title: { default: 'Sandbox Hub' },
+      configOptions: { default: [] },
+      components: {
+        default: [
+          {
+            title: 'Test WebGL',
+            description: 'an example of a WebGL component',
+            path: '/sandbox/test-webgl-sandbox',
+          },
+        ],
+      },
+    },
+    setup(x) {
+      const r = x,
+        h = S(null),
+        l = S(''),
+        i = `sb-config-${r.title.toLowerCase().replace(/\s/g, '-')}`;
+      L(() => {
+        f();
+      });
+      const m = () => {
+          const e = window == null ? void 0 : window.localStorage.getItem(i);
+          return e ? JSON.parse(e) : {};
+        },
+        k = (e) => (window == null ? void 0 : window.localStorage.setItem(i, JSON.stringify(e))),
+        u = (e) => m()[e] || !1,
+        f = () => {
+          var o;
+          let e = !0;
+          l.value = '';
+          const _ = m();
+          ((o = h.value) == null ||
+            o.forEach((p) => {
+              if (p.checked) {
+                const t = e ? '?' : '&';
+                ((l.value += `${t}${p.name}=true`), (e = !1));
+              }
+              _[p.name] = p.checked;
+            }),
+            k(_));
+        },
+        v = Object.entries(
+          ((e, _) =>
+            e.map((o) => o[_]).reduce((o, p, t) => ((o[p] = (o[p] || []).concat(e[t])), o), {}))(
+            r.components,
+            'category',
+          ),
+        ).map(([e, _]) => ({ category: e == 'undefined' ? oe : e, components: _ }));
+      function E(e) {
+        return e.charAt(0).toUpperCase() + e.slice(1);
+      }
+      return (e, _) => (
+        c(),
+        s('div', K, [
+          g('h1', Z, T(x.title), 1),
+          g('div', q, [
+            (c(!0),
+            s(
+              R,
+              null,
+              A(
+                y(v),
+                (o, p) => (
+                  c(),
+                  s('div', { class: 'col', key: o.category }, [
+                    o.category ? (c(), s('div', M, T(o.category), 1)) : C('', !0),
+                    x.configOptions && p == 0
+                      ? (c(),
+                        s('div', X, [
+                          (c(!0),
+                          s(
+                            R,
+                            null,
+                            A(
+                              x.configOptions,
+                              (t) => (
+                                c(),
+                                s('div', { class: 'item', key: t }, [
+                                  g(
+                                    'input',
+                                    {
+                                      type: 'checkbox',
+                                      ref_for: !0,
+                                      ref_key: 'refOptions',
+                                      ref: h,
+                                      id: t,
+                                      name: t,
+                                      checked: u(t),
+                                      onChange: f,
+                                    },
+                                    null,
+                                    40,
+                                    Q,
+                                  ),
+                                  g('label', { for: t }, T(E(t)), 9, Y),
+                                ])
+                              ),
+                            ),
+                            128,
+                          )),
+                        ]))
+                      : C('', !0),
+                    g('div', ee, [
+                      (c(!0),
+                      s(
+                        R,
+                        null,
+                        A(
+                          o.components,
+                          (t) => (
+                            c(),
+                            s(
+                              'a',
+                              { class: 'col__item', href: `${t.path}${l.value}`, key: t.title },
+                              [V(T(t.title), 1), g('span', null, T(t.description), 1)],
+                              8,
+                              te,
+                            )
+                          ),
+                        ),
+                        128,
+                      )),
+                    ]),
+                  ])
+                ),
+              ),
+              128,
+            )),
+          ]),
+        ])
+      );
+    },
+  },
+  ae = { key: 0 },
+  se = { key: 1, class: 'sandbox' },
+  re = {
+    __name: '[...slug]',
+    setup(x) {
+      const r = w(),
+        h = ['gui'],
+        l = [
+          {
+            title: 'Section 1',
+            description: 'an example of a Section 1 component',
+            path: '/sandbox/section-1',
+            category: 'Sections',
+            component: n(() =>
+              a(
+                () => import('./t6X-vfZJ.js'),
+                __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Section 2',
+            description: 'an example of a Section 2 component',
+            path: '/sandbox/section-2',
+            category: 'Sections',
+            component: n(() =>
+              a(
+                () => import('./t6X-vfZJ.js'),
+                __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Section 3',
+            description: 'an example of a Section 3 component',
+            path: '/sandbox/section-3',
+            category: 'Sections',
+            component: n(() =>
+              a(
+                () => import('./t6X-vfZJ.js'),
+                __vite__mapDeps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Collage Example',
+            description: 'an example of a Collage component',
+            path: '/sandbox/collage-example',
+            component: n(() =>
+              a(
+                () => import('./B4mEty-d.js'),
+                __vite__mapDeps([18, 1, 2, 3, 4, 5, 6, 9, 19, 20, 13, 14, 12]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Section 1 Collage Example',
+            description: 'an example of a Section 1 Collage component',
+            path: '/sandbox/section-1-collage',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Asset Zoom Example',
+            description: 'an example of a Asset Zoom component',
+            path: '/sandbox/section-1-zoom',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Footer Example',
+            description: 'an example of a Footer component',
+            path: '/sandbox/footer-example',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Transaction 1 Example',
+            description: 'an example of a Transaction 1 component',
+            path: '/sandbox/transaction-1',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Transaction 2 Example',
+            description: 'an example of a Transaction 2 component',
+            path: '/sandbox/transaction-2',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Transaction 3 Example',
+            description: 'an example of a Transaction 3 component',
+            path: '/sandbox/transaction-3',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Husband And Wife',
+            description: 'an example of a Husband And Wife component',
+            path: '/sandbox/husband-and-wife',
+            component: n(() =>
+              a(
+                () => import('./BpG8wLCf.js'),
+                __vite__mapDeps([21, 1, 2, 3, 4, 5, 6, 11, 12, 10, 13]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'Navigation',
+            description: 'an example of a Navigation component',
+            path: '/sandbox/navigation',
+            component: n(() =>
+              a(
+                () => import('./B-ewFBwx.js'),
+                __vite__mapDeps([22, 1, 4, 23, 10, 20, 6, 16]),
+                import.meta.url,
+              ),
+            ),
+          },
+          {
+            title: 'ParticleTest',
+            description: 'an example of a ParticleTest component',
+            path: '/sandbox/particle-test',
+            component: n(() =>
+              a(
+                () => import('./Dc84iY9I.js'),
+                __vite__mapDeps([24, 17, 12, 6, 5, 1, 3]),
+                import.meta.url,
+              ),
+            ),
+          },
+        ],
+        i = S(null),
+        m = S(null),
+        u = $(
+          (() => {
+            const d = N(),
+              v = l.filter((E) => E.path === d.path);
+            return v.length === 0 ? null : v[0];
+          })(),
+        ),
+        f = ({ renderer: d }) => {
+          (console.log('Render setup complete'),
+            B.setGlobals({ renderer: d }),
+            W.setGlobals({ renderer: d }),
+            H.setGlobals({ renderer: d }));
+        };
+      return (
+        L(() => {
+          (r.setScrollPaused(!1), (r.canvasRollover = !0), (window.appStore = r));
+        }),
+        G(m, (d) => {
+          setTimeout(() => {
+            i.value.context.start();
+          }, 400);
+        }),
+        (d, v) => {
+          const E = J;
+          return (
+            c(),
+            s('div', null, [
+              b(E, null, {
+                default: O(() => [
+                  u.value
+                    ? (c(),
+                      s('div', ae, [
+                        b(
+                          U,
+                          { ref_key: 'loader', ref: i },
+                          {
+                            default: O(() => [
+                              b(
+                                y(z),
+                                {
+                                  ref: 'refRenderer',
+                                  antialias: !1,
+                                  autoResize: !0,
+                                  autoRender: !0,
+                                  onSetupComplete: f,
+                                },
+                                {
+                                  default: O(() => [
+                                    b(y(F), null, {
+                                      default: O(() => [
+                                        b(
+                                          y(u).component,
+                                          { ref_key: 'refComponent', ref: m },
+                                          null,
+                                          512,
+                                        ),
+                                      ]),
+                                      _: 1,
+                                    }),
+                                  ]),
+                                  _: 1,
+                                },
+                                512,
+                              ),
+                            ]),
+                            _: 1,
+                          },
+                          512,
+                        ),
+                      ]))
+                    : C('', !0),
+                  u.value
+                    ? C('', !0)
+                    : (c(),
+                      s('div', se, [
+                        b(y(ne), { title: 'Sandbox', components: l, configOptions: h }),
+                      ])),
+                ]),
+                _: 1,
+              }),
+            ])
+          );
+        }
+      );
+    },
+  },
+  de = D(re, [['__scopeId', 'data-v-fa3c8639']]);
+export { de as default };

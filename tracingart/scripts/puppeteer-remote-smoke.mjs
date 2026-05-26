@@ -4,8 +4,12 @@ import puppeteer from 'puppeteer-core';
 
 const browserURL = process.env.BROWSER_URL || 'http://127.0.0.1:9222';
 const targetURL = process.env.TARGET_URL || 'http://localhost:5173/tracingart/';
-const screenshot = 'site/puppeteer-remote-smoke.png';
-const reportPath = 'site/puppeteer-remote-report.json';
+const reportDir = process.env.REPORT_DIR || 'site';
+const targetHost = new URL(targetURL).host;
+const targetPort = new URL(targetURL).port || (new URL(targetURL).protocol === 'https:' ? '443' : '80');
+const allowedHosts = new Set([targetHost, `localhost:${targetPort}`, `127.0.0.1:${targetPort}`]);
+const screenshot = `${reportDir}/puppeteer-remote-smoke.png`;
+const reportPath = `${reportDir}/puppeteer-remote-report.json`;
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -69,7 +73,7 @@ await page.evaluateOnNewDocument(() => {
 page.on('request', request => {
   const url = request.url();
   const host = hostFor(url);
-  if (host && !['localhost:5173', '127.0.0.1:5173'].includes(host) && !url.startsWith('data:') && !url.startsWith('blob:')) {
+  if (host && !allowedHosts.has(host) && !url.startsWith('data:') && !url.startsWith('blob:')) {
     external.push({method: request.method(), url});
   }
 });
@@ -80,7 +84,7 @@ page.on('requestfailed', request => {
 
 page.on('response', response => {
   const url = response.url();
-  if (url.startsWith('http://localhost:5173/') && response.status() >= 400) {
+  if (allowedHosts.has(hostFor(url)) && response.status() >= 400) {
     localErrors.push({status: response.status(), url});
   }
 });
@@ -119,7 +123,11 @@ for (const position of positions) {
   }, {position, elementProbeText: elementProbe.toString()}));
 }
 
-await page.screenshot({path: screenshot, fullPage: true});
+try {
+  await page.screenshot({path: screenshot, fullPage: true});
+} catch {
+  await page.screenshot({path: screenshot, fullPage: false});
+}
 
 const result = await page.evaluate(() => ({
   title: document.title,

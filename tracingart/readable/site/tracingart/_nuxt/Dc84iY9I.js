@@ -1,0 +1,41 @@
+import { r as x } from './BBmyyArJ.js';
+import { t as P, Y as h, Z as y, _ as B, $ as G } from './s5kuwhN6.js';
+import { h as S } from './CDY68bNc.js';
+import { l as M } from './BdT36_8W.js';
+import { o as b, c as k } from './DPLBeim1.js';
+import './vxidHdmP.js';
+const t = 10,
+  m = 1.5,
+  s = 2e3,
+  C = 10,
+  $ = {
+    __name: 'ParticleTest',
+    setup(j) {
+      const { scene: c, camera: d, renderer: f } = P(),
+        n = new Float32Array(s * 3),
+        i = (360 - C * t) / t / 2;
+      for (let e = 0; e < t; e++) {
+        const o = (e * 360) / t,
+          A = o - i,
+          _ = o + i,
+          w = M(e / t, 0.5, 0.9);
+        for (let r = 0; r < s / t; r++) {
+          const p = x({ start: m * w, end: m }, { start: A, end: _ }),
+            a = (e * (s / t) + r) * 3;
+          ((n[a] = p.x), (n[a + 1] = p.y), (n[a + 2] = 0));
+        }
+      }
+      const l = new h();
+      l.setAttribute('position', new y(n, 3));
+      const g = new B({ color: 16711680, size: 0.1 }),
+        u = new G(l, g);
+      return (
+        c.add(u),
+        S(() => {
+          f.render(c, d);
+        }),
+        (e, o) => (b(), k('div'))
+      );
+    },
+  };
+export { $ as default };

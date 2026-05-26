@@ -2,7 +2,7 @@ import {createServer} from 'node:http';
 import {createReadStream, existsSync, statSync} from 'node:fs';
 import {join, normalize, resolve} from 'node:path';
 
-const root = resolve('site');
+const root = resolve(process.env.SITE_DIR || 'site');
 const port = Number(process.env.PORT || 5173);
 
 const types = new Map([
