@@ -1,0 +1,28 @@
+{
+  "name": "spree",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "docker compose up -d && turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean",
+    "server:setup": "git clone --depth 1 https://github.com/spree/spree-starter.git server && rm -rf server/.git server/.gitignore && echo 'SPREE_PATH=..' > server/.env && echo '\nServer cloned to server/. Next steps:\n  cd server\n  # edit .env if needed (DATABASE_USERNAME, etc.)\n  bin/setup\n  bin/dev\n'",
+    "server:dev": "cd server && bin/dev",
+    "server:console": "cd server && bin/rails c",
+    "server:logs": "cd server && tail -f log/development.log",
+    "server:seed": "cd server && bin/rails db:seed",
+    "server:load_sample_data": "cd server && bin/rails spree:load_sample_data",
+    "server:up": "docker compose up -d",
+    "server:down": "docker compose down"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.5"
+  },
+  "packageManager": "pnpm@10.6.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

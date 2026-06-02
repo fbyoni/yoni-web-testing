@@ -1,0 +1,51 @@
+# See https://docs.docker.com/engine/reference/builder/#dockerignore-file for more about ignoring files.
+
+# Ignore git directory.
+.git/
+.gitignore
+
+# Ignore bundler config.
+.bundle
+
+# Build-from-source: the lockfile is re-resolved inside the image against the
+# vendored ./spree path source. Keep the stale host lock out so it can't clobber it.
+Gemfile.lock
+
+# Vendored Spree monorepo: only the Ruby gems under spree/spree are needed.
+spree/.git
+spree/node_modules
+spree/packages
+spree/docs
+
+# Vendored extensions: drop VCS and JS deps, keep the Ruby gem source.
+extensions/*/.git
+extensions/*/node_modules
+
+# Ignore all environment files.
+.env*
+
+# Ignore all default key files.
+config/master.key
+config/credentials/*.key
+
+# Ignore all logfiles and tempfiles.
+log/*
+tmp/*
+!log/.keep
+!tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+tmp/pids/*
+!tmp/pids/.keep
+
+# Ignore storage (uploaded files on local disk).
+storage/*
+!storage/.keep
+
+# Ignore assets.
+/app/assets/builds/*
+!app/assets/builds/.keep
+
+# Ignore CI and Docs
+.github
+.claude

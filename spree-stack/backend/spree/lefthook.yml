@@ -1,0 +1,10 @@
+pre-commit:
+  commands:
+    typelizer-and-zod:
+      glob: "spree/api/app/serializers/**/*.rb"
+      run: |
+        echo "Serializer changes detected — regenerating TypeScript types and Zod schemas..."
+        cd spree/api && bundle exec rake typelizer:generate && cd ../..
+        cd packages/sdk && pnpm generate:zod && cd ../..
+        git add packages/sdk/src/types/generated/ packages/sdk/src/zod/generated/
+        git add packages/admin-sdk/src/types/generated/

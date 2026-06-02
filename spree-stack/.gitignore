@@ -1,0 +1,23 @@
+# Dependencies & build artifacts (regenerated via npm install / docker build)
+node_modules/
+.next/
+.turbo/
+storefront/.vercel/
+
+# Secrets & local env — committed as *.example templates instead
+.env
+.env.local
+.env*.local
+backend/.env
+
+# Rails runtime (data lives in Docker volumes, not the repo)
+backend/log/*
+backend/tmp/*
+backend/storage/*
+!**/.keep
+
+# Re-resolved inside the Docker build against the vendored path sources
+backend/Gemfile.lock
+
+# OS
+.DS_Store
