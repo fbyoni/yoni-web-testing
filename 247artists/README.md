@@ -30,11 +30,18 @@ re-deoptimize); nothing in the serve/runtime path touches it.
 | --- | --- | --- |
 | `/`, `/about-us/`, `/events/`, `/blog/`, … | `247artists.com` (WordPress) | The original 21-page mirror. |
 | `/shop/`, `/shop/products/<handle>/`, `/shop/collections/all/` | `shop.247artists.com` (Shopify "Horizon") | Exact visual replica. Cart + checkout are **mocked client-side** (`shop-mock.js`): add-to-cart, cart drawer with qty/remove, live subtotal, and a "Checkout successful" modal that resets the cart. No backend, zero external calls. |
-| `/login/` | mocked (replaces `my.247artists.com/login`) | Brand-matched login card (`login-mock.js`): validates, shows a "Login successful" modal, then resets the form. |
+| `/login/`, `/signup/` | `my.247artists.com/login` + `/signup` (React SPA) | Faithful static replicas captured from the rendered DOM (passwordless email-code UI), fully localized (CSS, vendored Google Fonts, logo + collage). Mobile-responsive to match the original. Mocked via `auth-mock.js`: validate → "Success" modal → set a shared logged-in flag → redirect to `/`. |
+
+**Auth flows.** Every login / signup / account link across the site (WordPress
+nav, Shop account icon, member CTAs) is rewritten to `/login/` or `/signup/`.
+A shared `247_logged_in` flag in `localStorage` is set on success; `local-fixes.js`
+reads it and relabels the nav "Login" → "Account" (click = sign out). The
+captured-snapshot build is `scripts/build-auth.mjs`; mock UX lives in
+`scripts/runtime/auth-mock.{js,css}`.
 
 The nav "Shop" and "Login" links on the WordPress pages are rewritten to
 `/shop/` and `/login/`. "Blog" intentionally still points to the external
-beehiiv newsletter; member-portal CTAs (Join / Upgrade) remain outbound links.
+beehiiv newsletter; non-auth member CTAs (Upgrade) remain outbound links.
 The Shop scraper is `scripts/scrape-shop.mjs`; Shopify third-party stripping is
 `scripts/clean-shop.mjs`; mock UX sources live in `scripts/runtime/`.
 
