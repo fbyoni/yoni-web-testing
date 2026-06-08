@@ -1,0 +1,41 @@
+import { Component } from "@theme/component";
+import { debounce, requestIdleCallback } from "@theme/utilities";
+export class AnchoredPopoverComponent extends Component {
+  requiredRefs = ["popover", "trigger"];
+  #updatePosition = async () => {
+    const popover = this.refs.popover,
+      trigger = this.refs.trigger;
+    if (!popover || !trigger) return;
+    const positions = trigger.getBoundingClientRect();
+    (popover.style.setProperty("--anchor-top", `${positions.top}`),
+      popover.style.setProperty("--anchor-right", `${window.innerWidth - positions.right}`),
+      popover.style.setProperty("--anchor-bottom", `${window.innerHeight - positions.bottom}`),
+      popover.style.setProperty("--anchor-left", `${positions.left}`));
+  };
+  #resizeListener = debounce(() => {
+    if (this.dataset.closeOnResize) {
+      const popover = this.refs.popover;
+      popover && popover.matches(":popover-open") && popover.hidePopover();
+    }
+  }, 100);
+  connectedCallback() {
+    (super.connectedCallback(),
+      this.refs.popover?.addEventListener("beforetoggle", (event) => {
+        const evt = event;
+        (this.#updatePosition(),
+          window[evt.newState === "open" ? "addEventListener" : "removeEventListener"](
+            "resize",
+            this.#resizeListener,
+          ));
+      }),
+      requestIdleCallback(() => {
+        this.#updatePosition();
+      }));
+  }
+  disconnectedCallback() {
+    (super.disconnectedCallback(), window.removeEventListener("resize", this.#resizeListener));
+  }
+}
+customElements.get("anchored-popover-component") ||
+  customElements.define("anchored-popover-component", AnchoredPopoverComponent);
+//# sourceMappingURL=/cdn/shop/t/3/assets/anchored-popover.js.map?v=143092715850611436701754421400

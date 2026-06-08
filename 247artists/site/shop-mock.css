@@ -1,0 +1,290 @@
+/* shop-mock.css — on-brand cart drawer + checkout modal for the mocked shop.
+ * Uses the Horizon theme's CSS custom properties where available so it matches
+ * the store's look (Inter font, color scheme tokens). Falls back gracefully. */
+
+:root {
+  --mock-fg: rgb(var(--color-foreground-rgb, 18 18 18));
+  --mock-bg: rgb(var(--color-background-rgb, 255 255 255));
+  --mock-border: rgb(var(--color-border-rgb, 18 18 18) / 0.16);
+  --mock-accent: rgb(var(--color-foreground-rgb, 18 18 18));
+  --mock-font: var(--font-body--family, Inter, sans-serif);
+}
+
+.mock-cart-lock {
+  overflow: hidden;
+}
+
+/* ---- header count badge (fallback, layered over the cart icon) ---- */
+.mock-cart-count {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--mock-accent);
+  color: var(--mock-bg);
+  font: 600 11px/18px var(--mock-font);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* ---- overlay + drawer ---- */
+.mock-cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 2147483600;
+}
+.mock-cart-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mock-cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 420px;
+  max-width: 92vw;
+  background: var(--mock-bg);
+  color: var(--mock-fg);
+  font-family: var(--mock-font);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2147483601;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+}
+.mock-cart-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mock-cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--mock-border);
+}
+.mock-cart-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.mock-cart-close {
+  background: none;
+  border: none;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+  padding: 0 4px;
+}
+
+.mock-cart-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 12px 24px;
+}
+.mock-cart-empty {
+  text-align: center;
+  color: rgb(var(--color-foreground-rgb, 18 18 18) / 0.6);
+  margin-top: 48px;
+  font-size: 15px;
+}
+
+.mock-line {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--mock-border);
+  align-items: start;
+}
+.mock-line-img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: rgb(var(--color-foreground-rgb, 18 18 18) / 0.05);
+}
+.mock-line-img--blank {
+  display: block;
+}
+.mock-line-info {
+  min-width: 0;
+}
+.mock-line-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  line-height: 1.3;
+}
+.mock-line-title:hover {
+  text-decoration: underline;
+}
+.mock-line-variant {
+  font-size: 12px;
+  color: rgb(var(--color-foreground-rgb, 18 18 18) / 0.6);
+  margin-top: 2px;
+}
+.mock-line-price {
+  font-size: 13px;
+  margin-top: 4px;
+}
+.mock-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+.mock-qty-btn {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--mock-border);
+  background: var(--mock-bg);
+  color: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.mock-qty-val {
+  min-width: 22px;
+  text-align: center;
+  font-size: 14px;
+}
+.mock-line-remove {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  color: rgb(var(--color-foreground-rgb, 18 18 18) / 0.55);
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+.mock-line-total {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.mock-cart-foot {
+  border-top: 1px solid var(--mock-border);
+  padding: 20px 24px 24px;
+}
+.mock-cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.mock-cart-checkout {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--style-border-radius-buttons, 4px);
+  background: var(--mock-accent);
+  color: var(--mock-bg);
+  font: 600 15px var(--mock-font);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+.mock-cart-checkout:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.mock-cart-note {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(var(--color-foreground-rgb, 18 18 18) / 0.55);
+  margin: 12px 0 0;
+}
+
+/* ---- checkout success modal ---- */
+.mock-checkout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483602;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mock-font);
+}
+.mock-checkout-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.mock-checkout-card {
+  position: relative;
+  background: var(--mock-bg);
+  color: var(--mock-fg);
+  width: 380px;
+  max-width: 90vw;
+  border-radius: 8px;
+  padding: 36px 32px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  animation: mock-pop 0.25s ease;
+}
+@keyframes mock-pop {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.mock-checkout-check {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #1a7f37;
+  color: #fff;
+  font-size: 34px;
+  line-height: 64px;
+}
+.mock-checkout-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.mock-checkout-sub {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: rgb(var(--color-foreground-rgb, 18 18 18) / 0.7);
+}
+.mock-checkout-total {
+  margin: 0 0 22px;
+  font-size: 15px;
+}
+.mock-checkout-done {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--style-border-radius-buttons, 4px);
+  background: var(--mock-accent);
+  color: var(--mock-bg);
+  font: 600 15px var(--mock-font);
+  cursor: pointer;
+}

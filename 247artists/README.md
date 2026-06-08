@@ -24,6 +24,20 @@ external domains** — every JS/CSS/font/image is served from disk.
 minified bundles purely for reference (e.g. to diff against the live site or
 re-deoptimize); nothing in the serve/runtime path touches it.
 
+### Routes
+
+| Route | Source | Notes |
+| --- | --- | --- |
+| `/`, `/about-us/`, `/events/`, `/blog/`, … | `247artists.com` (WordPress) | The original 21-page mirror. |
+| `/shop/`, `/shop/products/<handle>/`, `/shop/collections/all/` | `shop.247artists.com` (Shopify "Horizon") | Exact visual replica. Cart + checkout are **mocked client-side** (`shop-mock.js`): add-to-cart, cart drawer with qty/remove, live subtotal, and a "Checkout successful" modal that resets the cart. No backend, zero external calls. |
+| `/login/` | mocked (replaces `my.247artists.com/login`) | Brand-matched login card (`login-mock.js`): validates, shows a "Login successful" modal, then resets the form. |
+
+The nav "Shop" and "Login" links on the WordPress pages are rewritten to
+`/shop/` and `/login/`. "Blog" intentionally still points to the external
+beehiiv newsletter; member-portal CTAs (Join / Upgrade) remain outbound links.
+The Shop scraper is `scripts/scrape-shop.mjs`; Shopify third-party stripping is
+`scripts/clean-shop.mjs`; mock UX sources live in `scripts/runtime/`.
+
 ## Serve it (readable)
 
 ```bash

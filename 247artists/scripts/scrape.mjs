@@ -440,11 +440,18 @@ function rewriteContent(text, baseUrl = ORIGIN) {
     return `${prefix}${rewritten}${suffix}`;
   });
 
-  out = out.replace(/url\(([^)]+)\)/gi, (full, value) => {
-    const quote = value.trim().startsWith('"') ? '"' : value.trim().startsWith("'") ? "'" : '';
-    const clean = value.trim().replace(/^['"]|['"]$/g, '');
+  // CSS url(...) — but ONLY at a word boundary, so we never match inside JS
+  // identifiers like `new URL(` or `getImageURL(`. Preserve the original
+  // open-token case and only rewrite when the value is an actual URL that
+  // changes, so non-URL constructs pass through byte-for-byte.
+  out = out.replace(/(\burl\()([^)]+)(\))/gi, (full, open, value, close) => {
+    const trimmed = value.trim();
+    const quote = trimmed.startsWith('"') ? '"' : trimmed.startsWith("'") ? "'" : '';
+    const clean = trimmed.replace(/^['"]|['"]$/g, '');
+    if (!isUrlish(clean)) return full;
     const rewritten = replaceUrlLike(clean, baseUrl);
-    return `url(${quote}${rewritten}${quote})`;
+    if (rewritten === clean) return full;
+    return `${open}${quote}${rewritten}${quote}${close}`;
   });
 
   // --- Catch-all for URLs living inside inline JS / JSON islands (Rank Math
