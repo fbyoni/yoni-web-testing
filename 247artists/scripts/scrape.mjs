@@ -4,7 +4,9 @@ import {dirname, extname, join, relative, resolve} from 'node:path';
 import {promisify} from 'node:util';
 
 const ORIGIN = 'https://247artists.com';
-const OUT_DIR = resolve('site');
+// Raw scrape lands in legacy/ (the minified archive). `npm run deoptimize`
+// pretty-prints it into the served site/ directory. See README.md.
+const OUT_DIR = resolve('legacy');
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/537.36 247artists-local-mirror/1.0';
 const MAX_ASSETS = 3000;
 const FETCH_DELAY_MS = 100;

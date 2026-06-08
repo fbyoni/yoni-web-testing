@@ -8,6 +8,7 @@
     "clean": "node scripts/clean-external.mjs",
     "shim": "node scripts/inject-shim.mjs",
     "deoptimize": "node scripts/deoptimize.mjs",
+    "build": "npm run scrape && npm run clean && npm run shim && npm run deoptimize",
     "serve": "node server.mjs",
     "verify:puppeteer": "node scripts/puppeteer-remote-smoke.mjs"
   },

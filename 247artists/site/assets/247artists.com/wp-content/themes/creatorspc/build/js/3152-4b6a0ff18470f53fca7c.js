@@ -1,1 +1,265 @@
-"use strict";(self.webpackChunkcreatorspc=self.webpackChunkcreatorspc||[]).push([[3152],{3152:(t,s,i)=>{i.r(s);var e=i(8760),h=i(8520),o=i(5216),n=i(314),r=i(8188);h.w$.registerPlugin(o.k,n.c,r.c),window.plr.controllers.SFeaturesHome=class extends e.c{init(){super.init();const{canvas:t}=this.refs;this.ctx=t.getContext("2d"),this.render={width:window.safeWidth,height:window.safeHeight,dpi:window.devicePixelRatio},this.progress=0,this.totalLines=6,this.isPaused=!1,this.setCanvasSize(),this.initLines(),luge&&luge.emitter.once("beforePageInit",this.initScroll.bind(this))}onResize(){this.setCanvasSize(),this.initLines(),this.initScroll()}onViewportIn(){this.isPaused=!1}onViewportOut(){this.isPaused=!0}setCanvasSize(){const{canvas:t}=this.refs;this.render={width:window.safeWidth,height:window.safeHeight,dpi:window.devicePixelRatio},t.width=this.render.width*this.render.dpi,t.height=this.render.height*this.render.dpi}initLines(){this.lines=[];for(let t=0;t<this.totalLines;t++)this.lines.push({points:[],start:0,end:.1});this.setLines()}setLines(){const{features:t}=this.refs,s=t.getBoundingClientRect(),i=s.width,e=s.height;this.steps=[],this.steps.push({p1:{x:s.left+.198*i-(window.safeWidth<987?.3*i:0)-i*this.progress*.0125,y:-.1*e},p2:{x:s.left+.245*i-(window.safeWidth<987?.25*i:0)+i*this.progress*.025,y:-.1*e}}),this.steps.push({p1:{x:s.left+.35*i-i*this.progress*.05-(window.safeWidth<987?.1*i:0),y:.4*e}});const h=.125*i;this.steps[1].p2={x:Math.cos(-25*Math.PI/180)*h+this.steps[1].p1.x+i*this.progress*.1+(window.safeWidth<987?.1*i:0),y:Math.sin(-25*Math.PI/180)*h+this.steps[1].p1.y},this.steps.push({p1:{x:s.left+i*(1.25-.25*this.progress),y:2*e},p2:{x:s.left+i*(1.75+this.progress)+e,y:e}});for(let t=0;t<this.totalLines;t++)this.lines[t].points=[];this.steps.forEach(((t,s)=>{const i=t.p2.x-t.p1.x,e=t.p2.y-t.p1.y,h=i/this.totalLines,o=e/this.totalLines;for(let s=0;s<this.totalLines;s++){const i={x:t.p1.x+h*s,y:t.p1.y+o*s};this.lines[s].points.push(i)}}))}initScroll(){const{content:t,feature:s,ruler:i,title:e,suptitle:o}=this.refs,n=i.offsetWidth,a=i.offsetHeight,d=s[0].offsetWidth,l=s[0].offsetHeight;this.tl&&this.tl.revert(),this.titleSt&&this.titleSt.revert(),this.titleSt=new r.c(e,{type:"chars,words,lines",linesClass:"line",wordsClass:"word",charsClass:"char"}),this.tl=h.w$.timeline({scrollTrigger:{trigger:this.el,start:"top 125%",end:window.safeWidth<576?"bottom -25%":"bottom 25%",scrub:.5}});let w=0,p=1.5;window.safeWidth<576?(w+=1.2,p+=.15):window.safeWidth<767?(w+=1.2,p+=.2):window.safeWidth<987&&(w+=1.2,p+=0),this.tl.fromTo(this.lines,{end:0},{end:1,duration:4,ease:"linear",stagger:-.05},.25),this.tl.fromTo([o,...this.titleSt.lines],{y:.5*window.safeHeight},{y:0,ease:"power3.out",duration:1.5,stagger:{each:"0.05"}},1),window.safeWidth<987&&this.tl.fromTo(t,{y:"-75%"},{y:"50%",ease:"power3.inOut",duration:.6},0),s.forEach(((t,s)=>{const i=s;t.style.zIndex=i,this.tl.fromTo(t,{y:a+1},{y:0,ease:"power2.inOut",duration:.5},w+0),w=p+.5,this.tl.to(t,{x:-1*n,y:-window.safeHeight+(window.safeHeight-l+(window.safeWidth<987?0:a))/2,ease:"power3.inOut",duration:1.1},p),this.tl.to(t,{rotateX:0,ease:"power3.inOut",duration:1.1},p),this.tl.to(t,{rotateZ:-65,rotateY:45,rotateX:-180,scale:0,ease:"power1.inOut",duration:1.5},p+1.1),this.tl.to(t,{x:-2*d,ease:"power1.inOut",duration:1.5},p+1.1),this.tl.to(t,{y:-1*(window.safeHeight+.5*l),ease:"power1.inOut",duration:1.5},p+1.1),p+=1})),this.tl.fromTo(this.lines,{start:0},{start:.5,duration:3,ease:"linear",stagger:-.05},"-=2"),this.tl.to([o,...this.titleSt.lines],{y:"-20vh",ease:"power3.in",duration:2},"-=2")}drawLines(){const{ctx:t,lines:s}=this;s.forEach((s=>{const{points:i}=s;let e="";const h=.1,n=i[0];e+=`M ${n.x} ${n.y} `,i.forEach(((t,s)=>{const o={},n=i[s-1]??t,r=t.x-n.x,a=t.y-n.y,d=Math.hypot(r,a),l=Math.atan2(a,r);o.x=n.x+Math.cos(l)*d*h,o.y=n.y+Math.sin(l)*d*h;const w={},p=i[s+1]??t,c=p.x-t.x,f=p.y-t.y,u=Math.hypot(c,f),g=Math.atan2(f,c);w.x=t.x-Math.cos(g)*u*h,w.y=t.y-Math.sin(g)*u*h,e+=`C ${o.x} ${o.y} ${w.x} ${w.y} ${t.x} ${t.y} `}));const r=o.k.stringToRawPath(e),a=o.k.sliceRawPath(r,s.start,s.end),d=new Path2D(o.k.rawPathToString(a));t.strokeStyle="#2A2925",t.stroke(d)}))}tick(t){if(this.isPaused)return;const{canvas:s}=this.refs,{ctx:i,render:e}=this,h=this.tl?this.tl.progress():0;this.progress+=1*(h-this.progress),i.clearRect(0,0,s.width,s.height),i.save(),i.scale(e.dpi,e.dpi),this.setLines(),this.drawLines(),i.restore()}}}}]);
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [3152],
+  {
+    3152: (t, s, i) => {
+      i.r(s);
+      var e = i(8760),
+        h = i(8520),
+        o = i(5216),
+        n = i(314),
+        r = i(8188);
+      (h.w$.registerPlugin(o.k, n.c, r.c),
+        (window.plr.controllers.SFeaturesHome = class extends e.c {
+          init() {
+            super.init();
+            const { canvas: t } = this.refs;
+            ((this.ctx = t.getContext("2d")),
+              (this.render = {
+                width: window.safeWidth,
+                height: window.safeHeight,
+                dpi: window.devicePixelRatio,
+              }),
+              (this.progress = 0),
+              (this.totalLines = 6),
+              (this.isPaused = !1),
+              this.setCanvasSize(),
+              this.initLines(),
+              luge && luge.emitter.once("beforePageInit", this.initScroll.bind(this)));
+          }
+          onResize() {
+            (this.setCanvasSize(), this.initLines(), this.initScroll());
+          }
+          onViewportIn() {
+            this.isPaused = !1;
+          }
+          onViewportOut() {
+            this.isPaused = !0;
+          }
+          setCanvasSize() {
+            const { canvas: t } = this.refs;
+            ((this.render = {
+              width: window.safeWidth,
+              height: window.safeHeight,
+              dpi: window.devicePixelRatio,
+            }),
+              (t.width = this.render.width * this.render.dpi),
+              (t.height = this.render.height * this.render.dpi));
+          }
+          initLines() {
+            this.lines = [];
+            for (let t = 0; t < this.totalLines; t++)
+              this.lines.push({ points: [], start: 0, end: 0.1 });
+            this.setLines();
+          }
+          setLines() {
+            const { features: t } = this.refs,
+              s = t.getBoundingClientRect(),
+              i = s.width,
+              e = s.height;
+            ((this.steps = []),
+              this.steps.push({
+                p1: {
+                  x:
+                    s.left +
+                    0.198 * i -
+                    (window.safeWidth < 987 ? 0.3 * i : 0) -
+                    i * this.progress * 0.0125,
+                  y: -0.1 * e,
+                },
+                p2: {
+                  x:
+                    s.left +
+                    0.245 * i -
+                    (window.safeWidth < 987 ? 0.25 * i : 0) +
+                    i * this.progress * 0.025,
+                  y: -0.1 * e,
+                },
+              }),
+              this.steps.push({
+                p1: {
+                  x:
+                    s.left +
+                    0.35 * i -
+                    i * this.progress * 0.05 -
+                    (window.safeWidth < 987 ? 0.1 * i : 0),
+                  y: 0.4 * e,
+                },
+              }));
+            const h = 0.125 * i;
+            ((this.steps[1].p2 = {
+              x:
+                Math.cos((-25 * Math.PI) / 180) * h +
+                this.steps[1].p1.x +
+                i * this.progress * 0.1 +
+                (window.safeWidth < 987 ? 0.1 * i : 0),
+              y: Math.sin((-25 * Math.PI) / 180) * h + this.steps[1].p1.y,
+            }),
+              this.steps.push({
+                p1: { x: s.left + i * (1.25 - 0.25 * this.progress), y: 2 * e },
+                p2: { x: s.left + i * (1.75 + this.progress) + e, y: e },
+              }));
+            for (let t = 0; t < this.totalLines; t++) this.lines[t].points = [];
+            this.steps.forEach((t, s) => {
+              const i = t.p2.x - t.p1.x,
+                e = t.p2.y - t.p1.y,
+                h = i / this.totalLines,
+                o = e / this.totalLines;
+              for (let s = 0; s < this.totalLines; s++) {
+                const i = { x: t.p1.x + h * s, y: t.p1.y + o * s };
+                this.lines[s].points.push(i);
+              }
+            });
+          }
+          initScroll() {
+            const { content: t, feature: s, ruler: i, title: e, suptitle: o } = this.refs,
+              n = i.offsetWidth,
+              a = i.offsetHeight,
+              d = s[0].offsetWidth,
+              l = s[0].offsetHeight;
+            (this.tl && this.tl.revert(),
+              this.titleSt && this.titleSt.revert(),
+              (this.titleSt = new r.c(e, {
+                type: "chars,words,lines",
+                linesClass: "line",
+                wordsClass: "word",
+                charsClass: "char",
+              })),
+              (this.tl = h.w$.timeline({
+                scrollTrigger: {
+                  trigger: this.el,
+                  start: "top 125%",
+                  end: window.safeWidth < 576 ? "bottom -25%" : "bottom 25%",
+                  scrub: 0.5,
+                },
+              })));
+            let w = 0,
+              p = 1.5;
+            (window.safeWidth < 576
+              ? ((w += 1.2), (p += 0.15))
+              : window.safeWidth < 767
+                ? ((w += 1.2), (p += 0.2))
+                : window.safeWidth < 987 && ((w += 1.2), (p += 0)),
+              this.tl.fromTo(
+                this.lines,
+                { end: 0 },
+                { end: 1, duration: 4, ease: "linear", stagger: -0.05 },
+                0.25,
+              ),
+              this.tl.fromTo(
+                [o, ...this.titleSt.lines],
+                { y: 0.5 * window.safeHeight },
+                { y: 0, ease: "power3.out", duration: 1.5, stagger: { each: "0.05" } },
+                1,
+              ),
+              window.safeWidth < 987 &&
+                this.tl.fromTo(
+                  t,
+                  { y: "-75%" },
+                  { y: "50%", ease: "power3.inOut", duration: 0.6 },
+                  0,
+                ),
+              s.forEach((t, s) => {
+                const i = s;
+                ((t.style.zIndex = i),
+                  this.tl.fromTo(
+                    t,
+                    { y: a + 1 },
+                    { y: 0, ease: "power2.inOut", duration: 0.5 },
+                    w + 0,
+                  ),
+                  (w = p + 0.5),
+                  this.tl.to(
+                    t,
+                    {
+                      x: -1 * n,
+                      y:
+                        -window.safeHeight +
+                        (window.safeHeight - l + (window.safeWidth < 987 ? 0 : a)) / 2,
+                      ease: "power3.inOut",
+                      duration: 1.1,
+                    },
+                    p,
+                  ),
+                  this.tl.to(t, { rotateX: 0, ease: "power3.inOut", duration: 1.1 }, p),
+                  this.tl.to(
+                    t,
+                    {
+                      rotateZ: -65,
+                      rotateY: 45,
+                      rotateX: -180,
+                      scale: 0,
+                      ease: "power1.inOut",
+                      duration: 1.5,
+                    },
+                    p + 1.1,
+                  ),
+                  this.tl.to(t, { x: -2 * d, ease: "power1.inOut", duration: 1.5 }, p + 1.1),
+                  this.tl.to(
+                    t,
+                    { y: -1 * (window.safeHeight + 0.5 * l), ease: "power1.inOut", duration: 1.5 },
+                    p + 1.1,
+                  ),
+                  (p += 1));
+              }),
+              this.tl.fromTo(
+                this.lines,
+                { start: 0 },
+                { start: 0.5, duration: 3, ease: "linear", stagger: -0.05 },
+                "-=2",
+              ),
+              this.tl.to(
+                [o, ...this.titleSt.lines],
+                { y: "-20vh", ease: "power3.in", duration: 2 },
+                "-=2",
+              ));
+          }
+          drawLines() {
+            const { ctx: t, lines: s } = this;
+            s.forEach((s) => {
+              const { points: i } = s;
+              let e = "";
+              const h = 0.1,
+                n = i[0];
+              ((e += `M ${n.x} ${n.y} `),
+                i.forEach((t, s) => {
+                  const o = {},
+                    n = i[s - 1] ?? t,
+                    r = t.x - n.x,
+                    a = t.y - n.y,
+                    d = Math.hypot(r, a),
+                    l = Math.atan2(a, r);
+                  ((o.x = n.x + Math.cos(l) * d * h), (o.y = n.y + Math.sin(l) * d * h));
+                  const w = {},
+                    p = i[s + 1] ?? t,
+                    c = p.x - t.x,
+                    f = p.y - t.y,
+                    u = Math.hypot(c, f),
+                    g = Math.atan2(f, c);
+                  ((w.x = t.x - Math.cos(g) * u * h),
+                    (w.y = t.y - Math.sin(g) * u * h),
+                    (e += `C ${o.x} ${o.y} ${w.x} ${w.y} ${t.x} ${t.y} `));
+                }));
+              const r = o.k.stringToRawPath(e),
+                a = o.k.sliceRawPath(r, s.start, s.end),
+                d = new Path2D(o.k.rawPathToString(a));
+              ((t.strokeStyle = "#2A2925"), t.stroke(d));
+            });
+          }
+          tick(t) {
+            if (this.isPaused) return;
+            const { canvas: s } = this.refs,
+              { ctx: i, render: e } = this,
+              h = this.tl ? this.tl.progress() : 0;
+            ((this.progress += 1 * (h - this.progress)),
+              i.clearRect(0, 0, s.width, s.height),
+              i.save(),
+              i.scale(e.dpi, e.dpi),
+              this.setLines(),
+              this.drawLines(),
+              i.restore());
+          }
+        }));
+    },
+  },
+]);

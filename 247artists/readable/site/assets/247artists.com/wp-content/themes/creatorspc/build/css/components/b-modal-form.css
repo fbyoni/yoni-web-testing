@@ -1,9 +1,0 @@
-.b-modal-form {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-.b-modal-form .b__title {
-  margin-bottom: 1.2631em;
-  font: 600 2.111rem/1 var(--font-family-heading);
-}

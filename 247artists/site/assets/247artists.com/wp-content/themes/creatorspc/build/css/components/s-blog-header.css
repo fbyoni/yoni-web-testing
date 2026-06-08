@@ -1,1 +1,276 @@
-.s-blog-header{padding-top:6.1111rem}@media only screen and (max-width: 987px){.s-blog-header{padding-top:6.6666rem}}.s-blog-header .u-container{position:relative;display:flex;background:var(--color-white-2);border:1px solid var(--color-black)}@media only screen and (max-width: 1536px){.s-blog-header .u-container{flex-direction:column}}.s-blog-header .s__content{padding:1.7777rem 1.1111rem 1.6666rem}@media only screen and (max-width: 1536px){.s-blog-header .s__content{padding:.8333rem .555rem}}.s-blog-header .s__title{max-width:12.931em;font:550 3.222rem/1 var(--font-family-heading);letter-spacing:-0.06em}@media only screen and (max-width: 767px)and (orientation: landscape),only screen and (max-width: 576px){.s-blog-header .s__title{color:#2f2f39;font-size:1.555rem}}.s-blog-header .s__desc{margin:1.125em 0 .3125em;max-width:32.7777rem;font:500 .8888rem/1 var(--font-family-text)}.s-blog-header .s__nav{display:flex;flex-direction:row;align-items:center;justify-content:space-between;position:absolute;right:0;bottom:0;margin-bottom:2.111rem}@media only screen and (max-width: 1536px){.s-blog-header .s__nav{position:relative;align-items:normal;margin:0}}.s-blog-header .s__cats-mobile{display:none;padding:.5555rem;width:calc(100% - 3.222rem);border-top:1px solid var(--color-black)}@media only screen and (max-width: 1536px){.s-blog-header .s__cats-mobile{display:block}}.s-blog-header .s__cats-mobile select{padding:.6875em .625em;width:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;background:url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-select-arrow.svg") no-repeat calc(100% - 10px) center/12px 8px;border:1px solid var(--color-black);border-radius:0;color:var(--color-black);font:500 .888rem/1 var(--font-family-text)}.s-blog-header .s__cats{display:flex;align-self:normal;gap:2.1052em;margin:0;padding:0;list-style:none;font:500 1.0555rem/1 var(--font-family-text)}@media only screen and (max-width: 1680px){.s-blog-header .s__cats{gap:1.5em}}@media only screen and (max-width: 1536px){.s-blog-header .s__cats{display:none}}.s-blog-header .s__cats:has(li:hover:not(.is-active)) li.is-active:after{transform:scaleY(0)}.s-blog-header .s__cats li{position:relative;display:flex;align-items:center;white-space:nowrap}.s-blog-header .s__cats li:after{position:absolute;top:calc(100% + 2.111rem - 1.3684em + .5px);right:0;left:0;margin:0 auto;width:3px;height:1.3684em;background:var(--color-brand-1);transform:scaleY(0);transform-origin:bottom;transition:transform .2s cubic-bezier(0.86, 0, 0.07, 1);content:""}@media only screen and (max-width: 987px){.s-blog-header .s__cats li:after{top:calc(100% + 1rem - 1.3684em + .5px)}}.s-blog-header .s__cats li.is-active:after,.s-blog-header .s__cats li:hover:after,.s-blog-header .s__cats li:focus:after{transform:scaleY(1)}@media only screen and (max-width: 1536px){.s-blog-header .s__form:before{position:absolute;left:0;display:block;width:2.444rem;height:100%;background:var(--color-white-2) url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-close-search.svg") no-repeat center;border-top:1px solid var(--color-black);opacity:0;content:""}}@media only screen and (max-width: 1536px){.s-blog-header .s__form:focus-within:before{opacity:1}}.s-blog-header .s__btn{display:none}@media only screen and (max-width: 1536px){.s-blog-header .s__btn{position:absolute;top:0;right:0;z-index:3;padding:0;width:3.222rem;height:100%;background:none;border:none;cursor:pointer}}.s-blog-header .s__input{position:relative;display:flex;margin:0 1.1111rem 0 2.1111rem;width:1.9444rem;min-width:1.9444rem;height:1.8888rem;background:var(--color-white-2);border:1px solid var(--color-black);border-right:3px solid var(--color-brand-1);transition:min-width .5s cubic-bezier(0.86, 0, 0.07, 1)}@media only screen and (max-width: 1536px){.s-blog-header .s__input{position:absolute;right:0;margin:0;width:3.222rem;height:100%;border-width:1px 0 0 1px;transition:none}}.s-blog-header .s__input:after{position:absolute;top:0;bottom:0;left:.3888rem;z-index:2;margin:auto 0;width:.9444rem;height:.9444rem;background:url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-search.svg") no-repeat center/contain;transition:opacity .5s cubic-bezier(0.86, 0, 0.07, 1);content:"";pointer-events:none}@media only screen and (max-width: 1536px){.s-blog-header .s__input:after{right:1rem;left:auto;width:1.2222rem;height:1.2222rem;transition:none}}.s-blog-header .s__input ::-moz-placeholder{opacity:1;color:#2f2f39}.s-blog-header .s__input ::placeholder{opacity:1;color:#2f2f39}.s-blog-header .s__input input{padding:0 .5882em;width:100%;height:100%;background:#fff;border:none;opacity:0;font:500 .944rem/1 var(--font-family-text);letter-spacing:-0.06em;transition:opacity .5s cubic-bezier(0.86, 0, 0.07, 1)}@media only screen and (max-width: 1536px){.s-blog-header .s__input input{font-size:1.222rem;transition:none}}.s-blog-header .s__input:focus-within{min-width:11.1111rem}@media only screen and (max-width: 987px){.s-blog-header .s__input:focus-within{min-width:9rem}}@media only screen and (max-width: 1536px){.s-blog-header .s__input:focus-within{min-width:calc(100% - 2.444rem)}}.s-blog-header .s__input:focus-within input{opacity:1}.s-blog-header .s__input:focus-within:after{opacity:0}@media only screen and (max-width: 1536px){.s-blog-header .s__input:focus-within:after{opacity:1}}@media only screen and (max-width: 1536px){.s-blog-header .s__input:focus-within .s__btn{display:block}}
+.s-blog-header {
+  padding-top: 6.1111rem;
+}
+@media only screen and (max-width: 987px) {
+  .s-blog-header {
+    padding-top: 6.6666rem;
+  }
+}
+.s-blog-header .u-container {
+  position: relative;
+  display: flex;
+  background: var(--color-white-2);
+  border: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .u-container {
+    flex-direction: column;
+  }
+}
+.s-blog-header .s__content {
+  padding: 1.7777rem 1.1111rem 1.6666rem;
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__content {
+    padding: 0.8333rem 0.555rem;
+  }
+}
+.s-blog-header .s__title {
+  max-width: 12.931em;
+  font: 550 3.222rem/1 var(--font-family-heading);
+  letter-spacing: -0.06em;
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-blog-header .s__title {
+    color: #2f2f39;
+    font-size: 1.555rem;
+  }
+}
+.s-blog-header .s__desc {
+  margin: 1.125em 0 0.3125em;
+  max-width: 32.7777rem;
+  font: 500 0.8888rem/1 var(--font-family-text);
+}
+.s-blog-header .s__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 2.111rem;
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__nav {
+    position: relative;
+    align-items: normal;
+    margin: 0;
+  }
+}
+.s-blog-header .s__cats-mobile {
+  display: none;
+  padding: 0.5555rem;
+  width: calc(100% - 3.222rem);
+  border-top: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__cats-mobile {
+    display: block;
+  }
+}
+.s-blog-header .s__cats-mobile select {
+  padding: 0.6875em 0.625em;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  background: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-select-arrow.svg")
+    no-repeat calc(100% - 10px) center/12px 8px;
+  border: 1px solid var(--color-black);
+  border-radius: 0;
+  color: var(--color-black);
+  font: 500 0.888rem/1 var(--font-family-text);
+}
+.s-blog-header .s__cats {
+  display: flex;
+  align-self: normal;
+  gap: 2.1052em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 500 1.0555rem/1 var(--font-family-text);
+}
+@media only screen and (max-width: 1680px) {
+  .s-blog-header .s__cats {
+    gap: 1.5em;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__cats {
+    display: none;
+  }
+}
+.s-blog-header .s__cats:has(li:hover:not(.is-active)) li.is-active:after {
+  transform: scaleY(0);
+}
+.s-blog-header .s__cats li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.s-blog-header .s__cats li:after {
+  position: absolute;
+  top: calc(100% + 2.111rem - 1.3684em + 0.5px);
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 3px;
+  height: 1.3684em;
+  background: var(--color-brand-1);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+  content: "";
+}
+@media only screen and (max-width: 987px) {
+  .s-blog-header .s__cats li:after {
+    top: calc(100% + 1rem - 1.3684em + 0.5px);
+  }
+}
+.s-blog-header .s__cats li.is-active:after,
+.s-blog-header .s__cats li:hover:after,
+.s-blog-header .s__cats li:focus:after {
+  transform: scaleY(1);
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__form:before {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 2.444rem;
+    height: 100%;
+    background: var(--color-white-2)
+      url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-close-search.svg")
+      no-repeat center;
+    border-top: 1px solid var(--color-black);
+    opacity: 0;
+    content: "";
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__form:focus-within:before {
+    opacity: 1;
+  }
+}
+.s-blog-header .s__btn {
+  display: none;
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    padding: 0;
+    width: 3.222rem;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+.s-blog-header .s__input {
+  position: relative;
+  display: flex;
+  margin: 0 1.1111rem 0 2.1111rem;
+  width: 1.9444rem;
+  min-width: 1.9444rem;
+  height: 1.8888rem;
+  background: var(--color-white-2);
+  border: 1px solid var(--color-black);
+  border-right: 3px solid var(--color-brand-1);
+  transition: min-width 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    width: 3.222rem;
+    height: 100%;
+    border-width: 1px 0 0 1px;
+    transition: none;
+  }
+}
+.s-blog-header .s__input:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.3888rem;
+  z-index: 2;
+  margin: auto 0;
+  width: 0.9444rem;
+  height: 0.9444rem;
+  background: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-search.svg")
+    no-repeat center/contain;
+  transition: opacity 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  content: "";
+  pointer-events: none;
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input:after {
+    right: 1rem;
+    left: auto;
+    width: 1.2222rem;
+    height: 1.2222rem;
+    transition: none;
+  }
+}
+.s-blog-header .s__input ::-moz-placeholder {
+  opacity: 1;
+  color: #2f2f39;
+}
+.s-blog-header .s__input ::placeholder {
+  opacity: 1;
+  color: #2f2f39;
+}
+.s-blog-header .s__input input {
+  padding: 0 0.5882em;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: none;
+  opacity: 0;
+  font: 500 0.944rem/1 var(--font-family-text);
+  letter-spacing: -0.06em;
+  transition: opacity 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input input {
+    font-size: 1.222rem;
+    transition: none;
+  }
+}
+.s-blog-header .s__input:focus-within {
+  min-width: 11.1111rem;
+}
+@media only screen and (max-width: 987px) {
+  .s-blog-header .s__input:focus-within {
+    min-width: 9rem;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input:focus-within {
+    min-width: calc(100% - 2.444rem);
+  }
+}
+.s-blog-header .s__input:focus-within input {
+  opacity: 1;
+}
+.s-blog-header .s__input:focus-within:after {
+  opacity: 0;
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input:focus-within:after {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1536px) {
+  .s-blog-header .s__input:focus-within .s__btn {
+    display: block;
+  }
+}

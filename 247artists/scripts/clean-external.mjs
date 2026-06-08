@@ -21,7 +21,9 @@ import {readFile, writeFile} from 'node:fs/promises';
 import {readdirSync, statSync} from 'node:fs';
 import {join, resolve} from 'node:path';
 
-const ROOT = resolve('site');
+// Operates on the raw minified archive (legacy/); the readable served copy in
+// site/ is regenerated from it by `npm run deoptimize`.
+const ROOT = resolve('legacy');
 
 // Hosts whose mention inside an inline <script> means "third-party loader".
 // 247artists.com is a WordPress site; the only off-host runtime calls come

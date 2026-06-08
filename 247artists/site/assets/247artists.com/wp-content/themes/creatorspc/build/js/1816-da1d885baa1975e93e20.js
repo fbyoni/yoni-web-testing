@@ -1,1 +1,20 @@
-"use strict";(self.webpackChunkcreatorspc=self.webpackChunkcreatorspc||[]).push([[1816],{1816:(a,e,s)=>{s.r(e);var n=s(8760);window.plr.controllers.SBlogHeader=class extends n.c{bindEvents(){super.bindEvents(),this.callbacks.onCatChange=this.onCatChange.bind(this),this.on(this.refs.cat,"change",this.callbacks.onCatChange)}onCatChange(a){window.location=a.target.value}}}}]);
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [1816],
+  {
+    1816: (a, e, s) => {
+      s.r(e);
+      var n = s(8760);
+      window.plr.controllers.SBlogHeader = class extends n.c {
+        bindEvents() {
+          (super.bindEvents(),
+            (this.callbacks.onCatChange = this.onCatChange.bind(this)),
+            this.on(this.refs.cat, "change", this.callbacks.onCatChange));
+        }
+        onCatChange(a) {
+          window.location = a.target.value;
+        }
+      };
+    },
+  },
+]);

@@ -1,1 +1,121 @@
-.b-testimonial{max-width:30.8889rem;background:var(--color-white);border:1px solid var(--color-black)}@media only screen and (max-width: 767px)and (orientation: landscape),only screen and (max-width: 576px){.b-testimonial{width:var(--grid-width)}}.b-testimonial .b__text{padding:1.1111rem}@media only screen and (max-width: 767px){.b-testimonial .b__text{padding-bottom:3.2222rem}}.b-testimonial .b__text p{font-size:1.3333rem;font-style:italic;font-weight:400;line-height:1.13}@media only screen and (max-width: 987px){.b-testimonial .b__text p{font-size:1.1111rem}}.b-testimonial .b__text p:before{content:"“"}.b-testimonial .b__text p:after{content:"”"}.b-testimonial .b__footer{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;border-top:1px solid var(--color-black)}.b-testimonial .b__image{margin:0;padding:0;width:3.5556rem;height:100%;min-height:3.5556rem;border-right:1px solid var(--color-black)}.b-testimonial .b__image img{display:block;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.b-testimonial .b__author{display:flex;flex-direction:row;align-items:baseline;justify-content:flex-start;position:relative;flex:1;flex-wrap:wrap;gap:.2222em .4444em;margin:0 .75em;padding:.4em 0;font-size:1rem;font-style:normal;font-weight:600;line-height:.9}.b-testimonial .b__author a{color:var(--color-brand-4);font-weight:600}.b-testimonial .b__author a:hover{color:var(--color-brand-1)}.b-testimonial .b__role{display:block;font-size:.8889em;font-weight:400}.b-testimonial .b__role:before{display:inline-block;margin:0 .25em 0 0;content:" — "}.b-testimonial .b__rate{display:flex;flex:1;align-self:center;justify-content:flex-end;margin-right:.333em}@media only screen and (max-width: 767px){.b-testimonial .b__rate{position:absolute;top:-2.6rem;left:-3.25rem;margin-right:0}}.b-testimonial .b__rate:after{display:block;width:6.1111em;height:.7777em;background:linear-gradient(90deg, rgb(0, 0, 0) calc(var(--r) * 0.2 * 100%), rgba(0, 0, 0, 0.15) calc(var(--r) * 0.2 * 100%));content:"";-webkit-mask:url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-star.svg") center/20% 100% space;mask:url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-star.svg") center/20% 100% space}
+.b-testimonial {
+  max-width: 30.8889rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .b-testimonial {
+    width: var(--grid-width);
+  }
+}
+.b-testimonial .b__text {
+  padding: 1.1111rem;
+}
+@media only screen and (max-width: 767px) {
+  .b-testimonial .b__text {
+    padding-bottom: 3.2222rem;
+  }
+}
+.b-testimonial .b__text p {
+  font-size: 1.3333rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.13;
+}
+@media only screen and (max-width: 987px) {
+  .b-testimonial .b__text p {
+    font-size: 1.1111rem;
+  }
+}
+.b-testimonial .b__text p:before {
+  content: "“";
+}
+.b-testimonial .b__text p:after {
+  content: "”";
+}
+.b-testimonial .b__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid var(--color-black);
+}
+.b-testimonial .b__image {
+  margin: 0;
+  padding: 0;
+  width: 3.5556rem;
+  height: 100%;
+  min-height: 3.5556rem;
+  border-right: 1px solid var(--color-black);
+}
+.b-testimonial .b__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.b-testimonial .b__author {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  position: relative;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.2222em 0.4444em;
+  margin: 0 0.75em;
+  padding: 0.4em 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.9;
+}
+.b-testimonial .b__author a {
+  color: var(--color-brand-4);
+  font-weight: 600;
+}
+.b-testimonial .b__author a:hover {
+  color: var(--color-brand-1);
+}
+.b-testimonial .b__role {
+  display: block;
+  font-size: 0.8889em;
+  font-weight: 400;
+}
+.b-testimonial .b__role:before {
+  display: inline-block;
+  margin: 0 0.25em 0 0;
+  content: " — ";
+}
+.b-testimonial .b__rate {
+  display: flex;
+  flex: 1;
+  align-self: center;
+  justify-content: flex-end;
+  margin-right: 0.333em;
+}
+@media only screen and (max-width: 767px) {
+  .b-testimonial .b__rate {
+    position: absolute;
+    top: -2.6rem;
+    left: -3.25rem;
+    margin-right: 0;
+  }
+}
+.b-testimonial .b__rate:after {
+  display: block;
+  width: 6.1111em;
+  height: 0.7777em;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) calc(var(--r) * 0.2 * 100%),
+    rgba(0, 0, 0, 0.15) calc(var(--r) * 0.2 * 100%)
+  );
+  content: "";
+  -webkit-mask: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-star.svg")
+    center/20% 100% space;
+  mask: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-star.svg")
+    center/20% 100% space;
+}

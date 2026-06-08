@@ -1,1 +1,122 @@
-"use strict";(self.webpackChunkcreatorspc=self.webpackChunkcreatorspc||[]).push([[8624],{8624:(t,e,s)=>{s.r(e);var i=s(8760),r=s(8520),o=s(314),h=s(8188);r.w$.registerPlugin(o.c,h.c),window.plr.controllers.SPricingHome=class extends i.c{init(){super.init(),luge&&(luge.emitter.once("beforePageInit",this.setSizes.bind(this)),luge.emitter.once("beforePageInit",this.initScroll.bind(this)))}onResize(){this.setSizes(),this.initScroll()}setSizes(){this.setLayout(),this.setTiersBackground()}initScroll(){const{name:t,text:e,tier:s,title:i,suptitle:n,wrapper:l}=this.refs;this.tl&&this.tl.revert(),this.st&&this.st.forEach((t=>t.kill())),this.st=[],this.titleSt&&this.titleSt.revert(),this.textSt&&this.textSt.revert(),window.safeWidth>987&&(this.titleSt=new h.c(i,{type:"chars,words,lines",linesClass:"line",wordsClass:"word",charsClass:"char"}),this.textSt=new h.c(e,{type:"chars,words,lines",linesClass:"line",wordsClass:"word",charsClass:"char"})),this.tl=r.w$.timeline({scrollTrigger:{trigger:this.el,start:"top 100%",end:"bottom 100%",scrub:.25}});let a=1.5;if("horizontal"===this.layout)this.tl.fromTo(s,{y:"100%"},{y:"0%",ease:"power2.out",duration:2,stagger:{each:1,from:"start"}},0),this.tl.addLabel("showContent",.5);else{let e=0;s.forEach((t=>{const s=t.offsetHeight;s>e&&(e=s)}));const i=.5*t[0].offsetHeight,r=Math.max((window.safeHeight-e-i)/2,0);s.forEach(((t,e)=>{const s=o.c.create({trigger:t,start:`top ${r+e*i}px`,endTrigger:l,end:"bottom 100%",pin:!0,pinSpacing:!1,anticipatePin:1});this.st.push(s)})),this.tl.addLabel("showContent",0),a=1}window.safeWidth>987&&(this.tl.fromTo([n,...this.titleSt.words],{y:"175%"},{y:"0%",ease:"power3.out",duration:a,stagger:{each:"0.05"}},"showContent"),this.tl.from(this.textSt.words,{y:"100%",ease:"power3.out",duration:.66*a},"showContent+="+.3*a))}setLayout(){const{content:t,tier:e,wrapper:s}=this.refs,i=(window.safeHeight-t.offsetHeight)/2;this.el.style.setProperty("--content-top",`${i}px`),this.layout=e[0].offsetWidth===s.offsetWidth?"vertical":"horizontal"}setTiersBackground(){this.el.querySelectorAll(".js-background").forEach(((t,e)=>{const s=t.parentElement,i=t.querySelector("path"),r=s.getBoundingClientRect();t.style.width=`${r.width}px`,t.style.height=`${r.height}px`;const o=r.width-1,h=r.width-1,n=r.height,l={x:h-10,y:n+10},a=-10,c=`M0,1 L${o},1 L${h},${n} L${l.x},${l.y} L${a},${l.y} L${a},10 Z`;i.setAttribute("d",c)}))}}}}]);
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [8624],
+  {
+    8624: (t, e, s) => {
+      s.r(e);
+      var i = s(8760),
+        r = s(8520),
+        o = s(314),
+        h = s(8188);
+      (r.w$.registerPlugin(o.c, h.c),
+        (window.plr.controllers.SPricingHome = class extends i.c {
+          init() {
+            (super.init(),
+              luge &&
+                (luge.emitter.once("beforePageInit", this.setSizes.bind(this)),
+                luge.emitter.once("beforePageInit", this.initScroll.bind(this))));
+          }
+          onResize() {
+            (this.setSizes(), this.initScroll());
+          }
+          setSizes() {
+            (this.setLayout(), this.setTiersBackground());
+          }
+          initScroll() {
+            const { name: t, text: e, tier: s, title: i, suptitle: n, wrapper: l } = this.refs;
+            (this.tl && this.tl.revert(),
+              this.st && this.st.forEach((t) => t.kill()),
+              (this.st = []),
+              this.titleSt && this.titleSt.revert(),
+              this.textSt && this.textSt.revert(),
+              window.safeWidth > 987 &&
+                ((this.titleSt = new h.c(i, {
+                  type: "chars,words,lines",
+                  linesClass: "line",
+                  wordsClass: "word",
+                  charsClass: "char",
+                })),
+                (this.textSt = new h.c(e, {
+                  type: "chars,words,lines",
+                  linesClass: "line",
+                  wordsClass: "word",
+                  charsClass: "char",
+                }))),
+              (this.tl = r.w$.timeline({
+                scrollTrigger: {
+                  trigger: this.el,
+                  start: "top 100%",
+                  end: "bottom 100%",
+                  scrub: 0.25,
+                },
+              })));
+            let a = 1.5;
+            if ("horizontal" === this.layout)
+              (this.tl.fromTo(
+                s,
+                { y: "100%" },
+                { y: "0%", ease: "power2.out", duration: 2, stagger: { each: 1, from: "start" } },
+                0,
+              ),
+                this.tl.addLabel("showContent", 0.5));
+            else {
+              let e = 0;
+              s.forEach((t) => {
+                const s = t.offsetHeight;
+                s > e && (e = s);
+              });
+              const i = 0.5 * t[0].offsetHeight,
+                r = Math.max((window.safeHeight - e - i) / 2, 0);
+              (s.forEach((t, e) => {
+                const s = o.c.create({
+                  trigger: t,
+                  start: `top ${r + e * i}px`,
+                  endTrigger: l,
+                  end: "bottom 100%",
+                  pin: !0,
+                  pinSpacing: !1,
+                  anticipatePin: 1,
+                });
+                this.st.push(s);
+              }),
+                this.tl.addLabel("showContent", 0),
+                (a = 1));
+            }
+            window.safeWidth > 987 &&
+              (this.tl.fromTo(
+                [n, ...this.titleSt.words],
+                { y: "175%" },
+                { y: "0%", ease: "power3.out", duration: a, stagger: { each: "0.05" } },
+                "showContent",
+              ),
+              this.tl.from(
+                this.textSt.words,
+                { y: "100%", ease: "power3.out", duration: 0.66 * a },
+                "showContent+=" + 0.3 * a,
+              ));
+          }
+          setLayout() {
+            const { content: t, tier: e, wrapper: s } = this.refs,
+              i = (window.safeHeight - t.offsetHeight) / 2;
+            (this.el.style.setProperty("--content-top", `${i}px`),
+              (this.layout = e[0].offsetWidth === s.offsetWidth ? "vertical" : "horizontal"));
+          }
+          setTiersBackground() {
+            this.el.querySelectorAll(".js-background").forEach((t, e) => {
+              const s = t.parentElement,
+                i = t.querySelector("path"),
+                r = s.getBoundingClientRect();
+              ((t.style.width = `${r.width}px`), (t.style.height = `${r.height}px`));
+              const o = r.width - 1,
+                h = r.width - 1,
+                n = r.height,
+                l = { x: h - 10, y: n + 10 },
+                a = -10,
+                c = `M0,1 L${o},1 L${h},${n} L${l.x},${l.y} L${a},${l.y} L${a},10 Z`;
+              i.setAttribute("d", c);
+            });
+          }
+        }));
+    },
+  },
+]);

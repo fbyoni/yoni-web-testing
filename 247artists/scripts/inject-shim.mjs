@@ -1,16 +1,28 @@
 #!/usr/bin/env node
-// Inject the runtime net-shim as the first child of <head> on every page, and
-// the local-fixes bundle (CSS + JS) at the end of <head>/<body>. Idempotent —
-// safe to re-run after each scrape/clean pass.
+// Copy the runtime guard files (net-shim + local-fixes) into the archive root,
+// then inject net-shim as the first child of <head> on every page and the
+// local-fixes bundle (CSS + JS) at the end of <head>/<body>. Idempotent — safe
+// to re-run after each scrape/clean pass, and self-contained: the guard files
+// live in scripts/runtime/ so a fresh `scrape` (which wipes legacy/) loses
+// nothing.
 
-import {readFile, writeFile} from 'node:fs/promises';
+import {copyFile, readFile, writeFile} from 'node:fs/promises';
 import {readdirSync, statSync} from 'node:fs';
-import {join, resolve} from 'node:path';
+import {dirname, join, resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
 
-const ROOT = resolve('site');
+// Operates on the raw minified archive (legacy/); the readable served copy in
+// site/ is regenerated from it by `npm run deoptimize`.
+const ROOT = resolve('legacy');
+const RUNTIME_DIR = join(dirname(fileURLToPath(import.meta.url)), 'runtime');
 const SHIM_TAG = '<script src="/net-shim.js"></script>';
 const FIXES_CSS = '<link rel="stylesheet" href="/local-fixes.css">';
 const FIXES_JS = '<script src="/local-fixes.js"></script>';
+
+// Ensure the guard files exist at the archive root before wiring them in.
+for (const name of ['net-shim.js', 'local-fixes.css', 'local-fixes.js']) {
+  await copyFile(join(RUNTIME_DIR, name), join(ROOT, name));
+}
 
 function listHtml(dir) {
   const out = [];

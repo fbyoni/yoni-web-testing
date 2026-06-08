@@ -1,1 +1,101 @@
-"use strict";(self.webpackChunkcreatorspc=self.webpackChunkcreatorspc||[]).push([[4059],{4059:(t,e,i)=>{i.r(e);var s=i(8760),n=i(8432);window.plr.controllers.ALines=class extends s.c{init(){super.init();const t=function(t){var e;let i=t.parentElement.previousElementSibling;for(;i&&!i.dataset.plrComponent;)i=i.previousElementSibling;return null==i||null===(e=i.querySelector(".a-lines"))||void 0===e?void 0:e.plr.controller}(this.el);this.side=this.el.dataset.side||"both",this.prevLines=t,this.continueY=0,this.render={width:window.safeWidth,height:window.safeHeight},this.lineSpacing=6,this.lineWidth=1,this.isPaused=!1,this.ampls=(null==t?void 0:t.ampls)||Array.from({length:3}).map((()=>5+5*Math.random())),this.freqs=(null==t?void 0:t.freqs)||this.ampls.map((()=>.0075+.005*Math.random())),this.offsets=(null==t?void 0:t.offsets)||Array.from({length:2}).map((()=>1e3*Math.random())),luge&&(luge.emitter.once("beforePageInit",this.setSizes.bind(this)),luge.emitter.once("beforePageInit",this.setLines.bind(this)))}onResize(){this.setSizes(),n.Q.widthChanged&&this.setLines()}onViewportIn(){this.isPaused=!1}onViewportOut(){this.isPaused=!0}setSizes(){const{svg:t}=this.refs,e=this.el.getBoundingClientRect(),i=e.height,s=e.width;this.render={width:s,height:i},t.style.width=`${s}px`,t.style.height=`${i}px`}setLines(){const{lineSpacing:t,lineWidth:e,render:i}=this,s=t+e;function n(t){return t[Math.round(Math.random()*(t.length-1))]}this.lines=[];const{prevLines:h,offsets:o,freqs:r,ampls:l}=this,a=(null==h?void 0:h.continueY)||0,d=this.side;for(let t=1;t<=i.height-1;t+=s){this.continueY=this.lines.length+a;const e=Math.abs(Math.sin(.005*this.continueY));for(let s=0;s<2;s++){if("left"===d&&0!==s||"right"===d&&1!==s)continue;const h=[],a={x:0===s?0:i.width,y:t},p=.1*i.width*e*Math.random(),u={x:Math.round(0===s?p:a.x-p),y:a.y};h.push(a),h.push(u),this.lines.push({points:h,p:1,offset:n(o),freq:n(r),ampl:n(l)})}}}drawLines(t){const{path:e}=this.refs,{lines:i}=this;let s="";i.forEach((e=>{const i=e.points[0],n=e.points[1],h=n.x+Math.cos(t*e.freq+e.offset)*e.ampl;s+=`M ${i.x} ${i.y} `,s+=`L ${i.x-(i.x-h)*e.p} ${n.y} `})),e.setAttribute("d",s)}tick(t){this.isPaused||this.drawLines(t)}}}}]);
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [4059],
+  {
+    4059: (t, e, i) => {
+      i.r(e);
+      var s = i(8760),
+        n = i(8432);
+      window.plr.controllers.ALines = class extends s.c {
+        init() {
+          super.init();
+          const t = (function (t) {
+            var e;
+            let i = t.parentElement.previousElementSibling;
+            for (; i && !i.dataset.plrComponent; ) i = i.previousElementSibling;
+            return null == i || null === (e = i.querySelector(".a-lines")) || void 0 === e
+              ? void 0
+              : e.plr.controller;
+          })(this.el);
+          ((this.side = this.el.dataset.side || "both"),
+            (this.prevLines = t),
+            (this.continueY = 0),
+            (this.render = { width: window.safeWidth, height: window.safeHeight }),
+            (this.lineSpacing = 6),
+            (this.lineWidth = 1),
+            (this.isPaused = !1),
+            (this.ampls =
+              (null == t ? void 0 : t.ampls) ||
+              Array.from({ length: 3 }).map(() => 5 + 5 * Math.random())),
+            (this.freqs =
+              (null == t ? void 0 : t.freqs) ||
+              this.ampls.map(() => 0.0075 + 0.005 * Math.random())),
+            (this.offsets =
+              (null == t ? void 0 : t.offsets) ||
+              Array.from({ length: 2 }).map(() => 1e3 * Math.random())),
+            luge &&
+              (luge.emitter.once("beforePageInit", this.setSizes.bind(this)),
+              luge.emitter.once("beforePageInit", this.setLines.bind(this))));
+        }
+        onResize() {
+          (this.setSizes(), n.Q.widthChanged && this.setLines());
+        }
+        onViewportIn() {
+          this.isPaused = !1;
+        }
+        onViewportOut() {
+          this.isPaused = !0;
+        }
+        setSizes() {
+          const { svg: t } = this.refs,
+            e = this.el.getBoundingClientRect(),
+            i = e.height,
+            s = e.width;
+          ((this.render = { width: s, height: i }),
+            (t.style.width = `${s}px`),
+            (t.style.height = `${i}px`));
+        }
+        setLines() {
+          const { lineSpacing: t, lineWidth: e, render: i } = this,
+            s = t + e;
+          function n(t) {
+            return t[Math.round(Math.random() * (t.length - 1))];
+          }
+          this.lines = [];
+          const { prevLines: h, offsets: o, freqs: r, ampls: l } = this,
+            a = (null == h ? void 0 : h.continueY) || 0,
+            d = this.side;
+          for (let t = 1; t <= i.height - 1; t += s) {
+            this.continueY = this.lines.length + a;
+            const e = Math.abs(Math.sin(0.005 * this.continueY));
+            for (let s = 0; s < 2; s++) {
+              if (("left" === d && 0 !== s) || ("right" === d && 1 !== s)) continue;
+              const h = [],
+                a = { x: 0 === s ? 0 : i.width, y: t },
+                p = 0.1 * i.width * e * Math.random(),
+                u = { x: Math.round(0 === s ? p : a.x - p), y: a.y };
+              (h.push(a),
+                h.push(u),
+                this.lines.push({ points: h, p: 1, offset: n(o), freq: n(r), ampl: n(l) }));
+            }
+          }
+        }
+        drawLines(t) {
+          const { path: e } = this.refs,
+            { lines: i } = this;
+          let s = "";
+          (i.forEach((e) => {
+            const i = e.points[0],
+              n = e.points[1],
+              h = n.x + Math.cos(t * e.freq + e.offset) * e.ampl;
+            ((s += `M ${i.x} ${i.y} `), (s += `L ${i.x - (i.x - h) * e.p} ${n.y} `));
+          }),
+            e.setAttribute("d", s));
+        }
+        tick(t) {
+          this.isPaused || this.drawLines(t);
+        }
+      };
+    },
+  },
+]);

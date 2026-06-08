@@ -12,8 +12,8 @@ import puppeteer from 'puppeteer-core';
 
 const browserURL = process.env.BROWSER_URL || 'http://127.0.0.1:9222';
 const base = process.env.BASE_URL || 'http://localhost:5173';
-const reportPath = process.env.REPORT_PATH || 'site/puppeteer-remote-report.json';
-const screenshot = process.env.SCREENSHOT || 'site/puppeteer-remote-smoke.png';
+const reportPath = process.env.REPORT_PATH || 'puppeteer-remote-report.json';
+const screenshot = process.env.SCREENSHOT || 'puppeteer-remote-smoke.png';
 
 const basePort = new URL(base).port || '80';
 const allowedHosts = new Set([
