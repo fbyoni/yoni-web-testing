@@ -8,9 +8,10 @@ scripts, and Node static server.
 
 ## Projects
 
-| Folder       | Live source           | Notes                                  |
-| ------------ | --------------------- | -------------------------------------- |
-| `gethapply/` | `gethapply.com`       | Shopify storefront mirror, no API calls |
+| Folder        | Live source           | Notes                                   |
+| ------------- | --------------------- | --------------------------------------- |
+| `gethapply/`  | `gethapply.com`       | Shopify storefront mirror, no API calls |
+| `247artists/` | `247artists.com`      | WordPress (creatorspc theme) mirror; webpack lazy chunks + per-section CSS mirrored, GTM/Clarity/HubSpot/wsimg stripped |
 
 ## Run a project
 

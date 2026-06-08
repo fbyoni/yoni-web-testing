@@ -1,0 +1,19 @@
+{
+  "name": "247artists-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local static mirror of the public 247artists.com WordPress site.",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "clean": "node scripts/clean-external.mjs",
+    "shim": "node scripts/inject-shim.mjs",
+    "serve": "node server.mjs",
+    "verify:puppeteer": "node scripts/puppeteer-remote-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}
