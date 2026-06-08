@@ -1,0 +1,146 @@
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [2336],
+  {
+    2336: (t, e, s) => {
+      s.r(e);
+      var i = s(8760),
+        o = s(8520),
+        r = s(314);
+      (o.w$.registerPlugin(r.c),
+        (window.plr.controllers.SFaqHome = class extends i.c {
+          init() {
+            super.init();
+            const { canvas: t } = this.refs;
+            ((this.ctx = t.getContext("2d")),
+              (this.render = { width: window.safeWidth, height: window.safeHeight }),
+              (this.totalLines = 4),
+              (this.isAnimated = this.el.classList.contains("is-animated")),
+              (this.isPaused = !1),
+              this.setCanvasSize(),
+              luge &&
+                (luge.emitter.once("beforePageInit", this.setLines.bind(this)),
+                luge.emitter.once("beforePageInit", this.initScroll.bind(this))));
+          }
+          bindEvents() {
+            const { more: t, question: e } = this.refs;
+            (super.bindEvents(),
+              (this.callbacks.toggleAnswer = this.toggleAnswer.bind(this)),
+              this.on(e, "click", this.callbacks.toggleAnswer),
+              (this.callbacks.showMore = this.showMore.bind(this)),
+              this.on(t, "click", this.callbacks.showMore));
+          }
+          toggleAnswer(t) {
+            const e = t.currentTarget.closest(".js-faq");
+            this.refs.faq
+              .filter((t) => t.classList.contains("is-active") && t !== e)
+              .forEach((t) => {
+                const e = t.querySelector(".js-answer");
+                ((e.style.display = "block"),
+                  o.w$.to(e, {
+                    height: 0,
+                    duration: 0.4,
+                    ease: "power3.inOut",
+                    onComplete: () => {
+                      ((e.style.display = ""), (e.style.height = ""));
+                    },
+                  }),
+                  setTimeout(() => {
+                    t.classList.remove("is-active");
+                  }, 200));
+              });
+            const s = e.querySelector(".js-answer");
+            e.classList.contains("is-active")
+              ? ((s.style.display = "block"),
+                o.w$.to(s, {
+                  height: 0,
+                  duration: 0.4,
+                  ease: "power3.inOut",
+                  onComplete: () => {
+                    ((s.style.height = ""), (s.style.display = ""), luge.emitter.emit("update"));
+                  },
+                }),
+                e.classList.remove("is-active"))
+              : (e.classList.add("is-active"),
+                o.w$.from(s, {
+                  height: 0,
+                  duration: 0.4,
+                  ease: "power3.inOut",
+                  onComplete: () => {
+                    ((s.style.height = ""), (s.style.display = ""), luge.emitter.emit("update"));
+                  },
+                }));
+          }
+          showMore() {
+            const { faqs: t } = this.refs,
+              e = this.refs.faq.filter((t) => t.classList.contains("is-hidden")),
+              s = t.offsetHeight;
+            this.el.classList.add("is-expanded");
+            const i = o.w$.timeline({
+              onComplete: () => {
+                ((t.style.height = ""), luge.emitter.emit("update"), luge.emitter.emit("resize"));
+              },
+            });
+            (i.from(t, { height: s, duration: 0.8, ease: "power3.inOut" }),
+              i.from(e, { x: "-100%", duration: 0.8, ease: "power3.out", stagger: 0.025 }, 0));
+          }
+          onResize() {
+            (this.setCanvasSize(), this.setLines(), this.initScroll());
+          }
+          onViewportIn() {
+            this.isPaused = !1;
+          }
+          onViewportOut() {
+            this.isPaused = !0;
+          }
+          setCanvasSize() {
+            const { canvas: t, ruler: e } = this.refs;
+            ((this.render = { width: e.offsetWidth, height: this.el.offsetHeight }),
+              (t.style.width = `${this.render.width}px`),
+              (t.width = this.render.width),
+              (t.height = this.render.height),
+              (this.lineGap = this.render.width / (this.totalLines + 1)));
+          }
+          setLines() {
+            const t = this.render.height;
+            this.lines = [];
+            for (let e = 0; e < this.totalLines; e++) {
+              const s = { x: Math.round(this.lineGap * (e + 1)) + 0.5, y: 0 },
+                i = { x: s.x, y: t };
+              this.lines.push([s, i]);
+            }
+            this.drawLines();
+          }
+          initScroll() {
+            const { title: t } = this.refs;
+            this.isAnimated &&
+              (this.tl && this.tl.revert(),
+              (this.tl = o.w$.timeline({
+                scrollTrigger: {
+                  trigger: this.el,
+                  start: "top 100%",
+                  end: "top -25%",
+                  scrub: 0.25,
+                },
+              })),
+              this.tl.fromTo(
+                this.el,
+                { "--progress": 0 },
+                { "--progress": 1, ease: "linear", duration: 1 },
+                0,
+              ),
+              this.tl.fromTo(t, { y: "50%" }, { y: 0, ease: "power3.out", duration: 1 }, 0.5));
+          }
+          drawLines() {
+            const { ctx: t, lines: e } = this;
+            ((t.strokeStyle = "#2A2925"),
+              e.forEach((e) => {
+                const s = e[0],
+                  i = e[1];
+                (t.beginPath(), t.moveTo(s.x, s.y), t.lineTo(i.x, i.y), t.closePath(), t.stroke());
+              }));
+          }
+        }));
+    },
+  },
+]);

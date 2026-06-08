@@ -1,0 +1,80 @@
+.s-content-quote {
+  position: relative;
+  margin: var(--section-spacing) 0 var(--section-spacing-sm);
+  color: var(--color-black);
+  font: 450 3.1111rem/1 var(--font-family-text);
+  letter-spacing: -0.06em;
+}
+@media only screen and (max-width: 767px) {
+  .s-content-quote {
+    margin: calc(var(--section-spacing-sm) * 0.8) 0;
+    font-size: 1.6666rem;
+  }
+}
+.s-content-quote .u-container {
+  display: flex;
+  align-items: flex-start;
+}
+.s-content-quote .s__line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 0.2142em;
+  min-width: calc(3 * var(--grid-column-width) + 3 * var(--grid-gutter-width));
+}
+@media only screen and (max-width: 1080px) {
+  .s-content-quote .s__line {
+    min-width: calc(2 * var(--grid-column-width) + 1 * var(--grid-gutter-width));
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-content-quote .s__line {
+    min-width: calc(1 * var(--grid-column-width) + 0 * var(--grid-gutter-width));
+  }
+}
+.s-content-quote .s__line:before {
+  position: absolute;
+  right: 1.4285em;
+  display: block;
+  width: calc(
+    100% + max((100vw - var(--grid-container-max-width-rem)) * 0.5, 0px) - 0.3214em - 0.75em -
+      0.3571em
+  );
+  height: 1px;
+  background: currentcolor;
+  content: "";
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-content-quote .s__line:before {
+    display: none;
+  }
+}
+.s-content-quote .s__line:after {
+  display: block;
+  margin-right: 0.3571em;
+  aspect-ratio: 42/34;
+  width: 0.75em;
+  height: auto;
+  background: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/icon-quote.svg")
+    no-repeat center/contain;
+  content: "";
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-content-quote .s__line:after {
+    margin: 0 calc(0 * var(--grid-column-width) + 1 * var(--grid-gutter-width)) 0 0;
+    width: 100%;
+  }
+}
+.s-content-quote .s__quote {
+  margin: 0;
+  padding: 0;
+  max-width: 16.428em;
+}
+.l-design-system .l__element__wrapper:has(.s-content-quote) {
+  background: var(--color-white-2);
+}

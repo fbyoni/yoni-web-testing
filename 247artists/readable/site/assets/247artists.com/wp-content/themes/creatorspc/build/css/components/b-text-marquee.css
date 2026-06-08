@@ -1,0 +1,45 @@
+.b-text-marquee {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 1.5151em;
+  overflow: hidden;
+  color: var(--color-beige-light);
+  font: 600 min(7.3333rem, 6.875vw)/1 var(--font-family-text);
+  letter-spacing: -0.04em;
+}
+@media only screen and (max-width: 767px) {
+  .b-text-marquee {
+    height: 1.74em;
+    font-size: 12.722vw;
+  }
+}
+.b-text-marquee ::-moz-selection {
+  background: var(--color-beige-light);
+  color: var(--color-brand-1);
+}
+.b-text-marquee ::selection {
+  background: var(--color-beige-light);
+  color: var(--color-brand-1);
+}
+.b-text-marquee .s__outer {
+  display: flex;
+  transform: translateX(var(--x));
+  will-change: transform;
+}
+.b-text-marquee .s__txt {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+}
+.b-text-marquee .s__txt:before {
+  display: block;
+  margin: 0 0.3787em;
+  width: 0.1666em;
+  height: 0.1666em;
+  background: currentcolor;
+  border-radius: 99px;
+  content: "";
+}

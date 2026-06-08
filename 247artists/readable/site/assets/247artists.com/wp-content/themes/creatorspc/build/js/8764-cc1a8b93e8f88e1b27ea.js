@@ -1,0 +1,82 @@
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [8764],
+  {
+    8764: (e, t, n) => {
+      n.r(t);
+      var i = n(8760);
+      const s = new WeakMap(),
+        r = new ResizeObserver((e) => {
+          for (const t of e) s.get(t.target)();
+        });
+      window.plr.controllers.STeam = class extends i.c {
+        init() {
+          (super.init(),
+            (this.items = Array.from(this.el.querySelectorAll(".sb__item"))),
+            this.generateColumns(),
+            luge.emitter.once("beforePageInit", this.calculateBg.bind(this)));
+        }
+        bindEvents() {
+          var e, t;
+          (super.bindEvents(),
+            this.on(this.refs.more, "click", this.onMoreClick.bind(this)),
+            (e = this.el),
+            (t = this.onElementResize.bind(this)),
+            s.set(e, t),
+            r.observe(e));
+        }
+        onMoreClick(e) {
+          (e.preventDefault(), e.currentTarget.closest(".sb__item").classList.toggle("is-active"));
+        }
+        onElementResize() {
+          (this.generateColumns(), this.calculateBg());
+        }
+        kill() {
+          var e;
+          ((e = this.el), s.delete(e), r.unobserve(e), super.kill());
+        }
+        generateColumns() {
+          const e = this.el,
+            t = window.getComputedStyle(e),
+            n = parseInt(t.getPropertyValue("--cols"), 10),
+            i = e.querySelectorAll(".sb__col");
+          if (n === i.length) return;
+          const s = this.items,
+            r = Array.from({ length: n }).map(() => {
+              const e = document.createElement("div");
+              return (e.classList.add("sb__col"), this.refs.items.append(e), e);
+            });
+          (s.forEach((e, t) => {
+            r[t % n].append(e);
+          }),
+            i.forEach((e) => e.remove()));
+        }
+        calculateBg() {
+          const e = this.el,
+            { bgRect: t, bgPattern: n, bgPath: i, header: s, container: r, bg: o } = this.refs,
+            l = window.getComputedStyle(e),
+            a = parseInt(l.getPropertyValue("--bg-size")),
+            c = window.innerWidth * a * 0.01,
+            h = e.getBoundingClientRect(),
+            d = r.getBoundingClientRect(),
+            u = s.getBoundingClientRect(),
+            g = Math.ceil(u.top - h.top + u.height),
+            $ = Math.max(Math.round(g / c) - 1, 1) + (a > 10 ? 1 : 0);
+          (n.setAttribute("width", c),
+            n.setAttribute("height", c),
+            t.setAttribute("width", c),
+            t.setAttribute("height", c));
+          const p = (window.innerWidth - d.width) % c,
+            b = d.right + p / 2 - 0.5,
+            m = d.left - p / 2 + 0.5,
+            w = window.innerWidth < 1920 ? 0.5 : 0;
+          (i.setAttribute(
+            "d",
+            `M0 0\n${h.width} 0\n${h.width} ${c - 0.5}\n${b + w} ${c - 0.5}\n${b + w} ${c * $ - 0.5}\n${b - c} ${c * $ - 0.5}\n${b - c} ${c * ($ + 1) - 0.5}\n${b - 2 * c} ${c * ($ + 1) - 0.5}\n${b - 2 * c} ${c * ($ + 2) - 0.5}\n${m + 2 * c} ${c * ($ + 2) - 0.5}\n${m + 2 * c} ${c * ($ + 1) - 0.5}\n${m + c} ${c * ($ + 1) - 0.5}\n${m + c} ${c * $ - 0.5}\n${m - w} ${c * $ - 0.5}\n${m - w} ${c - 0.5}\n0 ${c - 0.5} Z`,
+          ),
+            o.append(document.createTextNode("")));
+        }
+      };
+    },
+  },
+]);

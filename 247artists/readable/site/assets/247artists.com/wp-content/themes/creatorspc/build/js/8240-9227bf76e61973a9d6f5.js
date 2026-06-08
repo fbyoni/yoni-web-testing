@@ -1,0 +1,22 @@
+"use strict";
+(self.webpackChunkcreatorspc = self.webpackChunkcreatorspc || []).push([
+  [8240],
+  {
+    8240: (e, t, o) => {
+      o.r(t);
+      var n = o(8760),
+        s = o(8520);
+      window.plr.controllers.SiteLoader = class extends n.c {
+        constructor(e) {
+          (super(e), luge);
+        }
+        transitionOut(e, t) {
+          s.w$.to(this.el, { opacity: 0, duration: 0.3, ease: "none", onComplete: t });
+        }
+        transitionIn(e, t) {
+          s.w$.to(this.el, { opacity: 1, duration: 0.3, ease: "none", onComplete: t });
+        }
+      };
+    },
+  },
+]);

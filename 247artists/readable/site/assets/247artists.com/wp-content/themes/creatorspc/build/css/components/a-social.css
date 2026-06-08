@@ -1,0 +1,25 @@
+.a-social {
+  --icon-size: 1.4545rem;
+  display: block;
+}
+.a-social__icon {
+  position: relative;
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background: currentcolor;
+  -webkit-mask: var(--icon) center/cover no-repeat;
+  mask: var(--icon) center/cover no-repeat;
+}
+.a-social__icon img {
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.a-social__short-name {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: var(--icon-size);
+  text-transform: uppercase;
+}

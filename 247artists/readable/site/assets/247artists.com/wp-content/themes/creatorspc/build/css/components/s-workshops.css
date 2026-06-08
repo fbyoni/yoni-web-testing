@@ -1,0 +1,501 @@
+.s-workshops {
+  padding: var(--section-spacing-sm) 0 var(--section-spacing-md);
+  background: var(--color-brand-4);
+}
+.s-workshops .u-container {
+  padding: 0 0 0 calc(1 * var(--grid-column-width) + 1 * var(--grid-gutter-width));
+}
+@media only screen and (max-width: 1536px) {
+  .s-workshops .u-container {
+    padding-left: 0;
+  }
+}
+.s-workshops .s__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0 2.7778rem;
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .s__header {
+    flex-direction: column;
+  }
+}
+.s-workshops .s__header .s__title {
+  min-width: calc(3 * var(--grid-column-width) + 2 * var(--grid-gutter-width));
+  max-width: 5em;
+  font-size: 5.8889rem;
+}
+@media only screen and (max-width: 1536px) {
+  .s-workshops .s__header .s__title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .s__header .s__title {
+    font-size: 4.25rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .s__header .s__title {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-workshops .s__header .s__title {
+    font-size: 3.8889rem;
+  }
+}
+.s-workshops .s__header .s__text {
+  margin: 1.2em 0 0 calc(0 * var(--grid-column-width) + 1 * var(--grid-gutter-width));
+  max-width: 16em;
+  font-size: 1.3333rem;
+}
+@media only screen and (max-width: 1536px) {
+  .s-workshops .s__header .s__text {
+    font-size: 1.1111rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .s__header .s__text {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .s__header .s__text {
+    margin: 1.2em 0 0;
+    max-width: 20em;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-workshops .s__header .s__text {
+    max-width: none;
+  }
+}
+.s-workshops .s__header .s__text p + p {
+  margin-top: 1em;
+}
+.s-workshops .sb-workshop {
+  --title-height: 6rem;
+  --host-width: 8.3333rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  margin: 1.6667rem 0 0;
+  height: 23.8889rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 1536px) {
+  .s-workshops .sb-workshop {
+    --host-width: 6.6667rem;
+    height: 21rem;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop {
+    --title-height: 5rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+.s-workshops .sb-workshop:first-child {
+  margin-top: 0;
+}
+.s-workshops .sb-workshop .sb__metas {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 1;
+  flex: 0 0 auto;
+  width: 20.3199%;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__metas {
+    display: contents;
+  }
+}
+.s-workshops .sb-workshop .sb__type {
+  padding: 0.55rem 0.5556rem 0.45rem;
+  border-bottom: 1px solid var(--color-black);
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__type {
+    font-size: 0.8889rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__type {
+    order: 1;
+    width: 100%;
+    font-weight: 500;
+  }
+}
+.s-workshops .sb-workshop .sb__infos {
+  padding: 0.55rem 0.5556rem 0.45rem;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__infos {
+    order: 5;
+    width: 50%;
+    height: 8rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__infos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    order: 3;
+    gap: 2rem;
+    padding: 0.75rem 1.2223rem;
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-workshops .sb-workshop .sb__infos {
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+}
+.s-workshops .sb-workshop .sb__day {
+  font-size: 1.6667rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__day {
+    font-size: 1.1111rem;
+  }
+}
+.s-workshops .sb-workshop .sb__time {
+  font-size: 1.25rem;
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__time {
+    font-size: 1.1111rem;
+  }
+}
+.s-workshops .sb-workshop .sb__location {
+  position: relative;
+  margin: 1rem 0 0;
+  padding: 0 0 0 1rem;
+  font-size: 1.1111rem;
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__location {
+    font-size: 1.1111rem;
+  }
+}
+.s-workshops .sb-workshop .sb__location a {
+  text-decoration: underline;
+}
+.s-workshops .sb-workshop .sb__location__label:before {
+  position: absolute;
+  top: 0.665em;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: translate3d(0, -50%, 0);
+  content: "";
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__location__address {
+    display: none;
+  }
+}
+.s-workshops .sb-workshop .sb__location--online .sb__location__label:before {
+  width: 13px;
+  height: 13px;
+  background-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/globe-black.svg");
+}
+.s-workshops .sb-workshop .sb__location--physical .sb__location__label:before {
+  width: 14px;
+  height: 17px;
+  background-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/pin-black.svg");
+}
+.s-workshops .sb-workshop .sb__cta {
+  margin: auto 0 0;
+  padding: 1.2222rem 0;
+  border-top: 1px solid var(--color-black);
+  text-align: center;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    order: 6;
+    width: 50%;
+    height: 12.4444rem;
+    border-top: 0;
+    border-left: 1px solid var(--color-black);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__cta {
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+}
+.s-workshops .sb-workshop .sb__cta__link {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__cta__link {
+    margin: auto;
+  }
+}
+.s-workshops .sb-workshop .sb__countdown {
+  margin: 1.222rem 0 -0.3667rem;
+  padding: 0.8333rem 0.8333rem 0;
+  width: 100%;
+  border-top: 1px solid var(--color-black);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__countdown {
+    flex: 0 0 auto;
+  }
+}
+.s-workshops .sb-workshop .sb__countdown:before {
+  display: inline-block;
+  width: 0.9444rem;
+  height: 0.9444rem;
+  background: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/warning-black.svg")
+    center/contain no-repeat;
+  vertical-align: top;
+  content: "";
+}
+.s-workshops .sb-workshop .sb__image {
+  order: 2;
+  flex: 1 1 auto;
+  border-right: 1px solid var(--color-black);
+  border-left: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__image {
+    flex: 0 0 auto;
+    margin-top: auto;
+    width: 34.301%;
+    height: calc(100% - var(--title-height));
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__image {
+    order: 3;
+    width: 50%;
+    height: calc((5 * var(--grid-column-width) + 4 * var(--grid-gutter-width)) * 0.75);
+    border-right: 0;
+    border-bottom: 1px solid var(--color-black);
+    border-left: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__image {
+    position: relative;
+    order: 2;
+    width: 100%;
+    height: auto;
+  }
+  .s-workshops .sb-workshop .sb__image:before {
+    display: block;
+    padding-top: 75%;
+    content: "";
+  }
+}
+.s-workshops .sb-workshop .sb__image__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__image__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.s-workshops .sb-workshop .sb__content {
+  position: relative;
+  order: 3;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  width: 45.3791%;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__content {
+    display: contents;
+  }
+}
+.s-workshops .sb-workshop .sb__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 1.2223rem;
+  width: 100%;
+  height: var(--title-height);
+  border-bottom: 1px solid var(--color-black);
+  overflow: hidden;
+  font-size: 2.45rem;
+}
+@media only screen and (max-width: 1680px) {
+  .s-workshops .sb-workshop .sb__title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__title {
+    margin-left: -75.5877%;
+    padding: 0.75rem 1rem;
+    width: 175.5877%;
+    border-left: 1px solid var(--color-black);
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__title {
+    order: 2;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    border-left: 0;
+  }
+}
+.s-workshops .sb-workshop .sb__description {
+  position: absolute;
+  top: var(--title-height);
+  bottom: 0;
+  left: 0;
+  flex: 1 1 auto;
+  padding: 1rem 1.2223rem;
+  width: calc(100% - var(--host-width));
+  overflow: hidden;
+}
+@media only screen and (max-width: 1280px) {
+  .s-workshops .sb-workshop .sb__description {
+    font-size: 0.8889rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__description {
+    position: relative;
+    top: 0;
+    order: 4;
+    width: 50%;
+    height: calc((5 * var(--grid-column-width) + 4 * var(--grid-gutter-width)) * 0.75);
+    border-bottom: 1px solid var(--color-black);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__description {
+    order: 5;
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .s-workshops .sb-workshop .sb__description {
+    padding: 1rem;
+  }
+}
+.s-workshops .sb-workshop .sb__host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: absolute;
+  top: var(--title-height);
+  right: 0;
+  bottom: 0;
+  width: var(--host-width);
+  border-left: 1px solid var(--color-black);
+  overflow: hidden;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__host {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    order: 6;
+    width: 50%;
+    height: 4.4444rem;
+    border-top: 1px solid var(--color-black);
+    border-left: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .s-workshops .sb-workshop .sb__host {
+    position: relative;
+    order: 4;
+    width: 100%;
+    border-bottom: 1px solid var(--color-black);
+  }
+}
+.s-workshops .sb-workshop .sb__host__image {
+  order: 1;
+  flex: 0 0 auto;
+}
+@media only screen and (max-width: 987px) {
+  .s-workshops .sb-workshop .sb__host__image {
+    width: auto;
+    height: 100%;
+  }
+}
+.s-workshops .sb-workshop .sb__host__info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  order: 2;
+  flex: 1 1 auto;
+  padding: 0.6112rem 0.5rem;
+}
+.s-workshops .sb-workshop .sb__host__label {
+  margin-bottom: 0.5em;
+  font-size: 0.7778rem;
+}
+.s-workshops .sb-workshop .sb__host__name,
+.s-workshops .sb-workshop .sb__host__role {
+  font-size: 0.8889rem;
+  line-height: 1;
+}
+.s-workshops .sb-workshop .sb__host__name {
+  margin-top: auto;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+}
+.s-workshops .sb-workshop .sb__host__role {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+}

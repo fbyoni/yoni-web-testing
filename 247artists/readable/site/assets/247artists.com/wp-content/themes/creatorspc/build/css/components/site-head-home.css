@@ -1,0 +1,241 @@
+.site-head-home .s__bar {
+  --large-height: 5.2222rem;
+  --small-height: 3.7778rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: calc(var(--grid-offset) * 2);
+  left: var(--grid-abs-offset);
+  z-index: 20;
+  height: var(--large-height);
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  transition: height 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: height;
+}
+@media only screen and (max-width: 1280px) {
+  .site-head-home .s__bar {
+    --large-height: 4.7rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar {
+    --large-height: 3.333rem;
+    --small-height: 3.333rem;
+    top: calc(var(--admin-bar) + var(--grid-offset));
+    right: var(--grid-offset);
+    bottom: auto;
+    left: var(--grid-offset);
+    padding-right: 3.333rem;
+    width: auto;
+    transition: none;
+  }
+}
+.is-nav-small .site-head-home .s__bar {
+  height: min(var(--large-height), var(--small-height));
+}
+.site-head-home .s__bar:after {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  z-index: 5;
+  width: 3px;
+  height: 100%;
+  background: var(--color-brand-1);
+  content: "";
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar:after {
+    display: none;
+  }
+}
+.site-head-home .s__bar > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-black);
+}
+.site-head-home .s__bar > div:last-child {
+  border-right: 0;
+}
+.site-head-home .s__bar .s__logo {
+  --padding: 0.7778rem;
+  --width: 3.5556rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: var(--padding);
+  box-sizing: content-box;
+  width: var(--width);
+  transition:
+    padding 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+    width 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: padding, width;
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__logo {
+    padding: 0.45rem;
+    transition: none;
+  }
+}
+.is-nav-small .site-head-home .s__bar .s__logo {
+  --padding: 0.555rem;
+  width: calc(var(--width) * 0.75);
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .is-nav-small .site-head-home .s__bar .s__logo {
+    width: var(--width);
+  }
+}
+.site-head-home .s__bar .s__logo .s__logo__inner {
+  background: var(--color-black);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.site-head-home .s__bar .s__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__logo img {
+    transition: none;
+  }
+}
+.site-head-home .s__bar .s__logo--247 {
+  --width: 3.5556rem;
+}
+@media only screen and (max-width: 1280px) {
+  .site-head-home .s__bar .s__logo--247 {
+    --width: 3.8889rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__logo--247 {
+    --width: 2.433rem;
+  }
+}
+.site-head-home .s__bar .s__logo--247 .s__logo__inner {
+  -webkit-mask-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/logo-247.svg");
+  mask-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/logo-247.svg");
+}
+.site-head-home .s__bar .s__logo--247artists {
+  --width: 11.111rem;
+}
+@media only screen and (max-width: 1280px) {
+  .site-head-home .s__bar .s__logo--247artists {
+    --width: 9.72rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__logo--247artists {
+    display: none;
+  }
+}
+.site-head-home .s__bar .s__logo--247artists .s__logo__inner {
+  -webkit-mask-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/logo-247artists.svg");
+  mask-image: url("/assets/247artists.com/wp-content/themes/creatorspc/static/images/logo-247artists.svg");
+}
+.site-head-home .s__bar .s__description {
+  --width: 17.5em;
+  position: relative;
+  width: var(--width);
+  border-right: none;
+  overflow: hidden;
+  font-size: 1.0556rem;
+  line-height: 1;
+  transition: width 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: width;
+}
+@media only screen and (max-width: 1280px) {
+  .site-head-home .s__bar .s__description {
+    --width: 15em;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 987px) {
+  .site-head-home .s__bar .s__description {
+    display: none;
+  }
+}
+.is-nav-small .site-head-home .s__bar .s__description {
+  width: 0;
+}
+.site-head-home .s__bar .s__description__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em 1.2105em;
+  width: var(--width);
+  height: 100%;
+  border-right: 1px solid var(--color-black);
+}
+@media only screen and (max-width: 1280px) {
+  .site-head-home .s__bar .s__description__inner {
+    padding: 0.9em 0.75em;
+  }
+}
+.site-head-home .s__bar .s__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 0.555rem;
+  padding: 0 0.5556rem;
+}
+@media only screen and (max-width: 767px) {
+  .site-head-home .s__bar .s__links {
+    display: none;
+  }
+}
+.site-head-home .s__bar .s__cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5556rem;
+}
+@media only screen and (max-width: 767px) {
+  .site-head-home .s__bar .s__cta {
+    flex: 1 auto;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__cta {
+    margin: 0 auto;
+    max-width: 10em;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .site-head-home .s__bar .s__cta {
+    padding: 0.5rem;
+  }
+}
+.site-head-home .s__bar .s__cta a {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-head-home .s__bar .s__cta a {
+    --thickness: 0.35em;
+    padding: 0.75em;
+    font-weight: 550;
+  }
+}

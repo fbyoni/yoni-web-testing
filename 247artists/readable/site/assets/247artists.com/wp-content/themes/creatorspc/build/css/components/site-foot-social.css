@@ -1,0 +1,191 @@
+.site-foot-social {
+  --bc: rgb(235 237 240 / 30%);
+  background: var(--color-black);
+  color: var(--color-white-2);
+}
+.site-foot-social a {
+  color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .s__credits {
+    display: none;
+  }
+}
+.site-foot-social .s__credits .a-svg {
+  position: relative;
+  display: block;
+  margin: 0 0 0.3em auto;
+  width: 44px;
+  height: auto;
+  opacity: 0.25;
+  transition: opacity 0.07s linear;
+}
+.site-foot-social .s__credits .a-svg:before {
+  display: block;
+  padding-top: 37.778%;
+  content: "";
+}
+.site-foot-social .s__credits .a-svg path {
+  fill: currentcolor;
+}
+.site-foot-social .s__credits a:hover .a-svg {
+  opacity: 1;
+}
+.site-foot-social .s__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5555rem;
+  padding: 1.111rem 0;
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .s__bottom {
+    flex-direction: column-reverse;
+    gap: 1.3888rem;
+    padding: 1.3888rem 0 2.222rem;
+  }
+}
+.site-foot-social .s__logo {
+  display: block;
+  width: 3.888rem;
+  height: 3.888rem;
+}
+@media only screen and (max-width: 987px) {
+  .site-foot-social .s__logo {
+    width: 3.3333rem;
+    height: 3.3333rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-foot-social .s__logo {
+    display: none;
+  }
+}
+.site-foot-social .s__legals {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: normal;
+  flex: 1;
+  gap: 4.6153em;
+  font: 500 13px/1 var(--font-family-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .s__legals {
+    flex-direction: column;
+    gap: 1.923rem;
+    padding-bottom: 1.3888rem;
+    width: 100%;
+    border-bottom: 1px solid var(--bc);
+    font-weight: 550;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-foot-social .s__legals {
+    gap: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+.site-foot-social .s__legal-nav {
+  display: flex;
+  gap: 4.6153em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .s__legal-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.923rem;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape),
+  only screen and (max-width: 576px) {
+  .site-foot-social .s__legal-nav {
+    gap: 1rem;
+  }
+}
+.site-foot-social .s__cp {
+  color: #fff;
+}
+.site-foot-social .b-newsletter {
+  padding: 1.9444rem 1.666rem 1.9444rem 0;
+  border-right: 1px solid var(--bc);
+}
+@media only screen and (max-width: 987px) {
+  .site-foot-social .b-newsletter {
+    padding: 1.1111rem 0 1.6666rem;
+    border-right: none;
+    border-bottom: 1px solid var(--bc);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .b-newsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.site-foot-social .b__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6666rem;
+  padding: 1.9444rem 0 1.9444rem 1.666rem;
+}
+@media only screen and (max-width: 987px) {
+  .site-foot-social .b__socials {
+    justify-content: normal;
+    padding: 1.388rem 0;
+  }
+  .site-foot-social .b__socials .a-social {
+    --icon-size: 1.6666rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .site-foot-social .b__socials {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.site-foot-social .b__socials .b-socials li:not(:last-child) {
+  margin-right: 1.6666rem;
+}
+.site-foot-social .b__socials a {
+  transition: color 0.07s linear;
+}
+.site-foot-social .b__socials a:hover {
+  color: var(--color-brand-1);
+}
+.site-foot-social .b__socials-title {
+  font: 450 1.6666rem/1 var(--font-family-text);
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 987px) {
+  .site-foot-social .b__socials-title {
+    font-weight: 550;
+  }
+}
+.site-foot-social .s__connect {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--bc);
+  border-width: 1px 0;
+}
+@media only screen and (max-width: 987px) {
+  .site-foot-social .s__connect {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
