@@ -1,1 +1,5 @@
 /* Local mirror CSS overrides for 247artists.com. */
+
+/* The cookie consent banner (#icr-cookie-consent) is intentionally NOT hidden:
+   it is part of the original site (visible on live), and its CSS + JS are
+   bundled locally, so it renders and dismisses offline like the real site. */

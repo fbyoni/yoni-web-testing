@@ -452,6 +452,16 @@
     function (e) {
       var btn = e.target.closest('button[name="add"], [data-add-to-cart]');
       if (btn) {
+        // On multi-variant cards (products with sizes) the "Add" button opens a
+        // size-selection modal instead of adding directly — the theme wires it
+        // as on:click="quick-add-component/handleClick". In that case let the
+        // theme open the modal and do NOT add here; the user adds from inside
+        // the modal. Adding here too is the double-add bug (one on the card
+        // click, one from the modal).
+        var onClick = btn.getAttribute('on:click') || '';
+        if (onClick.indexOf('quick-add-component') !== -1) {
+          return;
+        }
         var form = closest(btn, 'form[action*="/cart/add"]');
         if (form) {
           // Let the submit handler do the work; just ensure submit fires.
