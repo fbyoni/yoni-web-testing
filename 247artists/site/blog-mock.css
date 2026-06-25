@@ -1,0 +1,106 @@
+/* Mock UX for the local beehiiv (/blog/) replica: subscribe + login modals.
+   The real beehiiv app's JS is stripped for a self-contained mirror, so the
+   subscribe form and the Subscribe / Login buttons are intercepted here and
+   answered with a simple success modal instead of hitting beehiiv's backend. */
+
+.blog-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+.blog-modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.blog-modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  padding: 32px 28px 26px;
+  text-align: center;
+  transform: translateY(8px) scale(0.98);
+  transition: transform 0.18s ease;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.blog-modal-overlay.is-open .blog-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.blog-modal-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: #111827;
+  color: #ffffff;
+}
+
+.blog-modal-title {
+  margin: 0 0 8px;
+  font-family: "Poppins", "Open Sans", system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.blog-modal-text {
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.blog-modal-btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+.blog-modal-btn:hover {
+  background: #000000;
+}
+
+@media (max-width: 480px) {
+  .blog-modal-card {
+    padding: 26px 20px 22px;
+    border-radius: 14px;
+  }
+  .blog-modal-title {
+    font-size: 20px;
+  }
+}
+
+html.blog-modal-lock,
+body.blog-modal-lock {
+  overflow: hidden;
+}
+
+/* The local archive mirror is the first page only — hide beehiiv's pagination
+   control (the grid wrapper whose group divs link to /archive?page=N). */
+div:has(> div > a[href*="archive?page"]) {
+  display: none !important;
+}
