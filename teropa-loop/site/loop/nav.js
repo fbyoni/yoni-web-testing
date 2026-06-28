@@ -56,6 +56,14 @@
     var steps = Array.prototype.slice.call(root.querySelectorAll('.step'));
     if (!steps.length) return;
 
+    var back = document.createElement('button');
+    back.className = 'loop-nav-back';
+    back.type = 'button';
+    back.setAttribute('aria-label', 'Previous section');
+    back.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">' +
+      '<path d="M15 18l-6-6 6-6" fill="none" stroke="#2b2b2b" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
     var btn = document.createElement('button');
     btn.className = 'loop-nav-toggle';
     btn.type = 'button';
@@ -84,8 +92,50 @@
       list.appendChild(li);
     });
 
+    document.body.appendChild(back);
     document.body.appendChild(btn);
     document.body.appendChild(panel);
+
+    // True once the user has advanced a substep within the current step.
+    var advanced = false;
+
+    // This deck is forward-only: a preStepLeave plugin (playerActivity) cancels
+    // any step change while the current slide still has substeps, so backward
+    // goto() doesn't work. The deck DOES honour the URL hash on load, landing at
+    // the *beginning* of that section. So "back" navigates by hash + reload:
+    //   - if we've advanced within the section -> restart THIS section
+    //   - if we're already at its beginning     -> the PREVIOUS section
+    back.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var idx = currentIndex();
+      if (idx < 0) return;
+      var target = advanced ? idx : idx - 1;
+      if (target < 0) return;
+      var id = steps[target].id;
+      if (!id) return;
+      if (location.hash !== '#/' + id) location.hash = '#/' + id;
+      location.reload();
+    });
+
+    // Detect forward advances so "back" knows whether we're already at the
+    // beginning of the current section. The deck handles (and stopPropagation's)
+    // these keys on document/window, so we listen on window in the CAPTURE phase
+    // — that runs before any of the deck's handlers can swallow the event.
+    function markAdvance(e) {
+      var k = e.key;
+      if (k === ' ' || k === 'Spacebar' || k === 'ArrowRight' || k === 'ArrowDown' ||
+          k === 'PageDown' || k === 'Enter') {
+        advanced = true;
+      }
+    }
+    window.addEventListener('keydown', markAdvance, true);
+    window.addEventListener('keyup', markAdvance, true);
+
+    function currentIndex() {
+      var id = (location.hash || '').replace(/^#\/?/, '');
+      var cur = (id && document.getElementById(id)) || root.querySelector('.step.active');
+      return cur ? steps.indexOf(cur) : -1;
+    }
 
     function open() {
       panel.classList.add('open');
@@ -120,11 +170,14 @@
       for (var i = 0; i < items.length; i++) {
         items[i].classList.toggle('active', items[i].dataset.target === id);
       }
+      // No previous section on the first slide.
+      back.classList.toggle('is-disabled', !!steps[0] && id === steps[0].id);
     }
 
     // impress dispatches a bubbling 'impress:stepenter' on the entered step.
     document.addEventListener('impress:stepenter', function (e) {
       if (e.target && e.target.id) setActive(e.target.id);
+      advanced = false;   // entering a step lands us at its beginning
     });
 
     // Initialise the highlight from the current step / hash.

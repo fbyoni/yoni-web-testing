@@ -48,13 +48,31 @@ prose is unaffected either way.
 
 ## Section-jump menu (local-only addition)
 
-`nav.css` + `nav.js` add a subtle hamburger button (always visible, top-right)
-that opens a list of all 31 sections; clicking one jumps straight there via the
-impress.js API (`window.impress().goto(stepEl)`), with the current section
-highlighted (tracked off the bubbling `impress:stepenter` event). This is **not
-part of the original site** — it's a convenience so you don't have to space-bar
-through the whole deck. The scraper injects the two files idempotently
-(`injectNav()`), so a re-scrape keeps the menu; it never overwrites them.
+`nav.css` + `nav.js` add two subtle always-visible buttons (top-right):
+
+- **Hamburger** — opens a list of all 31 sections; clicking one jumps straight
+  there via the impress.js API (`window.impress().goto(stepEl)`), with the
+  current section highlighted (tracked off the bubbling `impress:stepenter`
+  event).
+- **Back (‹)** — goes to the beginning of the current section, or, if already at
+  its beginning, to the beginning of the previous section. Disabled on the first
+  slide.
+
+This is **not part of the original site** — it's a convenience so you don't have
+to space-bar through the whole deck. The scraper injects the two files
+idempotently (`injectNav()`), so a re-scrape keeps the menu; it never overwrites
+them.
+
+Implementation note: this deck is **forward-only**. A preStepLeave plugin
+(`playerActivity`) drives substeps by calling `onNext()` on the slide you're
+leaving and *cancels any step change while substeps remain* — so backward
+`goto()` is swallowed, and there's no native `onPrev`. The back button therefore
+navigates by setting `location.hash` and reloading: on load impress honours the
+hash (`getElementFromHash() || steps[0]`) and re-initialises at that section's
+beginning (init `goto` runs with no active step, so nothing cancels it). A
+window-capture `keydown`/`keyup` listener tracks whether the user advanced a
+substep (the deck `stopPropagation`s these on document, so capture-on-window
+runs first) to decide restart-current vs. previous-section.
 
 ## Known offline gap: Helsinki tram map tiles
 
