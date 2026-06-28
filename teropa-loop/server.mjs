@@ -5,7 +5,8 @@ import {join, normalize, resolve} from 'node:path';
 // SITE_DIR override lets us serve alternate copies (e.g. a readable build);
 // defaults to ./site. PORT override lets two copies run side by side.
 const root = resolve(process.env.SITE_DIR || 'site');
-const port = Number(process.env.PORT || 5173);
+// Dedicated port (the other replicas in this repo default to 5173).
+const port = Number(process.env.PORT || 5180);
 
 const types = new Map([
   ['.html', 'text/html; charset=utf-8'],
