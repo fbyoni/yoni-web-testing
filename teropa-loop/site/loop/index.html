@@ -1,0 +1,973 @@
+<html>
+  <head>
+    <script src="/net-shim.js"></script>
+    <title>How Generative Music Works</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  <link href="main.54e7500caa24b03b8d84635513477cb4.css" rel="stylesheet">  <link rel="stylesheet" href="/loop/local-fixes.css">
+  <link rel="stylesheet" href="/loop/nav.css">
+  </head>
+  <body>
+    <div id="impress" data-width="1600" data-height="900">
+        <div id="title" class="step" data-x="-500" data-y="-900">
+            <h1>How Generative Music Works</h1>
+            <h2>A Perspective</h2>
+            <footer style="opacity: 0">
+              <span class="mode-read">Use space bar to advance</span>
+              <span class="mode-present">@teropa</span>
+            </footer>
+        </div>
+        <div id="generative" class="step centered-content" data-x="-500" data-y="0">
+          <h2>
+            This presentation is about making music<br>
+            by designing systems that make music.
+          </h2>
+        </div>
+        <div id="systemdefinition" class="step centered-content future" data-x="-570" data-y="80" data-scale="0.2">
+          <div class="card">
+            <h3><em>System</em></h3>
+            <ol>
+              <li><span class="mechanism">A set of things working together as parts of a mechanism</span> or an interconnecting network; a complex whole.</li>
+              <li class="scheme">A set of principles or procedures according to which something is done; an organized scheme or method.</li>
+            </ol>
+            <em>Oxford English Dictionary</em>
+          </div>
+        </div>
+        <div id="itsgonnarain" class="step centered-content future" data-x="-2600" data-y="-200" data-scale="1">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              For his 1965 composition &ldquo;It's Gonna Rain&rdquo;, Steve Reich
+              designed a generative mechanical system.
+            </p>
+            <p class="state state-init mode-present">
+              Steve Reich: It's Gonna Rain (1965)
+            </p>
+            <p class="state state-recorders mode-read is-hidden">
+              It was a system of two tape recorders.
+            </p>
+            <p class="state state-recorders mode-present is-hidden">
+              A system of two tape recorders
+            </p>
+            <p class="state state-speech mode-read is-hidden">
+              Reich had made field recordings of speech on tape.
+            </p>
+            <p class="state state-speech mode-present is-hidden">
+              With recorded speech
+            </p>
+            <p class="state state-loops mode-read is-hidden">
+              He made two short identical loops from his recordings. One for each tape recorder.
+            </p>
+            <p class="state state-loops mode-present is-hidden">
+              Two identical loops
+            </p>
+            <p class="state state-speeds mode-read is-hidden">
+              The tape recorders were set to slightly different speeds.<br>
+              One would play a little faster than the other.
+            </p>
+            <p class="state state-speeds mode-present is-hidden">
+              With slightly different speeds
+            </p>
+            <p class="state state-process mode-read is-hidden">
+              This started a <em>phasing</em> process. A continuously changing soundscape was generated from the short loops.
+            </p>
+            <p class="state state-process mode-present is-hidden">
+              A generative phasing process
+            </p>
+            <div class="state state-quote is-hidden">
+              <blockquote>
+                  <p>Though I may have the pleasure of discovering musical processes and composing the
+                    musical material to run through them, once the process is set up and loaded it runs by
+                    itself.</p>
+              </blockquote>
+              <p class="quote-attrib">Steve Reich, <a href="http://www.bussigel.com/systemsforplay/wp-content/uploads/2014/02/Reich_Gradual-Process.pdf" target="_blank">Music as a Gradual Process</a>, 1968.</p>
+            </div>
+          </div>
+          <div class="vis">
+            <canvas class="canvas"></canvas>
+          </div>
+          <div class="controls" style="opacity: 0">
+            <div class="pad"></div>
+            <div class="playpause">
+              <button class="play-button">&#9658;</button>
+              <button class="pause-button" style="display: none;">&#10073;&#10073;</button>
+            </div>
+            <input type="range" min=0 max=10000 step=0.1 value=0>
+            <div class="pad"></div>
+          </div>
+          <footer class="clip-src" style="opacity: 0">
+              Clip from a <a href="https://www.youtube.com/watch?v=yg7kKJsFpvc" target="_blank">Steve Reich interview on q on CBC</a>.
+          </footer>
+        </div>
+        <div id="reichphasing" class="step centered-content future" data-x="-3900" data-y="25" data-scale="0.5">
+          <div class="text-content">
+            <p class="mode-read">Once Reich had discovered this generative process in tape, he applied it to other media.</p>
+            <p class="mode-present">Reich's phasing process in other media</p>
+          </div>
+          <div class="videos">
+            <figure class="pendulum">
+              <div class="vidcontainer"><img></div>
+              <figcaption>Steve Reich: Pendulum Music. <br><a href="https://www.youtube.com/watch?v=fU6qDeJPT-w" target="_blank">Interpretation by Joan Cerver&#xF3;, V&#xED;ctor Trescol&#xED;, Isabel Le&#xF3;n, Estefan&#xED;a S&#xE1;nchez</a>.</figcaption>
+            </figure>
+            <figure class="pianophase">
+              <div class="vidcontainer"><img></div>
+              <figcaption>Steve Reich: Piano Phase. <br><a href="http://www.chenalexander.com/Piano-Phase" target="_blank">Visualization by Alexander Chen</a>.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="airports" class="step future" data-x="-2600" data-y="800">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Brian Eno was inspired by &ldquo;It's Gonna Rain&rdquo;, and used the same phasing process on &ldquo;Music for Airports&rdquo; in 1978.
+            </p>
+            <p class="state state-init mode-present">
+              Brian Eno: Music for Airports (1978)
+            </p>
+            <p class="state state-recorders mode-read is-hidden">
+              His design had seven tape recorders instead of two.
+            </p>
+            <p class="state state-recorders mode-present is-hidden">
+              A system of seven tape recorders
+            </p>
+            <p class="state state-loops mode-read is-hidden">
+              And the tape loops were a lot longer. Each had slightly different length.
+            </p>
+            <p class="state state-loops mode-present is-hidden">
+              With long loops, different length for each
+            </p>
+            <p class="state state-notes mode-read is-hidden">
+              Eno recorded one musical note on each loop.
+            </p>
+            <p class="state state-notes mode-present is-hidden">
+              One musical note per loop                
+            </p>
+            <p class="state state-play mode-read is-hidden">
+              This is the system that generated track 2 of &ldquo;Music for Airports&rdquo;.
+            </p>
+            <p class="state state-play mode-present is-hidden">
+              A generative phasing process
+            </p>
+            <div class="state state-quote is-hidden">
+              <blockquote>
+                <p>The thing about pieces like this is that they are actually of almost infinite length.
+                They simply don't reconfigure the same way again. This is music for free in a sense. The considerations that are important, then, become questions of how the system works and most important of all, what you feed into the system.</p>
+              </blockquote>
+              <p class="quote-attrib">Brian Eno, <a href="http://www.inmotionmagazine.com/eno1.html" target="_blank">Generative Music</a>, 1996.</p>
+            </div>
+          </div>
+          <div class="vis">
+            <canvas class="canvas"></canvas>
+          </div> 
+        </div>
+        <div id="systems-again" class="step centered-content future" data-x="-570" data-y="80" data-scale="0.2">
+        </div>
+        <div id="inc" class="step centered-content future" data-x="-2600" data-y="1700">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Terry Riley’s &ldquo;In C&rdquo; from 1964 is a composition expressed as a set of principles and procedures.
+            </p>
+            <p class="state state-init mode-present">
+              Terry Riley: In C (1964)
+            </p>
+            <p class="state state-social-system mode-read is-hidden">
+              It's a generative <em>social system</em>.
+            </p>
+            <p class="state state-social-system mode-present is-hidden">
+              A system of rules & principles. A generative <em>social system</em>.
+            </p>
+            <p class="state state-loops-instructions mode-read is-hidden">
+              <span class="loops-desc">It consists of a sequence of 53 short loops&hellip;</span>
+              <span class="instructions-desc">&hellip;and a set of instructions for playing them.</span>
+            </p>
+            <p class="state state-loops-instructions mode-present is-hidden">
+              <span class="loops-desc">53 short loops&hellip;</span>
+              <span class="instructions-desc">&hellip;instructions for playing</span>
+            </p>
+            <p class="state state-performance mode-read is-hidden">
+              Every performer can repeat each loop for as long as they like.<br/>
+              As long as collectively the group stays within a few loops of each other.
+            </p>
+            <p class="state state-performance mode-present is-hidden">
+              Repeat each loop as many times as you like
+            </p>
+          </div>
+          <div class="vis">
+            <img class="score">
+            <img class="instructions">
+          </div>
+        </div>
+        <div id="incplayer" class="step centered-content future" data-x="-2600" data-y="2600">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              With this simple blueprint you get a system that generates a new version every time it's played. <br>No two performances will ever be the same.
+            </p>
+            <p class="state state-init mode-present">
+              A new realization of the score generated every time
+            </p>
+            <p class="state state-regenerate mode-read is-hidden">
+              The system is simulated here by a quintet of marimbas.<br>
+              Use the slider to see how they generate a different performance every time.
+            </p>
+            <p class="state state-regenerate mode-present is-hidden">
+              No two performances will ever be the same
+            </p>
+            <div class="state state-quote is-hidden">
+              <blockquote>
+                <p>
+                  After working with tape loops and repetition a lot, I had this idea of a musical universe emerging that I hadn&#x2019;t heard before coming together. Since then, I&#x2019;ve always liked to include something in the mix that has some chance operational quality about it. I like to continue surprising myself.
+                </p>
+              </blockquote>
+              <p class="quote-attrib">Terry Riley, <a href="http://www.innerviews.org/inner/riley.html" target="_blank">2014</a>.</p>
+            </div>
+          </div>
+          <div class="vis">
+            <div class="controls">
+              <div class="rows">
+              </div>
+              <div class="playpause">
+                <button class="play-button">&#9658;</button>
+                <button class="pause-button" style="display: none;">&#10073;&#10073;</button>
+              </div>
+            </div>
+            <div class="player">
+              <div class="cnvs">
+               <canvas resize></canvas>
+              </div>
+              <input type="range" min=0 max=10000 step=1 value=0>    
+            </div>
+          </div>
+          <footer>
+            See also: <a href='https://teropa.info/blog/2017/01/23/terry-rileys-in-c' target='_blank'>Terry Riley's In C: A Journey Through a Musical Possibility Space</a>
+          </footer>
+        </div>
+        <div id="methodvsproduct" class="step transient future" data-x="-4600" data-y="1200" data-scale="4.5">
+          <div class="half">
+            <h2>Generative Method</h2>
+            <p class="mode-read">
+              “It's Gonna Rain” and "Music for Airports" were made using generative <em>methods</em>.
+            </p>
+            <p class="mode-read">
+              But the results don't retain that generative nature. Every time you listen to these pieces, you hear the same thing.
+            </p>
+          </div>
+          <div class="half">
+            <h2>Generative Product</h2>
+            <p class="mode-read">
+              &ldquo;In C&ldquo;, by contrast, is a generative <em>product</em>. It was not just generated once by the composer, but is generated anew every time.
+            </p>
+            <p class="mode-read">
+              For &ldquo;In C&rdquo; the system itself is shared, not just its outputs. Anyone can use the score to generate a new version. That happens somewhere in the world almost every day.
+            </p>
+          </div>
+        </div>
+        <div id="reflection" class="step future" data-x="-500" data-y="1500" data-scale="0.5">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Eno's latest album, Reflection, is both:<br>
+              A generative product made using generative methods.
+            </p>
+            <p class="state state-init mode-present">
+              Brian Eno: Reflection (2017)<br>
+              Both generative method and product
+            </p>
+            <p class="state state-app mode-read is-hidden">
+              You can get &ldquo;Reflection&ldquo; as an app.
+              <br>
+              The generative system itself is installed to your phone.<br> It produces an infinite stream of unique music.
+            </p>
+            <p class="state state-app mode-present is-hidden">
+              App edition contains the generative system itself
+            </p>
+          </div>
+          <div class="phone">
+            <video loop></video>            
+          </div>
+          <footer>
+            <a href="http://www.generativemusic.com/reflection.html" target="_blank">Brian Eno: Reflection</a>
+          </footer>
+        </div>
+        <div id="softwareoverview" class="step transient" data-x="0" data-y="1300" data-scale="4.5">
+          <p class="mode-read">
+            &ldquo;Reflection&rdquo; is a generative <em><strong>software system</strong></em>. That makes it easy to deliver to listeners.
+            <br>
+            Much easier than reel-to-reel tape recorders.
+          </p>
+          <p class="mode-read">
+            This presentation is another example of that convenience: Several generative software systems are embedded right onto this webpage.
+          </p>
+          <p class="mode-present">
+            Software Systems
+          </p>
+        </div>
+        <div id="randomness" class="step centered-content" data-x="-1000" data-y="2200">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Apart from the ease of delivery, software systems have a few other benefits.
+            </p>
+            <p class="state state-init mode-present">
+              Other Benefits of Using Software
+            </p>
+            <p class="state state-randomness mode-read is-hidden">
+              <span>One of them is their capability to make lots of <em class="shuffle" style="width: 212px">random choices</em> efficiently.<br>
+              And <em><strong class="shuffle" style="width: 180px">randomness</strong></em> is an incredibly useful generative technique.</span>
+            </p>
+            <p class="state state-randomness mode-present is-hidden">
+              <span class="shuffle">Randomness</span>
+            </p>
+          </div>
+        </div>
+        <div id="stochasticdrummachine" class="step centered-content future" data-x="-1000" data-y="3000">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Here's an example of a generative tool that is all about randomness.
+            </p>
+            <p class="state state-init mode-present">
+              Generative Randomness
+            </p>
+            <p class="state state-machine mode-read is-hidden">
+              It's a drum machine. One that generates random drum patterns.
+            </p>
+            <p class="state state-machine mode-present is-hidden">
+              A Stochastic Drum Machine
+            </p>
+            <p class="state state-neversame mode-read is-hidden">
+              You can generate as many patterns as you want and never get the same one twice.
+            </p>
+            <p class="state state-neversame mode-present is-hidden">
+              Never generates the same pattern twice
+            </p>
+            <p class="state state-spacesize mode-read is-hidden">
+              That's because there are about 12,000,000,000,000,000 different possible combinations.
+            </p>
+            <p class="state state-spacesize mode-present is-hidden">
+              About 12,000,000,000,000,000 patterns
+            </p>
+            <p class="state state-border mode-read is-hidden">
+              The &ldquo;Deviations&rdquo; slider turns up the randomness even more.<br/>
+              You can use it to explore the border between order and chaos. 
+            </p>
+            <p class="state state-border mode-present is-hidden">
+              Crank randomness up to 11 with &ldquo;Deviations&rdquo;
+            </p>
+          </div>
+          <div class="vis">
+            <div class="container">
+              <div class="controls">
+                <div class="left">
+                  <button class="generate-pattern">
+                    Generate New Pattern
+                  </button>
+                </div>
+                <label class="control">
+                    Deviations                    
+                  <input class="deviations-control" class="mdl-slider mdl-js-slider" type="range"
+                  min="0" max="1" value="0" step="0.05" tabindex="2">
+                  </label>
+              </div>
+              <div class="sequencer-container"></div>
+              <div class="loading">
+                Loading...
+              </div>
+            </div>
+          </div>
+          <footer>
+            <a href="https://codepen.io/teropa/pen/PKoYXM" target="_blank">Full version & source code</a>
+          </footer>
+        </div>
+        <div id="cage" class="step centered-content future" data-x="100" data-y="2800" data-scale="0.5">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              John Cage was a pioneer in the use of randomness in music composition.
+            </p>
+            <p class="state state-init mode-present">
+              John Cage's<br>Chance Procedures
+            </p>
+            <p class="state state-questions mode-read is-hidden">
+              <span>His method ever since the 1950s was to <br><em>&ldquo;ask questions rather than make choices&rdquo;.</em><br>
+              This is a generative system.</span>
+            </p>
+            <p class="state state-questions mode-present is-hidden">
+              <em>&ldquo;Asking questions rather than making choices&rdquo;</em>
+            </p>
+            <p class="state state-possibility-space mode-read is-hidden">
+              By asking a question you set up a possibility space: That of all the possible answers.<br><br>
+              For example, <em>&ldquo;what duration should this note have?&rdquo;</em>
+            </p>
+            <p class="state state-possibility-space mode-present is-hidden">
+              A question creates a possibility space
+            </p>
+            <p class="state state-random-selection mode-read is-hidden">
+              By then letting a random process answer the question, you generate the result.
+            </p>
+            <p class="state state-random-selection mode-present is-hidden">
+              Random selection generates an answer
+            </p>
+            <p class="state state-drummachine mode-read is-hidden">
+              <span>
+                Almost all generative music systems are elaborations of this core idea.<br><br>
+                This is also what the drum machine does. We ask <em>"what drum pattern should I use?"</em> and the system randomly selects an answer.
+              </span>
+            </p>
+            <p class="state state-drummachine mode-present is-hidden">
+              In the drum machine: <em>&ldquo;What drum pattern should I use?&rdquo;</em>
+            </p>
+            <div class="state state-quote is-hidden">
+              <blockquote>
+                <p>Then the answers, instead of coming from my likes and dislikes, come from chance operations, and that has the effect of opening me to possibilities that I hadn't considered.</p>
+                <p>Chance-determined answers will open my mind to the world around.</p>
+              </blockquote>
+              <p class="quote-attrib">John Cage, <a href="http://www.moredarkthanshark.org/eno_int_ammusic-sum85.html" target="_blank">1985</a>.</p>
+            </div>    
+          </div>
+          <div class="vis"></div>
+        </div>
+        <div id="algorithms" class="step centered-content future" data-x="1300" data-y="2000">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              <span>Another thing software is good at is <em>algorithms</em>.</span>
+            </p>
+            <p class="state state-init mode-present">
+              Algorithms
+            </p>
+            <p class="state state-description mode-read is-hidden">
+              That is, following a clear plan, making calculations, and doing formal reasoning.
+            </p>
+            <p class="state state-description mode-present is-hidden">
+              Following a plan,<br>making calculations,<br>doing formal reasoning.
+            </p>
+          </div>
+        </div>
+        <div id="generativegrammars" class="step centered-content future" data-x="1300" data-y="2750" data-scale="0.5">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              <span><em>Generative grammars</em> represent an algorithmic approach to music generation.</span>
+            </p>
+            <p class="state state-init mode-present">
+              Generative Grammars
+            </p>
+            <p class="state state-chomsky mode-read is-hidden">
+              The idea comes from linguistics, where it was first developed by Noam Chomsky in the 1950s.
+            </p>
+            <p class="state state-chomsky mode-present is-hidden">
+              From linguistics, Noam Chomsky
+            </p>
+            <p class="state state-system mode-read is-hidden">
+              <span>It's about formalizing the rules of language into a system that is capable of generating sentences of the language.</span>
+            </p>
+            <p class="state state-system mode-present is-hidden">
+                Formalizing the rules of language into a system
+            </p>
+            <p class="state state-languages mode-read is-hidden">
+              For Chomsky it was all about natural language. But it can also be applied to musical languages.
+            </p>
+            <p class="state state-languages mode-present is-hidden">
+              For musical language too?
+            </p>
+          </div>
+          <div class="vis">
+            <img>
+          </div>
+        </div>
+        <div id="additiverhythmgrammar" class="step centered-content future" data-x="3400" data-y="2550" data-scale="0.5">
+          <ul class="table">
+            <li class="build build-pattern is-hidden">
+              <div class="expr"><span>pattern</span></div>
+              <div class="term">cell</div>
+              <div class="term">cell&nbsp;&nbsp;pattern</div>
+            </li>
+            <li class="build build-cell is-hidden">
+              <div class="expr"><span>cell</span></div>
+              <div class="term">twoBeatCell</div>
+              <div class="term">threeBeatCell</div>
+            </li>
+            <li class="build build-twobeatcell is-hidden">
+              <div class="expr"><span>twoBeatCell</span></div>
+              <div class="term">eighth&nbsp;&nbsp;eighth</div>
+              <div class="term">quarter</div>
+            </li>
+            <li class="build build-threebeatcell is-hidden">
+              <div class="expr"><span>threeBeatCell</span></div>
+              <div class="term">eighth&nbsp;&nbsp;eighth&nbsp;&nbsp;eighth</div>
+              <div class="term">eighth&nbsp;&nbsp;quarter</div>
+              <div class="term">quarter&nbsp;&nbsp;eighth</div>
+            </li>
+            <li class="build build-notes is-hidden">
+                <div class="expr"><span>quarter</span></div>
+                <div class="term"><i class="quarter-note"></i></div>
+                <div class="term"><i class="quarter-rest"></i></div>
+              </li>
+            <li class="build build-notes is-hidden">
+              <div class="expr"><span>eighth</span></div>
+              <div class="term"><i class="eighth-note"></i></div>
+              <div class="term"><i class="eighth-rest"></i></div>
+            </li>
+          </ul>
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              <span>Let's define a generative grammar for <em>additive rhythm</em>.</span>
+            </p>
+            <p class="state state-init mode-present">
+              An additive rhythm grammar
+            </p>
+            <p class="state state-cell mode-read is-hidden">
+              <span>Additive rhythm patterns consist of rhythmic <em>cells</em>.</span> 
+              <span>A cell can be either two or three beats long.</span>
+            </p>
+            <p class="state state-cell mode-present is-hidden">
+              <span>Consists of <em>cells</em> that are two or three beats long</span> 
+            </p>
+            <p class="state state-twobeatcell mode-read is-hidden">
+              <span>A two-beat cell is either two eighths or one quarter.</span>
+            </p>
+            <p class="state state-twobeatcell mode-present is-hidden">
+              <span>A two beat cell is two eights or one quarter</span>
+            </p>
+            <p class="state state-threebeatcell mode-read is-hidden">
+              <span>A three-beat cell is either three eighths, or an eighth and a quarter in either order.</span>
+            </p>
+            <p class="state state-threebeatcell mode-present is-hidden">
+              <span>A three beat cell is three eighths, or an eighth and a quarter.</span>
+            </p>
+            <p class="state state-notes mode-read is-hidden">
+              <span>
+                Each quarter and eighth can be either a note or a rest.
+                <br><br>
+                Now we have hierarchically defined what a &ldquo;cell&rdquo;
+                means in this language, all the way down to the atomic level.
+              </span>
+            </p>
+            <p class="state state-notes mode-present is-hidden">
+              <span>Quarters and eighths are notes or rests</span>
+            </p>
+            <p class="state state-pattern mode-read is-hidden">
+              <span>
+                A full pattern is either a single cell, or a cell followed by another pattern.
+                <br><br>
+                This definition is <em>recursive</em>, and makes it possible to express multi-cell patterns.
+              </span>
+            </p>
+            <p class="state state-pattern mode-present is-hidden">
+              <span>A pattern is a cell or a cell followed by another pattern.<br>A <em>recursive</em> definition.</span>
+            </p>
+          </div>
+        </div>
+        <div id="polyloops" class="step centered-content future" data-x="2550" data-y="2750">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Once you have a grammar, you can generate rhythm patterns by expanding it.
+            </p>
+            <p class="state state-init mode-present">
+              Generating patterns from the grammar
+            </p>
+            <p class="state state-choose mode-read is-hidden">
+              Whenever there are two or more options, you choose one randomly.
+            </p>
+            <p class="state state-choose mode-present is-hidden">
+              When there's more than one option, choose randomly
+            </p>
+            <p class="state state-randomness mode-read is-hidden">
+              So randomness is again the tool that wields the generative power here.
+              <br>It's just used in a more constrained form this time.
+            </p>
+            <p class="state state-randomness mode-present is-hidden">
+              Randomness in a very constrained form
+            </p>
+            <p class="state state-poly mode-read is-hidden">
+              <span>When you generate two or more patterns simultaneously, you get <em>polyrhythms</em>.</span>
+            </p>
+            <p class="state state-poly mode-present is-hidden">
+              Multiple patterns make a polyrhythm
+            </p>
+          </div>
+          <div class="vis">  
+            <div class="vis-line">
+              <button class="regen-0">&#8635;</button>
+              <div class="vis-0 notes"></div>
+            </div>
+            <div class="space"></div>
+            <div class="vis-line">
+              <button class="regen-1">&#8635;</button>
+              <div class="vis-1 notes"></div>
+            </div>
+            <div class="space"></div>
+            <div class="vis-line">
+              <button class="regen-2">&#8635;</button>
+              <div class="vis-2 notes"></div>
+            </div>
+            <div class="margin"></div>            
+          </div>
+          <footer>
+            <a href="https://codepen.io/teropa/pen/rzQMEG" target="_blank">Full version & source code</a>
+          </footer>
+        </div>
+        <div id="connected" class="step centered-content future" data-x="3900" data-y="1750">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Software also makes it easy to connect systems to the external world.
+            </p>
+            <p class="state state-init mode-present">
+              Connected Software
+            </p>
+            <p class="state state-devices mode-read is-hidden">
+              The devices running these systems are equipped with sensors, interfaces, and network connections.
+            </p>
+            <p class="state state-devices mode-present is-hidden">
+              Through sensors, interfaces, network connections
+            </p>
+            <p class="state state-react mode-read is-hidden">
+              <span>That means you can make a generative musical system that <em>plays off of other systems</em>.</span>
+            </p>
+            <p class="state state-react mode-present is-hidden">
+              <span>Generative systems that play off of <em>other systems</em></span>
+            </p>
+          </div>
+        </div>
+        <div id="tramsofhelsinki" class="step centered-content future" data-x="1800" data-y="1150" data-scale="0.75">
+          <div class="vis">
+              <div class="map"></div>
+              <div class="effects">
+                <h1>Helsinki <span class="current-time"></span></h1>
+              </div>
+              <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+          </div>
+          <p class="state state-init mode-read">
+            This system generates music from the Helsinki tram system.
+          </p>
+          <p class="state state-init mode-present">
+            Generating music from the Helsinki tram system
+          </p>
+          <p class="state state-data mode-read is-hidden">
+            <span class="day">It is using real-time data to track where each tram is right now.</span>
+            <span class="night">It's likely to be quiet now because few trams run at night. Check back later ;)</span>
+          </p>
+          <p class="state state-data mode-present is-hidden">
+            Using real time tracking data
+          </p>
+          <p class="state state-listen"></p>           
+        </div>
+        <div id="tramszoomout" class="step centered-content future" data-x="1800" data-y="1050" data-scale="1.1">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              The trams are playing a pentatonic scale, mapped to central Helsinki.
+            </p>
+            <p class="state state-init mode-present">
+              A pentatonic scale mapped to central Helsinki
+            </p>
+            <p class="state state-random mode-read is-hidden">
+              In some sense, this is just randomness again.<br>The music is incidental - the tram drivers aren't deliberately playing music to you.
+            </p>
+            <p class="state state-random mode-present is-hidden">
+                Randomness again - because mapping is incidental
+            </p>
+            <p class="state state-romantic mode-read is-hidden">
+              But the conceptual layer is significant.<br>The idea that you're listening to the city's nervous system changes the way you experience the music.
+            </p>
+            <p class="state state-romantic mode-present is-hidden">
+              <span>Conceptual layer adds meaning - <em>&ldquo;listening to the city&rdquo;</em></span>
+            </p>
+          </div>
+          <div class="the-rest">
+            <ul class="scale">
+              <li class="note">E4</li>
+              <li class="note">D4</li>
+              <li class="note">C4</li>
+              <li class="note">A3</li>
+              <li class="note">G3</li>
+              <li class="note">E3</li>
+              <li class="note">D3</li>
+              <li class="note">C3</li>
+              <li class="note">A2</li>
+              <li class="note">G2</li>
+            </ul>      
+          </div>
+          <footer>
+            <a href="https://codepen.io/teropa/pen/mBbPEe" target="_blank">Full version & source code</a>
+          </footer>
+        </div>
+        <div id="datasonification" class="step centered-content future" data-x="1400" data-y="350" data-scale="0.5">
+          <div class="text-content">
+            <p class="mode-read">This was an example of <em>data sonification</em>:<br> Generative musical systems riding on events or data produced by other systems.</p>
+            <p class="mode-present">Data Sonification</p>
+          </div>
+          <div class="videos">
+            <figure class="atlas">
+              <div class="vidcontainer"><img></video></div>
+              <figcaption>Brian Foo: <a href="http://eclipticalis.com/" target="_blank">Music Eclipticalis</a>. Based on &ldquo;Atlas Eclipticalis&rdquo; by John Cage.</figcaption>
+            </figure>
+            <figure class="wiki">
+              <div class="vidcontainer"><img></video></div>
+              <figcaption>Hatnote, Stephen LaPorte, and Mahmoud Hashemi: <a href="http://listen.hatnote.com/" target="_blank">Listen to Wikipedia</a>.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="hooman" class="step centered-content future" data-x="3600" data-y="900">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Speaking of connecting musical systems to other systems, how about the most interesting systems of them all: Human beings?
+            </p>
+            <p class="state state-init mode-present">
+              The most interesting systems in the world: Human beings
+            </p>
+            <p class="state state-interactive mode-read is-hidden">
+              <span>This is the realm of<br> <em>interactive generative systems</em>.</span>
+            </p>
+            <p class="state state-interactive mode-present is-hidden">
+              Interactive Generative Systems
+            </p>
+          </div>
+          <div class="vis">
+            <img>
+            <footer>
+              Image: <a href="https://www.flickr.com/photos/bionicteaching/14092973648" target="_blank">Tom Woodward</a>
+            </footer>
+          </div>
+        </div>
+        <div id="trope" class="step centered-content future" data-x="4350" data-y="100" data-scale="0.5">
+          <img>
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Eno's &ldquo;Trope&rdquo; is an example of a generative system that's also interactive.
+            </p>
+            <p class="state state-init mode-present">
+              Brian Eno & Peter Chilvers: Trope (2009)
+            </p>
+            <p class="state state-interactive mode-read is-hidden">
+              It lets <em>the listener</em> complete the music.
+            </p>
+            <p class="state state-interactive mode-present is-hidden">
+              The listener completes the music
+            </p>
+            <p class="state state-blurring mode-read is-hidden">
+              This starts to blur the boundary between composer and listener.
+            </p>
+            <p class="state state-blurring mode-present is-hidden">
+              Blurring boundary between composer and listener
+            </p>
+            <p class="state state-control mode-read is-hidden">
+              On the one hand, the composer gives up some control by leaving artistic decisions unmade.
+            </p>
+            <p class="state state-control mode-present is-hidden">
+              Composer gives up control, <br>leaving artistic decisions open
+            </p>
+            <p class="state state-system-designer mode-read is-hidden">
+              On the other hand, the composer still has the ultimate control, as a <em>system designer</em>.<br> They design the generative space the listener explores.
+            </p>
+            <p class="state state-system-designer mode-present is-hidden">
+              <span>Composer as <em>system designer</em></span>
+            </p>
+            <p class="state state-listen"></p>
+          </div>
+          <footer><a href="http://www.generativemusic.com/trope.html" target="_blank">Trope</a> by Brian Eno and Peter Chilvers</footer>
+        </div>
+        <div id="musicmouse" class="step centered-content future" data-x="2800" data-y="-100">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              These interactive generative systems can be designed to give the user varying degrees of freedom.
+            </p>
+            <p class="state state-init mode-present">
+              Degrees of freedom for the user vary
+            </p>
+            <p class="state state-cocreation mode-read is-hidden">
+              <span>When there's more freedom, the interaction becomes about <em>co-creation</em> between a musician and a generative system.</span>
+            </p>
+            <p class="state state-cocreation mode-present is-hidden">
+              <span>More freedom leads to <em>co-creation</em> between musician and generative system</span>
+            </p>
+            <p class="state state-mm mode-read is-hidden">
+              Laurie Spiegel's &ldquo;Music Mouse&rdquo; from 1986 is a seminal example of such a system.
+            </p>
+            <p class="state state-mm mode-present is-hidden">
+              Laurie Spiegel: <br>Music Mouse (1986)
+            </p>
+            <p class="state state-algorithmic mode-read is-hidden">
+              It contains algorithmic and random procedures for generating and timing notes.
+            </p>
+            <p class="state state-algorithmic mode-present is-hidden">
+              Algorithmic and random procedures
+            </p>
+            <p class="state state-agency mode-read is-hidden">
+              <span>
+                But ultimately it lets you, the musician, control the structure of the music.
+                <br><br>
+                The result is a <em>collaboration</em> between you and Music Mouse.
+              </span>
+            </p>
+            <p class="state state-agency mode-present is-hidden">
+              But you are in control
+            </p>
+            <div class="state state-quote is-hidden">
+              <blockquote>
+                <p>I know that a lot of the ways that music is integrated to our lives is changing.</p>
+                <p>One of the big changes is that music is becoming a process that people can participate in - rather than a bunch of fixed, finite entities called pieces that you can listen to that are the same every time.</p>
+              </blockquote>
+              <p class="quote-attrib">Laurie Spiegel, <a href="https://archive.org/stream/09-commodore-magazine/Commodore_Magazine_Vol-08-N09_1987_Sep#page/n57/mode/2up" target="_blank">1987</a>.</p>
+            </div>
+          </div>
+          <div class="vis">
+            <div class="keyboards">
+            </div>
+            <footer>
+              A partial emulation of
+              <a href="http://retiary.org/ls/index.html" target="_blank">Laurie Spiegel</a>'s
+              <a href="http://retiary.org/ls/programs.html" target="_blank">&ldquo;Music Mouse - An Intelligent Instrument&rdquo;</a>.
+              <br>Use 'z' and 'x' to transpose, 'c' to toggle generative pattern. <a href="https://teropa.info/musicmouse" target="_blank">More features here</a>.
+            </footer>
+          </div>
+        </div>
+        <div id="models" class="step centered-content future" data-x="4400" data-y="-1000">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              <span>Another form of human-machine interaction is <em>teaching</em> machines how to do things.</span>
+            </p>
+            <p class="state state-init mode-present">
+              Teaching a machine to do things
+            </p>
+            <p class="state state-learn mode-read is-hidden">
+              <span>Rather than design a generative system, you can have a computer <em>learn</em> one<br> by showing it examples of the kind of music you want it to generate.</span>
+            </p>
+            <p class="state state-learn mode-present is-hidden">
+              Not designing a generative system, but having a computer learn one
+            </p>
+            <p class="state state-ml mode-read is-hidden">
+              <span>This is what <em>machine learning</em> is all about.</span>
+            </p>
+            <p class="state state-ml mode-present is-hidden">
+              <span>Machine Learning</span>
+            </p>
+          </div>
+          <div class="vis">
+            <img>
+          </div>
+        </div>
+        <div id="markovplayer" class="step centered-content future" data-x="2800" data-y="-1000">
+          <div class="vis">
+            <div class="visualization">
+            </div>
+            <div class="controls">
+              <canvas nx="keyboard" id="markovOnScreenKeyb"></canvas>
+              <footer>
+                Play with mouse, keyboard, or MIDI keyboard (Chrome only)
+                <button class="clear-button">Clear</button>
+                <br>See also: <a href="https://codepen.io/teropa/pen/bRqYVj" target="_blank">Dancing Markov Gymnopédies</a>
+              </footer>
+            </div>
+          </div>
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              <span><em>Markov chains</em> are an old, but still effective, example of the machine learning approach.</span>
+            </p>
+            <p class="state state-init mode-present">
+              Markov Chains
+            </p>
+            <p class="state state-models mode-read is-hidden">
+              A Markov chain is a mathematical model of how events follow other events over time. Events such as notes in a melody.
+            </p>
+            <p class="state state-models mode-present is-hidden">
+              Mathematical models of events over time
+            </p>
+            <p class="state state-train mode-read is-hidden">
+              <span>You can <em>train</em> a Markov chain by playing it some music. It learns the music you play and builds up a graph model of it.</span>
+            </p>
+            <p class="state state-train mode-present is-hidden">
+                Train a model by playing music
+            </p>
+            <p class="state state-generate mode-read is-hidden">
+              <span>You can then <em>generate</em> new music by having the Markov chain randomly walk its graph, following the connections it learned.</span>
+            </p>
+            <p class="state state-generate mode-present is-hidden">
+              Then generate from the learned model
+            </p>
+            <p class="state state-limited mode-read is-hidden">
+              It's a limited method because such a simple model can only capture a limited amount of information. In this case it only learns about short-term melodic progression. <br>But it can still be useful.
+            </p>
+            <p class="state state-limited mode-present is-hidden">
+              Limited but still effective!
+            </p>
+          </div>
+        </div>
+        <div id="deeplearning" class="step centered-content future" data-x="1300" data-y="-850" data-scale="0.5">
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              Markov chains are an ancestor of contemporary machine learning approaches to music generation, such as deep neural networks.
+            </p>
+            <p class="state state-init mode-present">
+              Contemporary machine learning: Deep neural networks
+            </p>
+            <p class="state state-neuralnet mode-read is-hidden">
+              Deep neural networks are highly complex statistical models and they're usually trained using large amounts of data.
+            </p>
+            <p class="state state-neuralnet mode-present is-hidden">
+              Large amounts of data, complex
+            </p>
+            <p class="state state-same mode-read is-hidden">
+              But fundamentally they work just like Markov chains: You teach the machine how music works by showing it examples. It builds up a model of the music and then uses the model to generate new music.
+            </p>
+            <p class="state state-same mode-present is-hidden">
+              But still about teaching the computer by example, like Markov chains
+            </p>
+          </div>
+          <div class="vis">
+            <a href="https://magenta.tensorflow.org/performance-rnn-browser" target="_blank"><img class="performancernn"></a>
+            <a href="https://magenta.tensorflow.org/nsynth" target="_blank"><img class="nsynth"></a>
+            <footer>
+              See <a href="https://medium.com/artists-and-machine-intelligence/neural-nets-for-generating-music-f46dffac21c0" target="_blank">Neural Nets for Generating Music</a> by Kyle McDonald.
+            </footer>
+          </div>
+        </div>
+        <div id="overview" class="step centered-content future" data-x="250" data-y="1400" data-scale="6">
+          <h2>Systems</h2>
+          <div class="text-content">
+            <p class="state state-init mode-read">
+              This is what the generative music landscape looks like to me.
+            </p>
+            <p class="state state-init mode-present">
+              The generative music landscape
+            </p>
+            <p class="state state-systems mode-read is-hidden">
+              It is inhabited by various kinds of systems.
+            </p>
+            <p class="state state-systems mode-present is-hidden">
+              Inhabited by <em>systems</em>
+            </p>
+            <p class="state state-designing mode-read is-hidden">
+              Making generative music is all about the process of <em>designing</em> those systems.
+            </p>
+            <p class="state state-designing mode-present is-hidden">
+              Making generative music is <em>systems design</em>.
+            </p>
+          </div>
+        </div>
+        <div id="links" class="step future" data-x="250" data-y="1150" data-scale="8">
+          <div class="frame frame-left"></div>
+          <div class="frame frame-top">
+            <div class="frame-content">
+              <h2 class="mode-present">teropa.info/loop</h2>
+              <h2 class="mode-read">Thanks for viewing!</h2>
+            </div>
+          </div>
+          <div class="frame frame-right"></div>
+          <div class="frame frame-bottom">
+            <div class="frame-content">
+              <p class="twitter-handle"><a href="https://twitter.com/teropa" target="_blank">teropa</a></p>
+              <p>tero@teropa.info</p>
+              <p><a href="https://ctpt.co" target="_blank">Counterpoint</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="static_assets/tracery.js"></script>
+    <script src="static_assets/audiokeys.js"></script>
+  <script type="text/javascript" src="bundle.js"></script>  <script src="/loop/local-fixes.js"></script>
+  <script src="/loop/nav.js"></script>
+  </body>
+ </html>

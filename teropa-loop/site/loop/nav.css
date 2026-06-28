@@ -1,0 +1,107 @@
+/* Subtle section-jump menu for the local mirror (not part of the original site). */
+
+.loop-nav-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(20, 20, 20, 0.04);
+  border: 1px solid rgba(20, 20, 20, 0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  z-index: 2147483000;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.loop-nav-toggle:hover,
+.loop-nav-toggle.open {
+  opacity: 1;
+  background: rgba(20, 20, 20, 0.08);
+}
+.loop-nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #2b2b2b;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.loop-nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.loop-nav-toggle.open span:nth-child(2) { opacity: 0; }
+.loop-nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.loop-nav-panel {
+  position: fixed;
+  top: 62px;
+  right: 16px;
+  width: 250px;
+  max-height: 78vh;
+  overflow-y: auto;
+  background: rgba(252, 252, 251, 0.97);
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 6px;
+  z-index: 2147482999;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.loop-nav-panel.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.loop-nav-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.loop-nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.3;
+  transition: background 0.12s ease;
+}
+.loop-nav-item:hover { background: rgba(20, 20, 20, 0.06); }
+.loop-nav-item.active { background: rgba(20, 20, 20, 0.09); }
+.loop-nav-item.active .loop-nav-label { font-weight: 600; }
+.loop-nav-idx {
+  flex: 0 0 auto;
+  width: 18px;
+  color: #b0aba2;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+.loop-nav-item.active .loop-nav-idx { color: #6b6b6b; }
+.loop-nav-label { flex: 1 1 auto; }
+
+/* Scrollbar polish (WebKit). */
+.loop-nav-panel::-webkit-scrollbar { width: 8px; }
+.loop-nav-panel::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.18);
+  border-radius: 4px;
+}

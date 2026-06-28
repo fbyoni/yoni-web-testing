@@ -1,0 +1,13 @@
+{
+  "name": "teropa-loop-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fully self-contained local mirror of teropa.info/loop (How Generative Music Works).",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "serve": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

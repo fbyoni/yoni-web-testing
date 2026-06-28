@@ -12,6 +12,7 @@ scripts, and Node static server.
 | ------------- | --------------------- | --------------------------------------- |
 | `gethapply/`  | `gethapply.com`       | Shopify storefront mirror, no API calls |
 | `247artists/` | `247artists.com`      | WordPress (creatorspc theme) mirror; webpack lazy chunks + per-section CSS mirrored, GTM/Clarity/HubSpot/wsimg stripped |
+| `teropa-loop/`| `teropa.info/loop`    | Single-page impress.js generative-music presentation; webpack-hashed media + 593 Salamander piano samples mirrored, Open Sans vendored, served at `/loop/` |
 
 ## Run a project
 
