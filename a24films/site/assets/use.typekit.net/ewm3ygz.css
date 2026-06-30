@@ -1,0 +1,45 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * akzidenz-grotesk:
+ *   - http://typekit.com/eulas/000000000000000000013631
+ *   - http://typekit.com/eulas/000000000000000000013633
+ *   - http://typekit.com/eulas/000000000000000000013635
+ * akzidenz-grotesk-extended:
+ *   - http://typekit.com/eulas/00000000000000000001375e
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2018-06-26 15:26:50 UTC"}*/
+
+@import url("/assets/p.typekit.net/p__a392c85957.css");
+
+@font-face {
+font-family:"akzidenz-grotesk";
+src:url("/assets/use.typekit.net/af/99cda7/000000000000000000013631/27/l__ef3c5c13c3.woff2") format("woff2"),url("/assets/use.typekit.net/af/99cda7/000000000000000000013631/27/d__ef3c5c13c3.woff") format("woff"),url("/assets/use.typekit.net/af/99cda7/000000000000000000013631/27/a__ef3c5c13c3") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+}
+
+@font-face {
+font-family:"akzidenz-grotesk";
+src:url("/assets/use.typekit.net/af/9d033e/000000000000000000013633/27/l__a0b5b5570d.woff2") format("woff2"),url("/assets/use.typekit.net/af/9d033e/000000000000000000013633/27/d__a0b5b5570d.woff") format("woff"),url("/assets/use.typekit.net/af/9d033e/000000000000000000013633/27/a__a0b5b5570d") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"akzidenz-grotesk";
+src:url("/assets/use.typekit.net/af/5556ca/000000000000000000013635/27/l__0a69e4891a.woff2") format("woff2"),url("/assets/use.typekit.net/af/5556ca/000000000000000000013635/27/d__0a69e4891a.woff") format("woff"),url("/assets/use.typekit.net/af/5556ca/000000000000000000013635/27/a__0a69e4891a") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"akzidenz-grotesk-extended";
+src:url("/assets/use.typekit.net/af/6bb33f/00000000000000000001375e/27/l__0a69e4891a.woff2") format("woff2"),url("/assets/use.typekit.net/af/6bb33f/00000000000000000001375e/27/d__0a69e4891a.woff") format("woff"),url("/assets/use.typekit.net/af/6bb33f/00000000000000000001375e/27/a__0a69e4891a") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-akzidenz-grotesk { font-family: "akzidenz-grotesk",sans-serif; }
+.tk-akzidenz-grotesk-extended { font-family: "akzidenz-grotesk-extended",sans-serif; }

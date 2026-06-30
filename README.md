@@ -13,6 +13,7 @@ scripts, and Node static server.
 | `gethapply/`  | `gethapply.com`       | Shopify storefront mirror, no API calls |
 | `247artists/` | `247artists.com`      | WordPress (creatorspc theme) mirror; webpack lazy chunks + per-section CSS mirrored, GTM/Clarity/HubSpot/wsimg stripped |
 | `teropa-loop/`| `teropa.info/loop`    | Single-page impress.js generative-music presentation; webpack-hashed media + 593 Salamander piano samples mirrored, Open Sans vendored, served at `/loop/` |
+| `a24films/`   | `a24films.com`        | A24 studio site (Craft CMS); 406 pages (all films/television/notes archive/jobs/legal), ~2,090 svdcdn CDN images with per-transform query-hashed filenames, Typekit akzidenz-grotesk + self-hosted NB International fonts; analytics/consent/Typekit-loader stripped |
 
 ## Run a project
 

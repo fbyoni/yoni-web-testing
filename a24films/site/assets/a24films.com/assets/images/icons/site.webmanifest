@@ -1,0 +1,11 @@
+{
+  "name":"A24 Films",
+  "short_name":"A24",
+  "icons": [
+    { "src": "/assets/images/icons/android-chrome-192x192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/assets/images/icons/android-chrome-512x512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color":"#ffffff",
+  "background_color":"#000000",
+  "display":"standalone"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "a24films-replica",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fully self-contained local static mirror of the public a24films.com (Craft CMS) site. Zero runtime calls to external domains.",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "clean": "node scripts/clean-external.mjs",
+    "shim": "node scripts/inject-shim.mjs",
+    "build": "npm run scrape && npm run clean && npm run shim",
+    "serve": "node server.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
